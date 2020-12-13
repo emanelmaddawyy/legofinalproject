@@ -105,6 +105,9 @@
   .earnPointsIcons li{
     position: relative;
   }
+  .earnPointsIcons li:hover{
+    cursor: pointer;
+  }
   
   .earnPointsIcons li .earnBtn{
     position: absolute;

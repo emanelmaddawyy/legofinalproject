@@ -8,6 +8,8 @@ class HomePage extends Component{
         return(
             <>
                 <Productslider />
+                <ProductsList />
+                <Vip />
             </>
           
         )
