@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Link ,withRouter} from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './Slider.css';
+import './productSlider.css';
 import {
     StarFilled,
     StarTwoTone,
