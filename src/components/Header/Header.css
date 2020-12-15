@@ -232,5 +232,20 @@ a.nav-link a {
   display: flex !important;
 }
 
+ul.shopstyle {
+  width: calc(60%);
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 0%;
+          flex: 3 1 0%;
+  -webkit-column-gap: 1.875rem;
+          column-gap: 1.875rem;
+  -webkit-column-fill: balance;
+          column-fill: balance;
+  padding-left: 0 !important;
+  text-align: center;
+}
+
 /* No CSS */
 /*# sourceMappingURL=Header.css.map */

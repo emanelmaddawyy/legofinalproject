@@ -18,6 +18,7 @@
   text-align: center;
   margin: 0 auto;
   border: 4px solid #fff;
+  padding-bottom: 20px;
 }
 .regForm input.form-control, .regForm select {
   font-size: .875rem;
@@ -44,6 +45,15 @@
 
 .main{
   background-color: #f2f5f7;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.mainForget{
+  background-color: #f2f5f7;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .formDescripe , .regForm form  {
   padding: 0 30px ;
@@ -140,4 +150,7 @@ margin-right: 20px;
   border:none;
   border-radius: 20px;
   padding: 5px 50px 5px 0;
+}
+.form-check-label{
+  margin-left: 20px;
 }
