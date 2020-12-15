@@ -4,7 +4,17 @@ import {BrowserRouter as Router,Route,} from "react-router-dom";
 import HomePage from './Pages/HomePage';
 import RegisterPage from './Pages/RegisterPage';
 import LoginPage from './Pages/LoginPage';
-import UsersPage from './Pages/UsersPage'
+import UsersPage from './Pages/UsersPage';
+import AboutusPage from './Pages/AboutusPage'
+import VipPage from './Pages/VipPage';
+import FindstorePage from './Pages/FindstorePage';
+import LegolifePage from './Pages/LegolifePage';
+import KidsPage from './Pages/KidsPage';
+import WishlistPage from './Pages/WishlistPage';
+import CartPage from './Pages/CartPage';
+import OffersPage from './Pages/Offers&Sale';
+import ExclusivesPage from './Pages/ExclusivesPage';
+
 
 
 function App() {
@@ -31,7 +41,46 @@ function App() {
         exact 
         component={() => <UsersPage/>}>
       </Route>
-
+      <Route 
+        path="/aboutus" 
+        exact 
+        component={() => <AboutusPage/>}>
+      </Route>
+      <Route 
+        path="/vip" 
+        exact 
+        component={() => <VipPage/>}>
+      </Route>
+      <Route 
+        path="/findstore" 
+        exact 
+        component={() => <FindstorePage/>}>
+      </Route>
+      <Route 
+        path="/legolife" 
+        exact 
+        component={() => <LegolifePage/>}>
+      </Route>
+      <Route 
+        path="/kids" 
+        exact 
+        component={() => <KidsPage/>}>
+      </Route>
+      <Route 
+        path="/cart" 
+        exact 
+        component={() => <CartPage/>}>
+      </Route>
+      <Route 
+        path="/offers" 
+        exact 
+        component={() => <OffersPage/>}>
+      </Route>
+      <Route 
+        path="/exclusives" 
+        exact 
+        component={() => <ExclusivesPage/>}>
+      </Route>
     </Router>
     </>
   );

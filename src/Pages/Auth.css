@@ -1,0 +1,143 @@
+.break h1::before,.break h1::after{
+  position: absolute;
+  top: 10px;
+  border-top: 2px double #badbf4;
+  content: "";
+  display: table-cell;
+  width: 37%;
+}
+.break h1::after{
+  right: 0;
+}
+.break{
+  position: relative;
+  text-align: center;
+}
+.regForm {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  border: 4px solid #fff;
+}
+.regForm input.form-control, .regForm select {
+  font-size: .875rem;
+    color: #333;
+    font-weight: 400;
+    font-family: inherit;
+    width: 100%;
+    height: 50px;
+    line-height: 45px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid #c9c9c9;
+    width: 100% !important;
+    text-align: left !important;
+}
+
+.main{
+  background-color: #f2f5f7;
+}
+.formDescripe , .regForm form  {
+  padding: 0 30px ;
+}
+.regForm form {
+text-align: left !important;
+}
+.regForm form button.btnConfirm{
+  text-align: center !important;
+  background-color: #006cb6;
+  background-color: #006cb6; 
+  font-size: 1.125rem;
+  color: #fff;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 4px;
+  height: 50px;
+  line-height: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
+  min-width: 175px;
+  display: block;
+  margin: 20px auto;
+}
+
+.formHeader{
+  background-color: #ffcf00;
+  padding: 10px;
+}
+.formHeader span{
+ font-size: 24px;
+ font-weight: bold;
+ padding: 10px;
+}
+.formHeader img {
+height: 40px;
+
+}
+.formDescripe p{
+  font-weight: bold;
+  font-size: 24px;
+}
+.formDescripe .loginBtn{
+ background-color: #006cb6; 
+ font-size: 1.125rem;
+ color: #fff;
+ font-weight: 400;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ border-radius: 4px;
+ height: 50px;
+ line-height: 35px;
+ padding-left: 25px;
+ padding-right: 25px;
+ min-width: 175px;
+}
+.formDescripe .loginBtn:hover{
+  color: #fff;
+}
+.break h1{
+  font-size: 16px !important;
+}
+.appleLogin{
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 7px 50px !important;
+}
+.regLink , .regLink:hover{
+  color: #006cb6 !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button.searchBtn,button.searchBtn:hover,button.searchBtn:focus{
+  background-color: #fff;
+  color: #006cb6;
+  border:none;
+  border-radius: 20px;
+  box-shadow:none;
+}
+
+.search{
+border-radius: 20px;
+background: #fff;
+padding: 0 !important;
+margin-right: 20px;
+}
+.inputSearch{
+  border:none;
+  border-radius: 20px;
+  padding: 5px 50px 5px 0;
+}
