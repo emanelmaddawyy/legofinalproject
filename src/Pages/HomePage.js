@@ -186,7 +186,7 @@ class HomePage extends Component {
 								ninjas={this.state.ninjas}
 								ArchitectureAccordion={this.state.ArchitectureAccordion}
 							/>
-						)}
+						)} 
 						path='/architecture'
 						exact></Route>
 
