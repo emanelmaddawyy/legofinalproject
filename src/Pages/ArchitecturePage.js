@@ -5,7 +5,7 @@ import Filter from "../components/Filter/Filter";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+//import '@fortawesome/fontawesome-free/css/all.min.css';
 import Logo from '../21042.jpeg';
 import Logo1 from '../21043.jpeg';
 import Logo2 from '../21045.jpeg';

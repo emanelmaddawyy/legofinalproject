@@ -4,6 +4,7 @@ import LegoLifePage from './LegoLifePage';
 import ProductPage from "./ProductPage";
 import './HomePage.css';
 
+import Header from '../components/Header/Header';
 import Slider from '../components/Slider/Slider';
 import CardContainer from '../components/CardContent/CardContainer';
 
@@ -166,6 +167,7 @@ class HomePage extends Component {
 	render() {
 		return (
 			<>
+      <Header />
 				<BrowserRouter>
 					<Route
 						component={() => <LegoLifePage />}
