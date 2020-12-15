@@ -90,7 +90,7 @@
       "id": 1,
       "title": "new",
       "display": [{
-          "img": "/bag.png",
+          "img": "/75257.jpg",
           "imgTitle": "pic1"
         },
         {
@@ -98,7 +98,7 @@
           "imgTitle": "pic1"
         },
         {
-          "img": "/bag.png",
+          "img": "/75257.jpg",
           "imgTitle": "pic1"
         }
       ]
@@ -107,7 +107,7 @@
       "id": 2,
       "title": "bestseller",
       "display": [{
-          "img": "/bag.png",
+          "img": "/75257.jpg",
           "imgTitle": "pic1"
         },
         {
@@ -115,7 +115,7 @@
           "imgTitle": "pic1"
         },
         {
-          "img": "/bag.png",
+          "img": "/75257.jpg",
           "imgTitle": "pic1"
         }
       ]
@@ -124,15 +124,15 @@
       "id": 3,
       "title": "Age",
       "display": [{
-          "img": "/bag.png",
+          "img": "/40186.jpeg",
           "age": "pic1"
         },
         {
-          "img": "/bag.png",
+          "img": "/40146.jpeg",
           "age": "pic1"
         },
         {
-          "img": "/bag.png",
+          "img": "/40186.jpeg",
           "age": "pic1"
         }
       ]
@@ -141,32 +141,32 @@
       "id": 4,
       "title": "Price",
       "display": [{
-          "img": "/bag.png",
+          "img": "/21043.jpeg",
           "price": "100$"
         },
         {
-          "img": "/bag.png",
-          "age": "33$"
+          "img": "/21042.jpeg",
+          "age": "3"
         },
         {
-          "img": "/bag.png",
-          "age": "22$"
+          "img": "/21043.jpeg",
+          "age": "2"
         }
       ]
     },
     {
       "id": 5,
       "title": "product type",
-      "display": [
-        "Architecture",
-        "Batman",
-        "Boost",
-        "City",
-        "Classic",
-        "DC",
-        "Creator",
-        "DOTS",
-        "Disney"
+      "display": [{
+        "imgTitle":"Architecture"},
+        {"imgTitle":"Batman"},
+        {"imgTitle":"Boost"},
+        {"imgTitle":"City"},
+        {"imgTitle":"Classic"},
+        {"imgTitle":"DC"},
+        {"imgTitle":"Creator"},
+        {"imgTitle": "DOTS"},
+        {"imgTitle":"Disney"}
       ]
     },
     {

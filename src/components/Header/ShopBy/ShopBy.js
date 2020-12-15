@@ -22,6 +22,7 @@ export default class ShopBy extends Component{
         <Dropdown.Toggle caret>Shop By</Dropdown.Toggle>
         <Dropdown.Menu>
         <Tab.Container id="left-tabs-example" defaultActiveKey={1}>
+          <Container className="p-0">
           <Row className="tabsWidth"> 
             <Col sm={3}>
               <Nav variant="pills" className="flex-column">
@@ -36,22 +37,28 @@ export default class ShopBy extends Component{
               <Tab.Content>
                 {this.state.shopby.map(item => (
                   <Tab.Pane key={item.id} eventKey={item.id}>
+                    <ul className="shopstyle">
                     {item.display.map(displayItem => (
                     <>
-                    <ul>
                       <li>   
-                        <img src={displayItem.img}/>
+                        <img src={displayItem.img} className="img-fluid"/>
                           <br/>
-                        <p>{displayItem.imgTitle}</p></li>
-                    </ul>
-                   
+                        <p>{displayItem.imgTitle}</p>
+                        <p>{displayItem.age}</p>
+                        <p>{displayItem.price}</p>
+
+
+                        </li>                   
                     </>
                     ))}
+                 </ul>
                   </Tab.Pane>
                 ))}
               </Tab.Content>
             </Col>
           </Row>
+          </Container>
+         
         </Tab.Container>
         </Dropdown.Menu>
       </Dropdown>

@@ -87,7 +87,7 @@ Remember to log out afterwards if you’re using a shared computer, for example 
    <button type="submit" className="btn btnConfirm"> Log In </button> 
     </form>
      <div className="forgetLinks">
-     <Link to="/forgetName" className="regLink px-2">Forget username? </Link> 
+     <Link to="/forgetusername" className="regLink px-2">Forget username? </Link> 
      |
      <Link to="/forgetpassword" className="regLink px-2">Forget password? </Link> 
 

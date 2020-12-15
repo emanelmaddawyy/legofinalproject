@@ -7,6 +7,7 @@ import './HomePage.css';
 import Header from '../components/Header/Header';
 import Slider from '../components/Slider/Slider';
 import CardContainer from '../components/CardContent/CardContainer';
+import Productslider from '../components/Slider/productSlider'
 
 import {
 	StarOutlined,
@@ -168,18 +169,16 @@ class HomePage extends Component {
 		return (
 			<>
       <Header />
+      <Slider /> 
+      <Productslider/>
+
 				<BrowserRouter>
 					<Route
 						component={() => <LegoLifePage />}
 						path='/legolife'
 						exact></Route>
 
-					<Route component={() => <Slider />} path='/' exact></Route>
-					<Route component={() => <Slider />} path='/architecture' exact></Route>
-
-					<Route component={() => <Slider />} path='/architecture/:id' exact></Route>
-
-					<Route component={() => <ProductPage />} path='/architecture/:id' exact></Route>
+					<Route component={() => <ProductPage />} path='/architecture/:' exact></Route>
 
 					<Route
 						component={() => (

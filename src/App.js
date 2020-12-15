@@ -14,6 +14,9 @@ import WishlistPage from './Pages/WishlistPage';
 import CartPage from './Pages/CartPage';
 import OffersPage from './Pages/Offers&Sale';
 import ExclusivesPage from './Pages/ExclusivesPage';
+import ForgetUsernamePage from './Pages/ForgetUsername';
+import ForgetPasswordPage from './Pages/ForgetPasswordPage';
+import ArchitecturePage from './Pages/ArchitecturePage';
 
 
 
@@ -80,6 +83,23 @@ function App() {
         exact 
         component={() => <ExclusivesPage/>}>
       </Route>
+      <Route 
+        path="/forgetusername" 
+        exact 
+        component={() => <ForgetUsernamePage/>}>
+      </Route>
+      <Route 
+        path="/forgetpassword" 
+        exact 
+        component={() => <ForgetPasswordPage/>}>
+      </Route>
+        <Route 
+        path="/architecture" 
+        exact 
+        component={ArchitecturePage}>
+      </Route>
+     
+      
     </Router>
   );
 }
