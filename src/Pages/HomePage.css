@@ -1,0 +1,9 @@
+@font-face {
+    font-family: cera;
+    src: url(../fonts/CeraProMedium.ttf)
+  }
+
+  body{
+      font-family: cera,sans-serif;
+      line-height: 1.5;
+  }

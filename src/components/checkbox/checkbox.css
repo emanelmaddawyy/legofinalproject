@@ -1,0 +1,33 @@
+
+.checkmark {
+	display: block;
+	width: 25px;
+	height: 25px;
+	/* background-color: #ddd; */
+	border: 1px solid rgb(224, 224, 224);
+	overflow: hidden;
+	position: relative;
+	transition: background-color 0.4s;
+}
+
+/* #check:checked ~ .checkmark {
+	background-color: #08bb68;
+} */
+
+.checkmark::after {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 15px;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	top: 40%;
+	left: 50%;
+    transform: translate(-50%, -50%) rotateZ(40deg);
+    opacity: 0;
+    transition: background-color 0.4s;
+}
+
+#check:checked ~ .checkmark::after {
+    opacity: 1;
+}

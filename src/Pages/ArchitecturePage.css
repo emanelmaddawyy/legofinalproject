@@ -1,0 +1,95 @@
+@import '~antd/dist/antd.css';
+
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.ant-carousel .slick-dots-bottom {
+	bottom: -10px;
+}
+.ant-carousel .slick-dots li {
+	background-color: blue;
+}
+.ant-carousel .slick-dots li.slick-active button {
+	background-color: grey;
+}
+
+.pImg {
+	transition: all 1s;
+}
+
+.pImg:hover {
+	transition: all 0.5s;
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.pImg2 {
+	margin: 100px 0;
+}
+
+button.add {
+	background-color: rgb(253, 128, 36);
+}
+button.add:hover {
+	background-color: transparent;
+	border: 1px solid rgb(253, 128, 36);
+}
+.love:hover {
+	cursor: pointer;
+}
+
+.react-multi-carousel-dot button {
+	width: 40vh !important;
+	height: 0px !important;
+	border-radius: 0 !important;
+	margin-right: 0px !important;
+	background-color: rgba(128, 128, 128, 0.3) !important;
+}
+.react-multi-carousel-dot button:hover {
+	background-color: rgb(128, 128, 128) !important;
+}
+.react-multi-carousel-dot--active button {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.wish i {
+	color: rgb(4, 4, 196);
+}
+
+/* ===================================================================================================================
+*/

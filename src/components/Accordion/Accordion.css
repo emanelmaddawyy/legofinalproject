@@ -1,0 +1,101 @@
+.accordion-section {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.accordion-title {
+	background-color: #fff;
+	color: #444;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	outline: none;
+	transition: background-color 0.6s ease;
+	width: 100%;
+	cursor: pointer;
+	border: 0;
+	padding: 0;
+	box-shadow: none;
+}
+
+.accordion-title:focus {
+	outline: 0px;
+}
+
+.accordion-icon {
+	margin-left: auto;
+	transition: transform 0.6s ease;
+	padding: 10px;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+
+.accordion-content {
+	background-color: white;
+	overflow: hidden;
+  transition: max-height 0.6s ease;
+  /* padding: 0px 0.75rem 0.75rem; */
+}
+
+.accordion-text {
+	font-weight: 500;
+	font-size: 0.875rem;
+}
+
+.titleStyle {
+	font-weight: 700;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	text-align: left;
+	display: flex;
+	padding: 1.125rem;
+	margin-bottom: 0;
+}
+
+
+.accordionUlStyle {
+	/* padding:0px 0.75rem 0.75rem; */
+	padding-inline-start: 20px;
+}
+
+.accordionListStyle {
+	align-items: center;
+	align-items: stretch;
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.1875rem;
+	list-style-type: none;
+	padding: 0.38rem 0px;
+  position: relative;
+}
+
+input[type='checkbox'] {
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	height: 1.5625rem;
+	height: 25px;
+	justify-content: center;
+	margin-right: 1.25rem;
+	width: 1.5625rem;
+	width: 25px;
+}
+
+.checkbox-label{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	color: rgb(0, 0, 0);
+	}

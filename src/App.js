@@ -8,7 +8,7 @@ import UsersPage from './Pages/UsersPage';
 import AboutusPage from './Pages/AboutusPage'
 import VipPage from './Pages/VipPage';
 import FindstorePage from './Pages/FindstorePage';
-import LegolifePage from './Pages/LegolifePage';
+import LegoLifePage from './Pages/LegoLifePage';
 import KidsPage from './Pages/KidsPage';
 import WishlistPage from './Pages/WishlistPage';
 import CartPage from './Pages/CartPage';
@@ -19,7 +19,6 @@ import ExclusivesPage from './Pages/ExclusivesPage';
 
 function App() {
   return (
-    <>
     <Router>
       <Route 
         path="/" 
@@ -59,7 +58,7 @@ function App() {
       <Route 
         path="/legolife" 
         exact 
-        component={() => <LegolifePage/>}>
+        component={() => <LegoLifePage/>}>
       </Route>
       <Route 
         path="/kids" 
@@ -82,7 +81,6 @@ function App() {
         component={() => <ExclusivesPage/>}>
       </Route>
     </Router>
-    </>
   );
 }
 
