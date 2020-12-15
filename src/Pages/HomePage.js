@@ -3,16 +3,13 @@ import ArchitecturePage from './ArchitecturePage';
 import LegoLifePage from './LegoLifePage';
 import ProductPage from "./ProductPage";
 import './HomePage.css';
-
+import Productslider from '../components/Slider/productSlider';
 import Slider from '../components/Slider/Slider';
 import CardContainer from '../components/CardContent/CardContainer';
-
+import Cart from '../components/cart/cart.js';
 import {
-	StarOutlined,
 	StarFilled,
 	StarTwoTone,
-	HeartTwoTone,
-	HeartOutlined,
 } from '@ant-design/icons';
 
 const { Component } = require('react');
@@ -126,7 +123,52 @@ class HomePage extends Component {
 			{ title: 'Availability', filters: [{ Availability: 'Out Of Stock' }] },
 			{ title: 'Rating', filters: [{ Rating: this.fourStars() }] },
 		],
+		products: []
 	};
+
+	componentDidMount() {
+		this.state.products = localStorage.getItem('products')?JSON.parse(localStorage.getItem('products')):[];
+		this.setState({
+			products: this.state.products
+		})
+	  }
+	isAddedBefore(products, product){
+		const isFounded = products.find((p)=>{
+			return p.ID === product.ID;
+		})
+		if(!isFounded){	
+			return false;
+		}else{
+			isFounded.numberOfProduct +=1;
+			return true;
+		}
+	}
+	addProductToCart = (product)=>{
+		const is = this.isAddedBefore(this.state.products,product);
+		let newSetOfProducts;
+		if(is){
+
+			newSetOfProducts = [...this.state.products];
+		} else{
+			newSetOfProducts = [...this.state.products, product];
+		}
+		this.setState({
+			products: newSetOfProducts
+		})
+		localStorage.setItem("products", JSON.stringify(newSetOfProducts));
+	}
+	deleteProductFromCart = (id)=> {
+		let newSetOfProducts = [];
+		let required ;
+		this.state.products.forEach(product => {
+		if(product.ID!==id) newSetOfProducts.push(product);
+		else required = product;
+		})
+		localStorage.setItem("products", JSON.stringify(newSetOfProducts));
+		this.setState({
+			products: newSetOfProducts
+		  })
+	}
 
 	fourStars() {
 		return (
@@ -138,34 +180,12 @@ class HomePage extends Component {
 				<StarTwoTone twoToneColor='orange' />
 			</span>
 		);
-	}
-
-	addNinja = (ninja) => {
-		let newNinjas = [...this.state.ninjas, ninja];
-		this.setState({
-			ninjas: newNinjas,
-		});
-	};
-
-	deleteNinja = (id) => {
-		let ninjas = this.state.ninjas.filter((ninja) => {
-			return ninja.ID !== id;
-		});
-
-		/*let deletedNinja = this.state.ninjas.find(ninja => {
-          return ninja.id === id;
-        })
-        let newNinjas = [...this.state.ninjas];
-        newNinjas.splice(deletedNinja.id-1, 1);*/
-
-		this.setState({
-			ninjas: ninjas,
-		});
-	};
+	}	
 
 	render() {
 		return (
 			<>
+			<Productslider addProductToCart = {this.addProductToCart}/>
 				<BrowserRouter>
 					<Route
 						component={() => <LegoLifePage />}
@@ -178,6 +198,7 @@ class HomePage extends Component {
 					<Route component={() => <Slider />} path='/architecture/:id' exact></Route>
 
 					<Route component={() => <ProductPage />} path='/architecture/:id' exact></Route>
+					<Route component={() => <Cart products = {this.state.products} deleteProductFromCart={this.deleteProductFromCart}/>} path='/cart' exact></Route>
 
 					<Route
 						component={() => (

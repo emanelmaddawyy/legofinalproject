@@ -1,0 +1,54 @@
+import React from 'react';
+import {withRouter, Link} from 'react-router-dom';
+
+
+
+const Cart = ({products, deleteProductFromCart})=> {
+
+    const productsList = products.map((product, i) => {
+    return (true) ? (
+        <tr key = {product._id} className="p-0">
+            <td className="text-left align-self-center">
+                {product.ID} 
+            </td>
+           
+            <td className="text-left align-self-center">
+                   {product.name}
+                {/*<button className="btn btn-warning p-0 pl-2 pr-2 ml-2 mr-2" type="button">Edit</button>*/}
+                
+                {/*<Link to="/wishList {state: this.ninja}">add to</Link>*/}
+                
+                {/*<button onClick={()=> deleteNinja(ninja.ID)} className="btn text-primary p-0 pl-2 pr-2 ml-3 mr-3" type="button"><i className="far fa-heart"></i></button>*/}
+            </td>
+            <td className="text-left align-self-center">
+                {product.price}
+            </td>
+            <td className="text-left align-self-center">
+                {product.numberOfProduct}
+            </td>
+            <td className="text-center align-self-center">
+                <button onClick={()=> deleteProductFromCart(product.ID)} className="btn text-primary p-0 pl-2 pr-2 ml-3 mr-3" type="button">Delete</button>
+            </td>
+        </tr>) : null ;
+    })
+    return(
+        <>
+            <table className="table col-8 offset-2">
+                <thead className="thead-light">
+                    <tr className="">
+                        <th scope="col" className="text-left align-self-center">ID</th>
+                        <th scope="col" className="text-left align-self-center">Name</th>
+                        <th scope="col" className="text-left align-self-center">Price</th>
+                        <th scope="col" className="text-left align-self-center">Number of product</th>
+                        <th scope="col" className="text-left align-self-center">del</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { productsList }
+                </tbody>
+            </table>
+        </>
+    )
+}
+
+export default withRouter(Cart);

@@ -31,69 +31,31 @@ const responsive = {
     }
   };
 
-const Productslider = ()=> {
+const Productslider = ({addProductToCart})=> {
 
     const products =[
-        {ID:1, name: "Empire State Building", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc:'./21042.jpeg'},
-        {ID:2, name: "The White House", price: "110.99", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21043.jpeg'},
-        {ID:3, name: "Trafalgar Square", price: "98.99", imgSrc: '21046.jpeg', rating: 3, imgSrc: './21046.jpeg'},
-        {ID:4, name: "Statue of Liberty", price: "70.50", imgSrc: '21046.jpeg', rating: 2, imgSrc: './21045.jpeg'},
-        {ID:5, name: "San Francisco", price: "255.99", imgSrc: '21046.jpeg', rating: 4, imgSrc: './40367.jpeg'},
-        {ID:6, name: "Las Vegas", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc: './21043.jpeg'},
-        {ID:7, name: "Paris", price: "110.0", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21042.jpeg'},
-        {ID:8, name: "London", price: "98.0", imgSrc: '21046.jpeg', rating: 3, imgSrc: './40367.jpeg'}
+        {ID:1, name: "Empire State Building", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc:'./21042.jpeg', numberOfProduct: 1},
+        {ID:2, name: "The White House", price: "110.99", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21043.jpeg', numberOfProduct: 1},
+        {ID:3, name: "Trafalgar Square", price: "98.99", imgSrc: '21046.jpeg', rating: 3, imgSrc: './21046.jpeg', numberOfProduct: 1},
+        {ID:4, name: "Statue of Liberty", price: "70.50", imgSrc: '21046.jpeg', rating: 2, imgSrc: './21045.jpeg', numberOfProduct: 1},
+        {ID:5, name: "San Francisco", price: "255.99", imgSrc: '21046.jpeg', rating: 4, imgSrc: './40367.jpeg', numberOfProduct: 1},
+        {ID:6, name: "Las Vegas", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc: './21043.jpeg', numberOfProduct: 1},
+        {ID:7, name: "Paris", price: "110.0", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21042.jpeg', numberOfProduct: 1},
+        {ID:8, name: "London", price: "98.0", imgSrc: '21046.jpeg', rating: 3, imgSrc: './40367.jpeg', numberOfProduct: 1}
     ]
     
     const productList = products.map((product, i) => {
-        let rate = (()=>{
-            switch(product.rating){
-                case 1: 
-                    return <p> 
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/> 
-                            </p>;
-                break;
-                case 2:
-                    return <p> 
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/> 
-                             </p>;
-                break;
-                case 3:
-                    return <p> 
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/> 
-                            </p>;
-                break;
-                case 4:
-                    return <p> 
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarTwoTone twoToneColor="rgb(255, 213, 0)"/> 
-                            </p>;
-                break;
-                case 5:
-                    return <p> 
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                                <StarFilled style={{ fontSize: '16px', color: "rgb(255, 213, 0)" }}/>
-                            </p>;
-                break;
-            }    
-        })
+
+       
+        let ratingClal = (nOfStars)=>{
+            const filledStar = <StarFilled style={{ fontSize: '16px', color: 'rgb(255, 213, 0)' }}/>;
+            const emptyStar = <StarTwoTone twoToneColor="rgb(255, 213, 0)"/>;  
+            let result = [];
+            for(let i=0; i < 5; i++){
+                (i < nOfStars) ? result.push(filledStar): result.push(emptyStar);
+            }
+            return <p>{result}</p>;
+        }
        
     return (true) ? (    
                 <div class="mb-5 m-0">
@@ -105,9 +67,9 @@ const Productslider = ()=> {
                             <img class="image-fluid w-100 pImg p-3" src={product.imgSrc} alt=""/>
                         </div>
                             <p>{product.name}</p>
-                            <p class="">{ rate() }</p>
+                            <p class="">{ ratingClal(product.rating) }</p>
                             <p class="font-weight-bold">${product.price}</p>
-                            <button class="btn add col-12" >Add to Bag</button>
+                            <button class="btn add col-12" onClick = {()=>{addProductToCart(product)}} >Add to Bag</button>
                         </div>
                 </div>
         ) : null;
