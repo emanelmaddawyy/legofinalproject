@@ -14,7 +14,8 @@ import {
 	StarFilled,
 	StarTwoTone,
 	HeartTwoTone,
-	HeartOutlined,
+    HeartOutlined,
+    HeartFilled  
 } from '@ant-design/icons';
 
 const responsive = {
@@ -37,19 +38,19 @@ const responsive = {
 	},
 };
 
-const Architecture = ({ ArchitectureAccordion }) => {
+const Architecture = ({ ArchitectureAccordion, addProductToCart, addProductToWishlist}) => {
 	// console.log('ArchitectureAccordion', ArchitectureAccordion);
 
 	const products =[
-        {ID:1, name: "Empire State Building", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc:'./21042.jpeg', avaliable: true},
-        {ID:2, name: "The White House", price: "110.99", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21043.jpeg', avaliable: false},
-        {ID:3, name: "Trafalgar Square", price: "98.99", imgSrc: '21046.jpeg', rating: 3, imgSrc: './21046.jpeg', avaliable: true},
-        {ID:4, name: "Statue of Liberty", price: "70.50", imgSrc: '21046.jpeg', rating: 2, imgSrc: './21045.jpeg', avaliable: false},
-        {ID:5, name: "San Francisco", price: "255.99", imgSrc: '21046.jpeg', rating: 4, imgSrc: './40367.jpeg', avaliable: true},
-        {ID:6, name: "Las Vegas", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc: './21043.jpeg', avaliable: false},
-        {ID:7, name: "Paris", price: "110.0", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21042.jpeg', avaliable: true},
-        {ID:8, name: "London", price: "98.0", imgSrc: '21046.jpeg', rating: 3, imgSrc: './40367.jpeg', avaliable: true}
-	]
+        {ID:1, name: "Empire State Building", price: "119.99",  rating: 1, imgSrc:'./21042.jpeg', avaliable: true, numberOfProduct: 1, isInWishlist: false},
+        {ID:2, name: "The White House", price: "110.99",  rating: 5, imgSrc: './21043.jpeg', avaliable: false, numberOfProduct: 1, isInWishlist: false},
+        {ID:3, name: "Trafalgar Square", price: "98.99",  rating: 3, imgSrc: './21046.jpeg', avaliable: true, numberOfProduct: 1, isInWishlist: false},
+        {ID:4, name: "Statue of Liberty", price: "70.50",  rating: 2, imgSrc: './21045.jpeg', avaliable: false, numberOfProduct: 1, isInWishlist: false},
+        {ID:5, name: "San Francisco", price: "255.99",  rating: 4, imgSrc: './40367.jpeg', avaliable: true, numberOfProduct: 1, isInWishlist: false},
+        {ID:6, name: "Las Vegas", price: "119.99",  rating: 1, imgSrc: './21043.jpeg', avaliable: false, numberOfProduct: 1, isInWishlist: false},
+        {ID:7, name: "Paris", price: "110.0",  rating: 5, imgSrc: './21042.jpeg', avaliable: true, numberOfProduct: 1, isInWishlist: false},
+        {ID:8, name: "London", price: "98.0",  rating: 3, imgSrc: './40367.jpeg', avaliable: true, numberOfProduct: 1, isInWishlist: false}
+    ]
 	
 	const productList = products.map((product) => {
 
@@ -64,10 +65,31 @@ const Architecture = ({ ArchitectureAccordion }) => {
         }
 
         let isAvaliable = ()=>{
-            const avaliable = <button class="btn add col-12 p-2" >Add to Bag</button>;
+            const avaliable = <button class="btn add col-12 p-2" onClick = {()=>{addProductToCart(product)}}>Add to Bag</button>;
             const outOfStock = <button disabled class="btn outOfStock col-12 p-2" >Out of stock</button>;
             return (product.avaliable)?avaliable:outOfStock;
         }
+
+        let isWishListProduct = (id)=>{
+            let wishlist = localStorage.getItem('wishlist')?JSON.parse(localStorage.getItem('wishlist')):[];
+            const FilledHeart = <><HeartFilled  style = {{cursor: "auto", fontSize: '18px', color: 'darkblue', backgroundColor: "#eee", margin: '2px', padding:'1px'}}/><span class="font-weight-bold" style={{fontSize:'14px'}} >Added to Wishlist</span></>;
+            const OutlinedHeart =  <><HeartOutlined  style = {{fontSize: '16px', color: 'darkblue', margin: '2px', paddingRight:'1px'}}/><span class="font-weight-bold" style={{fontSize:'14px'}} >Add to Wishlist</span></>;
+            let required;
+            wishlist.forEach(product => {
+                if(product.ID===id) required = product;
+            })
+            let result = [];
+            if(required) {
+                if(required.isInWishlist)
+                result.push(FilledHeart)
+                return <>{result}</>
+            }
+            else {
+                result.push(OutlinedHeart)
+                return <>{result}</>
+            }
+        }
+       
        
     return (true) ? (    
                 <div class="row col-6 col-lg-4 border border-1 m-0">
@@ -81,9 +103,8 @@ const Architecture = ({ ArchitectureAccordion }) => {
                         <p class="">{ ratingClal(product.rating) }</p>
                         <p class="font-weight-bold">${product.price}</p>
                         {isAvaliable()}
-                        <button class="btn wish text-left p-0 pt-2" >
-                            <HeartOutlined  style = {{fontSize: '16px', color: 'darkblue', margin: '2px', paddingRight:'1px'}}/>
-                            <span class="font-weight-bold" style={{fontSize:'14px'}} >Add to Wishlist</span>
+                        <button class="btn wish text-left p-0 pt-2" onClick = {(e)=>{addProductToWishlist(product, e)}}>
+                            {isWishListProduct(product.ID)}
                         </button>
 
                     </div>

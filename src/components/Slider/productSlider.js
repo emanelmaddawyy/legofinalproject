@@ -3,11 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Link ,withRouter} from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './productSlider.css';
+import './ProductSlider.css';
 import {
     StarFilled,
     StarTwoTone,
-    HeartOutlined  
+    HeartOutlined,
+    HeartFilled  
   } from '@ant-design/icons';
 
 
@@ -31,17 +32,17 @@ const responsive = {
     }
   };
 
-const Productslider = ({addProductToCart})=> {
+const ProductSlider = ({addProductToCart, addProductToWishlist})=> {
 
     const products =[
-        {ID:1, name: "Empire State Building", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc:'./21042.jpeg', numberOfProduct: 1},
-        {ID:2, name: "The White House", price: "110.99", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21043.jpeg', numberOfProduct: 1},
-        {ID:3, name: "Trafalgar Square", price: "98.99", imgSrc: '21046.jpeg', rating: 3, imgSrc: './21046.jpeg', numberOfProduct: 1},
-        {ID:4, name: "Statue of Liberty", price: "70.50", imgSrc: '21046.jpeg', rating: 2, imgSrc: './21045.jpeg', numberOfProduct: 1},
-        {ID:5, name: "San Francisco", price: "255.99", imgSrc: '21046.jpeg', rating: 4, imgSrc: './40367.jpeg', numberOfProduct: 1},
-        {ID:6, name: "Las Vegas", price: "119.99", imgSrc: '21046.jpeg', rating: 1, imgSrc: './21043.jpeg', numberOfProduct: 1},
-        {ID:7, name: "Paris", price: "110.0", imgSrc: '21046.jpeg', rating: 5, imgSrc: './21042.jpeg', numberOfProduct: 1},
-        {ID:8, name: "London", price: "98.0", imgSrc: '21046.jpeg', rating: 3, imgSrc: './40367.jpeg', numberOfProduct: 1}
+        {ID:1, name: "Empire State Building", price: "119.99", rating: 1, imgSrc:'./21042.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:2, name: "The White House", price: "110.99", rating: 5, imgSrc: './21043.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:3, name: "Trafalgar Square", price: "98.99", rating: 3, imgSrc: './21046.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:4, name: "Statue of Liberty", price: "70.50", rating: 2, imgSrc: './21045.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:5, name: "San Francisco", price: "255.99", rating: 4, imgSrc: './40367.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:6, name: "Las Vegas", price: "119.99", rating: 1, imgSrc: './21043.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:7, name: "Paris", price: "110.0", rating: 5, imgSrc: './21042.jpeg', numberOfProduct: 1, isInWishlist: false},
+        {ID:8, name: "London", price: "98.0", rating: 3, imgSrc: './40367.jpeg', numberOfProduct: 1, isInWishlist: false}
     ]
     
     const productList = products.map((product, i) => {
@@ -56,14 +57,36 @@ const Productslider = ({addProductToCart})=> {
             }
             return <p>{result}</p>;
         }
+
+        let isWishListProduct = (id)=>{
+            let wishlist = localStorage.getItem('wishlist')?JSON.parse(localStorage.getItem('wishlist')):[];
+            const FilledHeart = <HeartFilled  style = {{cursor: "auto", fontSize: '18px', color: 'darkblue', backgroundColor: "#eee", margin: '2px', padding:'1px'}}/>;
+            const OutlinedHeart = <HeartOutlined  style = {{fontSize: '18px', color: 'darkblue', backgroundColor: "#eee", margin: '2px', padding:'1px'}}/>;
+            let required;
+            wishlist.forEach(product => {
+                if(product.ID===id) required = product;
+            })
+            let result = [];
+            if(required) {
+                if(required.isInWishlist)
+                result.push(FilledHeart)
+                return <>{result}</>
+            }
+            else {
+                result.push(OutlinedHeart)
+                return <>{result}</>
+            }
+        }
        
     return (true) ? (    
                 <div class="mb-5 m-0">
                     <div class="p-3">
                         <div class="border border-1">
-                            <span class="love">
-                                <HeartOutlined  style = {{fontSize: '18px', color: 'darkblue', backgroundColor: "#eee", margin: '2px', padding:'1px'}}/>
-                            </span>
+                            <button class="btn p-0" onClick = {(e)=>{addProductToWishlist(product, e)}}>
+                                <span class="love">
+                                    {isWishListProduct(product.ID)}
+                                </span>
+                            </button>
                             <img class="image-fluid w-100 pImg p-3" src={product.imgSrc} alt=""/>
                         </div>
                             <p>{product.name}</p>
@@ -101,4 +124,4 @@ const Productslider = ({addProductToCart})=> {
     )
 }
 
-export default Productslider;
+export default ProductSlider;
