@@ -31,9 +31,6 @@ const WishList = ({wishlist, addProductToCart, deleteProductFromWishlist})=> {
                 {product.price}
             </td>
             <td className="text-left align-self-center">
-                {product.numberOfProduct}
-            </td>
-            <td className="text-left align-self-center">
                 <button class="btn wish text-left p-0 pt-2" onClick = {()=>{addProductToCart(product)}}>
                     <HeartOutlined  style = {{fontSize: '16px', color: 'darkblue', margin: '2px', paddingRight:'1px'}}/>
                 </button>
@@ -52,7 +49,6 @@ const WishList = ({wishlist, addProductToCart, deleteProductFromWishlist})=> {
                         <th scope="col" className="text-left align-self-center">ID</th>
                         <th scope="col" className="text-left align-self-center">Name</th>
                         <th scope="col" className="text-left align-self-center">Price</th>
-                        <th scope="col" className="text-left align-self-center">Number of product</th>
                         <th scope="col" className="text-left align-self-center">Add to Bag</th>
                         <th scope="col" className="text-left align-self-center">del</th>
                     </tr>
