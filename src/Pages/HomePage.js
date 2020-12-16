@@ -125,15 +125,27 @@ class HomePage extends Component {
 			{ title: 'Rating', filters: [{ Rating: this.fourStars() }] },
 		],
 		products: [],
-		wishlist: []
+		wishlist: [],
+		productsNumber: 0,
+		wishlistNumber: 0
 	};
 
+	numberOfProductsCalc = (products)=>{
+		let result = 0;
+		products.forEach(product => {
+			result += (product.numberOfProduct);
+		})
+		console.log(result);
+		return result;
+	}
 	componentDidMount() {
 		this.state.products = localStorage.getItem('products')?JSON.parse(localStorage.getItem('products')):[];
 		this.state.wishlist = localStorage.getItem('wishlist')?JSON.parse(localStorage.getItem('wishlist')):[];
 		this.setState({
 			wishlist: this.state.wishlist,
-			products: this.state.products
+			products: this.state.products,
+			productsNumber: this.numberOfProductsCalc(this.state.products),
+			wishlistNumber: this.state.wishlist.length
 		})
 	  }
 	isAddedBefore(products, product){
@@ -165,10 +177,16 @@ class HomePage extends Component {
 			newSetOfProducts = [...this.state.wishlist];
 		} else if(!is){
 			newSetOfProducts = [...this.state.wishlist, product];
+			this.state.wishlistNumber += 1;
 		}
-		this.deleteProductFromCart(product.ID);
+		const isInCart = this.isAddedBefore(this.state.products,product);
+		if(isInCart){
+			this.deleteProductFromCart(product);
+		}
+		
 		this.setState({
-			wishlist: newSetOfProducts
+			wishlist: newSetOfProducts,
+			wishlistNumber: this.state.wishlist.length+1
 		})
 		e.target.innerHTML = '<path d="M923 283.6a260.04 260.04 0 00-56.9-82.8 264.4 264.4 0 00-84-55.5A265.34 265.34 0 00679.7 125c-49.3 0-97.4 13.5-139.2 39-10 6.1-19.5 12.8-28.5 20.1-9-7.3-18.5-14-28.5-20.1-41.8-25.5-89.9-39-139.2-39-35.5 0-69.9 6.8-102.4 20.3-31.4 13-59.7 31.7-84 55.5a258.44 258.44 0 00-56.9 82.8c-13.9 32.3-21 66.6-21 101.9 0 33.3 6.8 68 20.3 103.3 11.3 29.5 27.5 60.1 48.2 91 32.8 48.9 77.9 99.9 133.9 151.6 92.8 85.7 184.7 144.9 188.6 147.3l23.7 15.2c10.5 6.7 24 6.7 34.5 0l23.7-15.2c3.9-2.5 95.7-61.6 188.6-147.3 56-51.7 101.1-102.7 133.9-151.6 20.7-30.9 37-61.5 48.2-91 13.5-35.3 20.3-70 20.3-103.3.1-35.3-7-69.6-20.9-101.9z"></path>';
 		e.target.style = "cursor: auto";
@@ -183,7 +201,8 @@ class HomePage extends Component {
 		})
 		localStorage.setItem("wishlist", JSON.stringify(newSetOfProducts));
 		this.setState({
-			wishlist: newSetOfProducts
+			wishlist: newSetOfProducts,
+			wishlistNumber: this.state.wishlist.length-1,
 		  })
 	}
 	addProductToCart = (product)=>{
@@ -194,21 +213,25 @@ class HomePage extends Component {
 		} else{
 			newSetOfProducts = [...this.state.products, product];
 		}
+		this.state.productsNumber += 1;
 		this.setState({
-			products: newSetOfProducts
+			products: newSetOfProducts,
+			productsNumber: this.state.productsNumber
 		})
 		localStorage.setItem("products", JSON.stringify(newSetOfProducts));
 	}
-	deleteProductFromCart = (id)=> {
+	deleteProductFromCart = (p)=> {
 		let newSetOfProducts = [];
-		let required ;
+		let required;
 		this.state.products.forEach(product => {
-		if(product.ID!==id) newSetOfProducts.push(product);
+		if(product.ID!==p.ID) newSetOfProducts.push(product);
 		else required = product;
 		})
 		localStorage.setItem("products", JSON.stringify(newSetOfProducts));
+		this.state.productsNumber -= p.numberOfProduct;
 		this.setState({
-			products: newSetOfProducts
+			products: newSetOfProducts,
+			productsNumber: this.state.productsNumber
 		  })
 	}
 	
@@ -227,6 +250,8 @@ class HomePage extends Component {
 	render() {
 		return (
 			<>
+			<span>Cart: {this.state.productsNumber} </span>
+			<span>Wishlist: {this.state.wishlistNumber} </span>
 			<ProductSlider addProductToCart = {this.addProductToCart} addProductToWishlist = {this.addProductToWishlist}/>
 				<BrowserRouter>
 					<Route

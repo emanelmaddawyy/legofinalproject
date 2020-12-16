@@ -39,7 +39,7 @@ const Cart = ({products, addProductToWishlist, deleteProductFromCart})=> {
                 </button>
             </td>
             <td className="text-center align-self-center">
-                <button onClick={()=> deleteProductFromCart(product.ID)} className="btn text-primary p-0 pl-2 pr-2 ml-3 mr-3" type="button">Delete</button>
+                <button onClick={()=> deleteProductFromCart(product)} className="btn text-primary p-0 pl-2 pr-2 ml-3 mr-3" type="button">Delete</button>
             </td>
         </tr>) : null ;
     })
