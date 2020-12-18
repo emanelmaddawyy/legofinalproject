@@ -5,15 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faAppleAlt} from '@fortawesome/free-solid-svg-icons';
 import {  faCoffee } from '@fortawesome/fontawesome-free-solid';
 import './Auth.css';
+import LoggedUserModule from '../modules/LoggedUserModule';
 
 
 const { Component } = require("react");
-class RegisterPage extends Component{
+class LoginPage extends Component{
+  loggedModule = new LoggedUserModule();
+
   state={
     users:{
       email:'',
-      password:'',
-      birthdate:''
+      password:''
     }
   }
 
@@ -28,26 +30,20 @@ class RegisterPage extends Component{
       password : e.target.value
     })
   }
-  birthdateChangeHandeler =(e)=>{
-    this.setState({
-      birthdate : e.target.value
-    })
-  }
+
   submitHandeler = async (e) => {
     e.preventDefault();
     
     const reqBody = {
       email: this.state.email,
       password: this.state.password,
-      birthDate: this.state.birthdate
     }
 
     try {
-        const response = await Axios.post('http://localhost:3001/auth/register', reqBody);
-        if (response.status === 201) {
-          // successful
-          // redirect
-          this.props.history.push('/users');
+        const response = await Axios.post('http://localhost:3001/auth/login', reqBody);
+        if (response.status === 200) {
+          this.loggedModule.setLoggedUser(response.data);
+          this.props.history.push('/');
         } else {
           alert("Something went wrong");
         } 
@@ -57,7 +53,6 @@ class RegisterPage extends Component{
   }
   render(){
     return(<>
-
       <div className="main">
         <div className="regForm">
           <div className="formHeader">
@@ -121,4 +116,4 @@ Remember to log out afterwards if you’re using a shared computer, for example 
     </>)
   }
 }
-export default withRouter(RegisterPage);
+export default withRouter(LoginPage);

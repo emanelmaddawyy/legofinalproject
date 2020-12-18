@@ -163,6 +163,10 @@ ul.liststyle li {
   padding: 10px;
 }
 
+ul.liststyle li a {
+  display: inline;
+}
+
 ul.interestliststyle {
   width: calc(60%);
   -webkit-column-count: 4;

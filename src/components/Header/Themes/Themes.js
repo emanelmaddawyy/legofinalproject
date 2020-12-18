@@ -1,16 +1,35 @@
 import { Component } from "react"
 import { Nav, Container ,Dropdown , Row, Col} from 'react-bootstrap';
+import {Link, withRouter} from 'react-router-dom';
+import Axios from 'axios';
 import './themes.css';
 import data from "../../../api/data.json";
 
 export default class Themes extends Component{
   state = {
     isOpen1: false,
-    themes: data.themes
+    themes: []
   }
+
   toggle1() {
     this.setState({ ...this.state, isOpen1: !this.state.isOpen1 });
   }
+
+  componentDidMount = async()=>{
+  try {
+    const response = await Axios.get('http://localhost:3001/themes');
+    if (response.status === 200) {
+       this.setState({
+        themes : response.data
+       })
+    } else {
+      alert("Something went wrong");
+    } 
+  } catch (error) {
+    alert(error);
+  }
+}
+
 
   render(){
     console.log(this.state.themes)
@@ -21,7 +40,9 @@ export default class Themes extends Component{
           <div>
           <ul className="list-unstyled liststyle">
             {this.state.themes.map((item, index) => {
-              return(<li>{item.title}</li>);
+              return(<li key={item._id}>
+                <Link to={'/theme/' + item._id}>{item.name}</Link>
+                </li>);
             })}
           </ul>
           </div>

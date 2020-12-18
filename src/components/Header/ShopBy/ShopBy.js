@@ -46,8 +46,6 @@ export default class ShopBy extends Component{
                         <p>{displayItem.imgTitle}</p>
                         <p>{displayItem.age}</p>
                         <p>{displayItem.price}</p>
-
-
                         </li>                   
                     </>
                     ))}

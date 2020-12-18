@@ -129,6 +129,9 @@ ul.liststyle{
     column-fill: balance;
     li{
       padding: 10px;
+      a{
+        display: inline;
+      }
     }
 }
 ul.interestliststyle{

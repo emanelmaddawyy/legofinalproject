@@ -13,7 +13,9 @@ class RegisterPage extends Component{
     users:{
       email:'',
       password:'',
-      birthdate:''
+      birthdate:'',
+      country:'',
+      remember:''
     }
   }
 
@@ -33,13 +35,26 @@ class RegisterPage extends Component{
       birthdate : e.target.value
     })
   }
+  countryChangeHandeler =(e)=>{
+    this.setState({
+      country : e.target.value
+    })
+  }
+  rememberChangeHandeler =(e)=>{
+    this.setState({
+      remember : e.target.value
+    })
+  }
   submitHandeler = async (e) => {
     e.preventDefault();
     
     const reqBody = {
       email: this.state.email,
       password: this.state.password,
-      birthDate: this.state.birthdate
+      birthDate: this.state.birthdate,
+      country :this.state.country,
+      remember :this.state.remember
+      
     }
 
     try {
@@ -47,7 +62,7 @@ class RegisterPage extends Component{
         if (response.status === 201) {
           // successful
           // redirect
-          this.props.history.push('/users');
+          this.props.history.push('/login');
         } else {
           alert("Something went wrong");
         } 
@@ -107,7 +122,7 @@ class RegisterPage extends Component{
      </div>
      <div class="form-group my-4" >
     <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="exampleFormControlSelect1" value={this.state.country} onChange={this.countryChangeHandeler}>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -116,7 +131,7 @@ class RegisterPage extends Component{
     </select>
   </div>
   <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+  <input class="form-check-input" type="checkbox" value={this.state.remember} onChange={this.rememberChangeHandeler} id="defaultCheck1"/>
   <label class="form-check-label" for="defaultCheck1">
 <Link>I accept the terms and Conditions</Link> <br/>
   When you agree to the Terms and Conditions you also consent to our use of your personal information to process and operate your LEGO® Account. To see how to control your personal data, please see our privacy policy.

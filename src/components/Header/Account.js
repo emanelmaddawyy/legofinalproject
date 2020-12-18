@@ -1,14 +1,25 @@
 import { Button, Form, Modal} from 'react-bootstrap';
 import {useState} from 'react';
+import { useHistory } from "react-router";
 import {Link} from 'react-router-dom';
+import '../../Pages/Auth.css';
+import LoggedUserModule from '../../modules/LoggedUserModule';
 
 
-function Account() {
+
+function Account(props) {
+  const loggedModule = new LoggedUserModule();
+
   const [show, setShow] = useState(false);
-  const [logged,setLogged] = useState(false)
+  const history = useHistory();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const loggedUser = loggedModule.getLoggedUser();
+  const logOut = (e) => {
+    e.target.reset();
+    loggedModule.logout();
+    history.push("/login")
+  }
   return (
     <>
      <img src="../../../account.png" className="img-fluid topHeaderImg "/>
@@ -21,13 +32,13 @@ function Account() {
           <Modal.Title>Account</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img className="pr-3" src="../../Lego-logo.jpeg"/>
+        {loggedUser ? loggedUser.email : <><img className="pr-3" src="../../Lego-logo.jpeg"/>
           <span className="ml-3 boldText">Sign In to your LEGO® Account</span>
-          <Link to="/Login" className="btn  w-100 p-2 my-4 text-center signIn"> sign in </Link>
-          <div className="d-flex">   
-            <sapn>Don't have an account?</sapn>
-            <Link to="/Register" className="register pl-3">Register</Link>
-          </div>
+      <Link to="/Login" className="btn  w-100 p-2 my-4 text-center signIn"> sign in </Link>
+      <div className="d-flex">   
+      <sapn>Don't have an account?</sapn>
+      <Link to="/Register" className="register pl-3">Register</Link>
+      </div></>}
         <div className="orderRegister">
           <img src="../../orderStatus.png"/>
           <Link to="order">Check Order Satuts</Link>
@@ -38,6 +49,7 @@ function Account() {
           <Link to="order"> LEGO® VIP rewards</Link>
           </p>
         </div>
+        {loggedUser ? <button onClick={logOut} className="btn loginBtn m-auto d-block">log out</button>: ""}
         </Modal.Body>
       </Modal>
     </>
