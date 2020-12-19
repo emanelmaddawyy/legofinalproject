@@ -21,11 +21,10 @@ class App extends Component {
 			price: '119.99',
 			rating: 1,
 			imgSrc: '/21042.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 3,
 			isInWishlist: false,
 			avaliable: true,
-			numberOfReviews: 10,
-			countInStock: 2,
+			numberOfReviews: 2,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -68,11 +67,10 @@ class App extends Component {
 			price: '110.99',
 			rating: 5,
 			imgSrc: '/21043.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 4,
 			isInWishlist: false,
 			avaliable: true,
-			numberOfReviews: 10,
-			countInStock: 0,
+			numberOfReviews: 1,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -110,11 +108,10 @@ class App extends Component {
 			price: '98.99',
 			rating: 3,
 			imgSrc: '/21046.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 0,
 			isInWishlist: false,
 			avaliable: false,
-			numberOfReviews: 20,
-			countInStock: 3,
+			numberOfReviews: 2,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -157,11 +154,10 @@ class App extends Component {
 			price: '70.50',
 			rating: 2,
 			imgSrc: '/21045.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 4,
 			isInWishlist: false,
 			avaliable: true,
-			numberOfReviews: 20,
-			countInStock: 0,
+			numberOfReviews: 1,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -199,11 +195,10 @@ class App extends Component {
 			price: '255.99',
 			rating: 4,
 			imgSrc: '/40367.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 0,
 			isInWishlist: false,
 			avaliable: false,
-			numberOfReviews: 30,
-			countInStock: 4,
+			numberOfReviews: 2,
 			themeLogo: '/categoryBrickHeadz.png',
 			theme: 'Brick Headz',
 			interests: 'Building',
@@ -246,11 +241,10 @@ class App extends Component {
 			price: '119.99',
 			rating: 1,
 			imgSrc: '/21043.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 5,
 			isInWishlist: false,
 			avaliable: true,
-			numberOfReviews: 30,
-			countInStock: 0,
+			numberOfReviews: 1,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -288,11 +282,10 @@ class App extends Component {
 			price: '110.0',
 			rating: 5,
 			imgSrc: '/21042.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 0,
 			isInWishlist: false,
 			avaliable: false,
-			numberOfReviews: 40,
-			countInStock: 5,
+			numberOfReviews: 2,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -335,11 +328,10 @@ class App extends Component {
 			price: '98.0',
 			rating: 3,
 			imgSrc: '/40367.jpeg',
-			numberOfProduct: 1,
+			numberOfProduct: 5,
 			isInWishlist: false,
 			avaliable: true,
-			numberOfReviews: 50,
-			countInStock: 1,
+			numberOfReviews: 1,
 			themeLogo: '/categoryArchitecture.png',
 			theme: 'Architecture',
 			interests: 'Building',
@@ -443,18 +435,6 @@ class App extends Component {
 			},
 		],
 	};
-
-	// fourStars() {
-	// 	return (
-	// 		<span>
-	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
-	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
-	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
-	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
-	// 			<StarTwoTone twoToneColor='orange' />
-	// 		</span>
-	// 	);
-	// }
 
 	numberOfProductsCalc = (products) => {
 		let result = 0;
@@ -647,18 +627,3 @@ class App extends Component {
 }
 
 export default App;
-
-// import logo from './logo.svg';
-// import './App.css';
-// import { Button } from 'react-bootstrap';
-// import HomePage from './Pages/HomePage';
-
-// function App() {
-//   return (
-//     <>
-//     <HomePage/>
-//     </>
-//   );
-// }
-
-// export default App;

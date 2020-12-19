@@ -4,7 +4,7 @@ import AddToWishlistBtn from '../Shared/AddToWishlistBtn/AddToWishlistBtn';
 
 import NotifyWhenInStockModal from './NotifyWhenInStockModal/NotifyWhenInStockModal';
 
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
+import { Row, Col, ListGroup} from 'react-bootstrap';
 
 import './ProductNotInStock.css';
 

@@ -8,8 +8,8 @@ const NumberInput = (props) => {
 	function increaseValue() {
 		var value = parseInt(document.getElementById('number').value, 10);
 		value = isNaN(value) ? 0 : value;
-		if (value >= props.location.state.countInStock-1) {
-            value = props.location.state.countInStock;
+		if (value >= props.location.state.numberOfProduct-1) {
+            value = props.location.state.numberOfProduct;
             document.getElementsByClassName('input-number-increment')[0].classList.add("lowOpacity")
 		} else {
             value++;

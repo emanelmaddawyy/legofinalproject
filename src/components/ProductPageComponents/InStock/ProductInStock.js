@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { withRouter } from 'react-router-dom';
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import NumberInput from './NumberInput/NumberInput';
 import Tooltip from './Tooltip/Tooltip';
 import TooltipLeft from './Tooltip/TooltipLeft';
@@ -15,7 +15,7 @@ const ProductInStock = (props) => {
 	// console.log('ProductInStock props', props.function1)
 
 	// useEffect(() => {
-	// 	console.log(document.getElementsByClassName('add2bag ')[0],props.location.state.countInStock)
+	// 	console.log(document.getElementsByClassName('add2bag ')[0],props.location.state.numberOfProduct)
 	// 	console.log(`i've been called ${functionCounter} times`);
 	// });
 	// 	// }, []);
@@ -30,22 +30,18 @@ const ProductInStock = (props) => {
 
 			<ListGroup.Item className='px-0'>
 				<NumberInput />
-				<small className='ml-3 limitStyle'>{`Limit: ${props.location.state.countInStock}`}</small>
+				<small className='ml-3 limitStyle'>{`Limit: ${props.location.state.numberOfProduct}`}</small>
 				<Tooltip />
 				<TooltipLeft />
 			</ListGroup.Item>
 
 			<ListGroup.Item className='px-0'>
 				<AddToBagBtn
-					limit={props.location.state.countInStock}
+					limit={props.location.state.numberOfProduct}
 					showToastFunction={props.showToastFunction}
 				/>
 				<AddToWishlistBtn />
 			</ListGroup.Item>
-
-
-
-
 		</>
 	);
 };

@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
 import './ProductAccordion.css';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import WriteAReviewModal from '../../Shared/WriteAReviewModal/WriteAReviewModal';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const ProductAccordion = (props) => {
-	console.log('ProductAccordion props', props.data.location.state);
+	// console.log('ProductAccordion props', props.data.location.state);
 	// console.log(
 	// 	'ProductAccordion props',
 	// 	props.data.location.state.specificationsUl.map((item, i) => {
@@ -115,7 +111,7 @@ const ProductAccordion = (props) => {
 								your personal data, please see our{' '}
 								<span className='blue'>Privacy policy.</span>
 							</i>
-							<h5 className="mt-5">Reviews</h5>
+							<h5 className='mt-5'>Reviews</h5>
 							<hr />
 							<ul className='specificationsUl p-0'>
 								{props.data.location.state.Reviews.map((item, i) => {
@@ -124,7 +120,7 @@ const ProductAccordion = (props) => {
 										<li>
 											<ul className='p-0'>
 												<li className='blue nickname'>{item.nickname}</li>
-												<li className="review">{item.review}</li>
+												<li className='review'>{item.review}</li>
 											</ul>
 										</li>
 									);

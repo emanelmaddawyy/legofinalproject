@@ -4,7 +4,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
+import { Row, Col,  ListGroup } from 'react-bootstrap';
 
 // import ProductsSlider from '../components/ProductsSlider/ProductsSlider';
 import Rating from '../components/Rating/Rating';
@@ -25,7 +25,7 @@ const ProductPage = (props) => {
 	console.log('ProductPage props!', props);
 	// console.log('ProductPage props location state', props.location.state);
 	// console.log('ProductPage match.params.id', props.match.params.id);
-	// console.log('countInStock',props.location.state.countInStock);
+	// console.log('numberOfProduct',props.location.state.numberOfProduct);
 	// const product = products.find(p=>p.ID === props.match.params.id)
 	// console.log('product',product);
 
@@ -33,7 +33,7 @@ const ProductPage = (props) => {
 
 	// useEffect(() => {
 	// 	// debugger;
-	// 	const stockCount = props.location.state.countInStock;
+	// 	const stockCount = props.location.state.numberOfProduct;
 	// 	console.log(
 	// 		'window.scrollY >= 615',
 	// 		window.scrollY,
@@ -59,7 +59,7 @@ const ProductPage = (props) => {
 	// window.addEventListener('scroll', IsInStockForBagHeader);
 
 	// function IsInStockForBagHeader() {
-	// 	const stockCount = props.location.state.countInStock;
+	// 	const stockCount = props.location.state.numberOfProduct;
 	// 	console.log(
 	// 		'window.scrollY >= 615',
 	// 		window.scrollY,
@@ -82,7 +82,7 @@ const ProductPage = (props) => {
 	//! ===============================================================================================================
 
 	function IsInStock() {
-		const stockCount = props.location.state.countInStock;
+		const stockCount = props.location.state.numberOfProduct;
 		if (stockCount > 0) {
 			return (
 				<>
