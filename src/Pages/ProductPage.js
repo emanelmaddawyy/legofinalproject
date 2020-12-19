@@ -6,7 +6,7 @@ import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
 
-import ProductsSlider from '../components/ProductsSlider/ProductsSlider';
+// import ProductsSlider from '../components/ProductsSlider/ProductsSlider';
 import Rating from '../components/Rating/Rating';
 
 import ProductInStock from '../components/ProductPageComponents/InStock/ProductInStock';
@@ -18,9 +18,11 @@ import PromoBadge from '../components/ProductPageComponents/Shared/PromoBadge/Pr
 import ShopMoreLikeThis from '../components/ProductPageComponents/Shared/ShopMoreLikeThis/ShopMoreLikeThis';
 import ProductDetails from '../components/ProductPageComponents/Shared/ProductDetails/ProductDetails';
 import ProductAccordion from '../components/ProductPageComponents/Shared/ProductAccordion/ProductAccordion';
+import ProductSlider from '../components/Slider/ProductSlider';
+
 
 const ProductPage = (props) => {
-	// console.log('ProductPage props!', props);
+	console.log('ProductPage props!', props);
 	// console.log('ProductPage props location state', props.location.state);
 	// console.log('ProductPage match.params.id', props.match.params.id);
 	// console.log('countInStock',props.location.state.countInStock);
@@ -167,7 +169,14 @@ const ProductPage = (props) => {
 			<ProductAccordion data={props} />
 
 
-			<ProductsSlider title='Recommended For You' />
+			{/* <ProductsSlider title='Recommended For You' /> */}
+
+			<ProductSlider
+				title="Recommended For You"
+				products={props.products}
+				addProductToCart={props.addProductToCart}
+				addProductToWishlist={props.addProductToWishlist}
+			/>
 		</>
 	);
 };
