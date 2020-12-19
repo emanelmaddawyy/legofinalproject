@@ -223,7 +223,7 @@ const Vip = ()=> {
             </div>
             <div class="VipIconsContainer">
                 <ul class="VipIcons pt-5 row col-12 col-sm-10 offset-sm-1 m-auto col-md-7 offset-md-3 col-xl-5 offset-5 row">
-                    <li class="VipIconsLis col-4 m-0"> 
+                    <li class="VipIconsLis col-4 m-0">
                         <a href="" class="VipIconsAs">
                             <img src={FAQs} class="d-block m-auto"/>
                         </a>

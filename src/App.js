@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart.js';
 import WishList from './components/WishList/WishList.js';
 import './App.css';
 import './Pages/HomePage.css';
+import VipPage from './Pages/VipPage';
 import { StarFilled, StarTwoTone } from '@ant-design/icons';
 import Rating from './components/Rating/Rating';
 import axios from 'axios';
@@ -620,6 +621,9 @@ class App extends Component {
 						)}
 						path='/architecture/:id'
 						exact></Route>
+
+					<Route path='/vip' exact component={() => <VipPage />}></Route>
+
 				</BrowserRouter>
 			</>
 		);
