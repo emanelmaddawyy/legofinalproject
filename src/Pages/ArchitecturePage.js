@@ -46,10 +46,98 @@ const responsive = {
 	},
 };
 
-const Architecture = ({ ninjas, deleteNinja, ArchitectureAccordion }) => {
+const Architecture = ({ ninjas, deleteNinja }) => {
 	// console.log('ArchitectureAccordion', ArchitectureAccordion);
 
-	const ninjaList = ninjas.map((ninja, i) => {
+	const ArchitectureAccordion = [
+		{ title: 'Product Type', filters: [{ Sets: 'Sets' }] },
+		{ title: 'Age', filters: [{ Age: '12+' }] },
+		{
+			title: 'Price',
+			filters: [
+				{ Price1: '$25 - $50' },
+				{ Price2: '$50 - $75' },
+				{ Price3: '$75 - $100' },
+				{ Price4: '$100+' },
+			],
+		},
+		{ title: 'Theme', filters: [{ Theme: 'Architecture' }] },
+		{ title: 'Interest', filters: [{ Interest: 'Buildings' }] },
+		{
+			title: 'Piece Count',
+			filters: [
+				{ PieceCount1: '250-499' },
+				{ PieceCount2: '500-999' },
+				{ PieceCount3: '1000+' },
+			],
+		},
+		{ title: 'Availability', filters: [{ Availability: 'Out Of Stock' }] },
+		// { title: 'Rating', filters: [{ Rating: this.fourStars() }] },
+	];
+
+	// function fourStars() {
+	// 	return (
+	// 		<span>
+	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
+	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
+	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
+	// 			<StarFilled style={{ fontSize: '16px', color: 'orange' }} />
+	// 			<StarTwoTone twoToneColor='orange' />
+	// 		</span>
+	// 	);
+	// }
+
+
+	const ninjasArr = [
+		{
+			ID: 1,
+			name: 'Empire State Building',
+			price: '119.99',
+			imgSrc: '21046.jpeg',
+			rating: 1,
+		},
+		{
+			ID: 2,
+			name: 'The White House',
+			price: '110.99',
+			imgSrc: '21046.jpeg',
+			rating: 5,
+		},
+		{
+			ID: 3,
+			name: 'Trafalgar Square',
+			price: '98.99',
+			imgSrc: '21046.jpeg',
+			rating: 3,
+		},
+		{
+			ID: 4,
+			name: 'Statue of Liberty',
+			price: '70.50',
+			imgSrc: '21046.jpeg',
+			rating: 2,
+		},
+		{
+			ID: 5,
+			name: 'San Francisco',
+			price: '255.99',
+			imgSrc: '21046.jpeg',
+			rating: 4,
+		},
+		{
+			ID: 6,
+			name: 'Las Vegas',
+			price: '119.99',
+			imgSrc: '21046.jpeg',
+			rating: 1,
+		},
+		{ ID: 7, name: 'Paris', price: '110.0', imgSrc: '21046.jpeg', rating: 5 },
+		{ ID: 8, name: 'London', price: '98.0', imgSrc: '21046.jpeg', rating: 3 },
+	];
+
+
+
+	const ninjaList = ninjasArr.map((ninja, i) => {
 		const imgLogos = [
 			Logo,
 			Logo1,

@@ -3,7 +3,7 @@ import Accordion from '../Accordion/Accordion';
 import './Filter.css';
 
 const Filter = (props) => {
-	// console.log('Filter props', props.ArchitectureAccordion)
+	console.log('Filter props', props.ArchitectureAccordion)
 
 	//will run after the page is loaded
 	// uncheck checked boxes
