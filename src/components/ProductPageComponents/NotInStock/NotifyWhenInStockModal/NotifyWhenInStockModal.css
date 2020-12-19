@@ -1,0 +1,30 @@
+#NotifyWhenInStock .modal-header,
+#NotifyWhenInStock .modal-body {
+	border-bottom: 0 !important;
+}
+
+#NotifyWhenInStock .modal-content {
+	width: 75%;
+	left: 75px;
+}
+
+#NotifyWhenInStock #NotifyWhenInStockEmail {
+	margin: 15px 0;
+}
+
+#NotifyWhenInStock .modal-90w .checkbox-label {
+	font-size: 0.9rem;
+	margin: 25px;
+	margin-left: 10px;
+}
+
+#NotifyWhenInStock .modal-90w small {
+	font-size: 0.8rem;
+}
+
+#NotifyWhenInStock #NotifyWhenInStockEmail:invalid {
+	border-bottom: 2px solid red;
+}
+#NotifyWhenInStock #emailValidationMsg {
+	font-size: 0.8rem;
+}

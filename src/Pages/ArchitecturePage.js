@@ -1,8 +1,6 @@
 import React from 'react';
 import './ArchitecturePage.css';
-import Filter from "../components/Filter/Filter";
-
-
+import Filter from '../components/Filter/Filter';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -151,19 +149,14 @@ const Architecture = ({ ninjas, deleteNinja, ArchitectureAccordion }) => {
 		) : null;
 	});
 
-
-
 	return (
 		<div>
 			<div class='row p-5 m-0'>
 				<div class=' col-lg-3 d-none d-lg-block '>
-
-					<Filter ArchitectureAccordion={ArchitectureAccordion} ></Filter>
-
+					<Filter ArchitectureAccordion={ArchitectureAccordion}></Filter>
 				</div>
 
-				<div class='row col-lg-9 col-12  m-xs-0'>
-					{ninjaList}</div>
+				<div class='row col-lg-9 col-12  m-xs-0'>{ninjaList}</div>
 			</div>
 		</div>
 	);

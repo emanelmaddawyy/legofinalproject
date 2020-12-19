@@ -1,7 +1,7 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import ArchitecturePage from './ArchitecturePage';
 import LegoLifePage from './LegoLifePage';
-import ProductPage from "./ProductPage";
+import ProductPage from './ProductPage';
 import './HomePage.css';
 
 import Slider from '../components/Slider/Slider';
@@ -59,46 +59,342 @@ class HomePage extends Component {
 				ID: 1,
 				name: 'Empire State Building',
 				price: '119.99',
-				imgSrc: '21046.jpeg',
 				rating: 1,
+				imgSrc: '/21042.jpeg',
+				avaliable: true,
+				numberOfReviews: 10,
+				countInStock: 2,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 8,
+				pieces: 60,
+				vipPoints: 78,
+				itemNo: 40418,
+				specificatonImg: '/specificationImg1.jpeg',
+				specificationsParagraph:
+					'Collectors of LEGO® BrickHeadz™ will love Goofy & Pluto (40378), featuring 2 classic Disney characters. Goofy, wearing his familiar turtleneck sweater and tall green hat, stands alongside the playful Pluto. The 2 lovable Disney friends come with sturdy baseplates that make them easy to display, either individually or alongside other BrickHeadz models. Collectors of LEGO BrickHeadz can combine elements of different sets to create fun, mashed-up characters of their own.',
+				specificationsUl: [
+					'This collectible building set lets kids construct fun LEGO® BrickHeadz™ models of 2 of Disney’s most recognizable characters: Goofy and Pluto.',
+					'A great gift for LEGO® and Disney fans, this set provides an age-appropriate build-and-play experience for kids aged 10 and up',
+					'With Goofy standing over 3” (8cm) tall and Pluto over 1” (5cm) tall, this 214-piece buildable toy delivers creative fun on a big scale as kids build, play and display.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'LEGOfans123',
+						review:
+							'Love it, hope to see Winnie the Pooh BrickHeadz in the future. Highly recommended ',
+					},
+					{
+						nickname: 'lovingevenmorepenguins',
+						review:
+							'This set is really cute! Pluto has a really nice tail with really cute eyes which every Brickheadz always has the same as goofy but without the tail obviously but his hat is really nice. But I do really want a goofy and pluto figure soon and I bet as as other people.',
+					},
+				],
 			},
 			{
 				ID: 2,
 				name: 'The White House',
 				price: '110.99',
-				imgSrc: '21046.jpeg',
 				rating: 5,
+				imgSrc: '/21043.jpeg',
+				avaliable: false,
+				numberOfReviews: 10,
+				countInStock: 0,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 16,
+				pieces: 1685,
+				vipPoints: 780,
+				itemNo: 21042,
+				specificatonImg: '/specificationImg2.jpeg',
+				specificationsParagraph:
+					'Fans of superhero battles will have endless fun role-playing this colossal clash, as 2 popular Marvel Avengers – the winged Falcon and super-soldier Black Widow – take on 2 enemy A.I.M. Agents. LEGO® Marvel Avengers Falcon & Black Widow Team Up (40418) ramps up the action even further with an extra-large, hand-operated 6-shooter, plus lots of ammunition.',
+				specificationsUl: [
+					'This LEGO® Marvel Avengers set includes 4 minifigures – Black Widow, Falcon and 2 A.I.M. Agents – and a large 6-shooter, plus ammunition.',
+					'Falcon’s wings can be moved by hand into ‘flying’ position.',
+					'The hand-controlled 6-shooter fires out large LEGO®projectiles.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'frontranger',
+						review:
+							'It seems to me that LEGO has opened up a whole new category for what they can offer with this piece. As mom to a lifelong LEGO builder, and also having grown up with LEGO myself, this little fig touches my heart. It is an exquisite piece of lovely woodwork which can be displayed as is. It presently sits next to a fine art horse sculpture in my home & holds its own proudly. Given that my son & I used to create wool felt works together when he was a child, I can see adding a little felt vest & hat to the piece for special occasions. The best part about this piece is how it represents the beginnings of LEGO, honoring the beauty of toy making with wood. I will cherish this gift. I look forward to seeing more from LEGO in the form of sustainably produced wooden toys in the future. I welcome the blend of the historical with the modern. Bravo!',
+					},
+				],
 			},
 			{
 				ID: 3,
 				name: 'Trafalgar Square',
 				price: '98.99',
-				imgSrc: '21046.jpeg',
 				rating: 3,
+				imgSrc: '/21045.jpeg',
+				avaliable: true,
+				numberOfReviews: 20,
+				countInStock: 3,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 10,
+				pieces: 214,
+				vipPoints: 97,
+				itemNo: 40378,
+				specificatonImg: '/specificationImg3.jpeg',
+				specificationsParagraph:
+					'Collectors of LEGO® BrickHeadz™ will love Goofy & Pluto (40378), featuring 2 classic Disney characters. Goofy, wearing his familiar turtleneck sweater and tall green hat, stands alongside the playful Pluto. The 2 lovable Disney friends come with sturdy baseplates that make them easy to display, either individually or alongside other BrickHeadz models. Collectors of LEGO BrickHeadz can combine elements of different sets to create fun, mashed-up characters of their own.',
+				specificationsUl: [
+					'This collectible building set lets kids construct fun LEGO® BrickHeadz™ models of 2 of Disney’s most recognizable characters: Goofy and Pluto.',
+					'A great gift for LEGO® and Disney fans, this set provides an age-appropriate build-and-play experience for kids aged 10 and up',
+					'With Goofy standing over 3” (8cm) tall and Pluto over 1” (5cm) tall, this 214-piece buildable toy delivers creative fun on a big scale as kids build, play and display.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'LEGOfans123',
+						review:
+							'Love it, hope to see Winnie the Pooh BrickHeadz in the future. Highly recommended ',
+					},
+					{
+						nickname: 'lovingevenmorepenguins',
+						review:
+							'This set is really cute! Pluto has a really nice tail with really cute eyes which every Brickheadz always has the same as goofy but without the tail obviously but his hat is really nice. But I do really want a goofy and pluto figure soon and I bet as as other people.',
+					},
+				],
 			},
 			{
 				ID: 4,
 				name: 'Statue of Liberty',
 				price: '70.50',
-				imgSrc: '21046.jpeg',
 				rating: 2,
+				imgSrc: '/21046.jpeg',
+				avaliable: false,
+				numberOfReviews: 20,
+				countInStock: 0,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 8,
+				pieces: 60,
+				vipPoints: 78,
+				itemNo: 40418,
+				specificatonImg: '/specificationImg4.jpeg',
+				specificationsParagraph:
+					'Fans of superhero battles will have endless fun role-playing this colossal clash, as 2 popular Marvel Avengers – the winged Falcon and super-soldier Black Widow – take on 2 enemy A.I.M. Agents. LEGO® Marvel Avengers Falcon & Black Widow Team Up (40418) ramps up the action even further with an extra-large, hand-operated 6-shooter, plus lots of ammunition.',
+				specificationsUl: [
+					'This LEGO® Marvel Avengers set includes 4 minifigures – Black Widow, Falcon and 2 A.I.M. Agents – and a large 6-shooter, plus ammunition.',
+					'Falcon’s wings can be moved by hand into ‘flying’ position.',
+					'The hand-controlled 6-shooter fires out large LEGO®projectiles.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'frontranger',
+						review:
+							'It seems to me that LEGO has opened up a whole new category for what they can offer with this piece. As mom to a lifelong LEGO builder, and also having grown up with LEGO myself, this little fig touches my heart. It is an exquisite piece of lovely woodwork which can be displayed as is. It presently sits next to a fine art horse sculpture in my home & holds its own proudly. Given that my son & I used to create wool felt works together when he was a child, I can see adding a little felt vest & hat to the piece for special occasions. The best part about this piece is how it represents the beginnings of LEGO, honoring the beauty of toy making with wood. I will cherish this gift. I look forward to seeing more from LEGO in the form of sustainably produced wooden toys in the future. I welcome the blend of the historical with the modern. Bravo!',
+					},
+				],
 			},
 			{
 				ID: 5,
 				name: 'San Francisco',
 				price: '255.99',
-				imgSrc: '21046.jpeg',
 				rating: 4,
+				imgSrc: '/40367.jpeg',
+				avaliable: true,
+				numberOfReviews: 30,
+				countInStock: 4,
+				themeLogo: '/categoryBrickHeadz.png',
+				theme: 'Brick Headz',
+				interests: 'Building',
+				ages: 16,
+				pieces: 1685,
+				vipPoints: 780,
+				itemNo: 21042,
+				specificatonImg: '/specificationImg1.jpeg',
+				specificationsParagraph:
+					'Collectors of LEGO® BrickHeadz™ will love Goofy & Pluto (40378), featuring 2 classic Disney characters. Goofy, wearing his familiar turtleneck sweater and tall green hat, stands alongside the playful Pluto. The 2 lovable Disney friends come with sturdy baseplates that make them easy to display, either individually or alongside other BrickHeadz models. Collectors of LEGO BrickHeadz can combine elements of different sets to create fun, mashed-up characters of their own.',
+				specificationsUl: [
+					'This collectible building set lets kids construct fun LEGO® BrickHeadz™ models of 2 of Disney’s most recognizable characters: Goofy and Pluto.',
+					'A great gift for LEGO® and Disney fans, this set provides an age-appropriate build-and-play experience for kids aged 10 and up',
+					'With Goofy standing over 3” (8cm) tall and Pluto over 1” (5cm) tall, this 214-piece buildable toy delivers creative fun on a big scale as kids build, play and display.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'LEGOfans123',
+						review:
+							'Love it, hope to see Winnie the Pooh BrickHeadz in the future. Highly recommended ',
+					},
+					{
+						nickname: 'lovingevenmorepenguins',
+						review:
+							'This set is really cute! Pluto has a really nice tail with really cute eyes which every Brickheadz always has the same as goofy but without the tail obviously but his hat is really nice. But I do really want a goofy and pluto figure soon and I bet as as other people.',
+					},
+				],
 			},
 			{
 				ID: 6,
 				name: 'Las Vegas',
 				price: '119.99',
-				imgSrc: '21046.jpeg',
 				rating: 1,
+				imgSrc: '/21042.jpeg',
+				avaliable: false,
+				numberOfReviews: 30,
+				countInStock: 0,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 10,
+				pieces: 214,
+				vipPoints: 97,
+				itemNo: 40378,
+				specificatonImg: '/specificationImg2.jpeg',
+				specificationsParagraph:
+					'Fans of superhero battles will have endless fun role-playing this colossal clash, as 2 popular Marvel Avengers – the winged Falcon and super-soldier Black Widow – take on 2 enemy A.I.M. Agents. LEGO® Marvel Avengers Falcon & Black Widow Team Up (40418) ramps up the action even further with an extra-large, hand-operated 6-shooter, plus lots of ammunition.',
+				specificationsUl: [
+					'This LEGO® Marvel Avengers set includes 4 minifigures – Black Widow, Falcon and 2 A.I.M. Agents – and a large 6-shooter, plus ammunition.',
+					'Falcon’s wings can be moved by hand into ‘flying’ position.',
+					'The hand-controlled 6-shooter fires out large LEGO®projectiles.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'frontranger',
+						review:
+							'It seems to me that LEGO has opened up a whole new category for what they can offer with this piece. As mom to a lifelong LEGO builder, and also having grown up with LEGO myself, this little fig touches my heart. It is an exquisite piece of lovely woodwork which can be displayed as is. It presently sits next to a fine art horse sculpture in my home & holds its own proudly. Given that my son & I used to create wool felt works together when he was a child, I can see adding a little felt vest & hat to the piece for special occasions. The best part about this piece is how it represents the beginnings of LEGO, honoring the beauty of toy making with wood. I will cherish this gift. I look forward to seeing more from LEGO in the form of sustainably produced wooden toys in the future. I welcome the blend of the historical with the modern. Bravo!',
+					},
+				],
 			},
-			{ ID: 7, name: 'Paris', price: '110.0', imgSrc: '21046.jpeg', rating: 5 },
-			{ ID: 8, name: 'London', price: '98.0', imgSrc: '21046.jpeg', rating: 3 },
+			{
+				ID: 7,
+				name: 'Paris',
+				price: '110.0',
+				rating: 5,
+				imgSrc: '/21043.jpeg',
+				avaliable: true,
+				numberOfReviews: 40,
+				countInStock: 5,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 8,
+				pieces: 60,
+				vipPoints: 78,
+				itemNo: 40418,
+				specificatonImg: '/specificationImg3.jpeg',
+				specificationsParagraph:
+					'Collectors of LEGO® BrickHeadz™ will love Goofy & Pluto (40378), featuring 2 classic Disney characters. Goofy, wearing his familiar turtleneck sweater and tall green hat, stands alongside the playful Pluto. The 2 lovable Disney friends come with sturdy baseplates that make them easy to display, either individually or alongside other BrickHeadz models. Collectors of LEGO BrickHeadz can combine elements of different sets to create fun, mashed-up characters of their own.',
+				specificationsUl: [
+					'This collectible building set lets kids construct fun LEGO® BrickHeadz™ models of 2 of Disney’s most recognizable characters: Goofy and Pluto.',
+					'A great gift for LEGO® and Disney fans, this set provides an age-appropriate build-and-play experience for kids aged 10 and up',
+					'With Goofy standing over 3” (8cm) tall and Pluto over 1” (5cm) tall, this 214-piece buildable toy delivers creative fun on a big scale as kids build, play and display.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'LEGOfans123',
+						review:
+							'Love it, hope to see Winnie the Pooh BrickHeadz in the future. Highly recommended ',
+					},
+					{
+						nickname: 'lovingevenmorepenguins',
+						review:
+							'This set is really cute! Pluto has a really nice tail with really cute eyes which every Brickheadz always has the same as goofy but without the tail obviously but his hat is really nice. But I do really want a goofy and pluto figure soon and I bet as as other people.',
+					},
+				],
+			},
+			{
+				ID: 8,
+				name: 'London',
+				price: '98.0',
+				rating: 3,
+				imgSrc: '/21045.jpeg',
+				avaliable: true,
+				numberOfReviews: 50,
+				countInStock: 1,
+				themeLogo: '/categoryArchitecture.png',
+				theme: 'Architecture',
+				interests: 'Building',
+				ages: 16,
+				pieces: 1685,
+				vipPoints: 780,
+				itemNo: 21042,
+				specificatonImg: '/specificationImg4.jpeg',
+				specificationsParagraph:
+					'Fans of superhero battles will have endless fun role-playing this colossal clash, as 2 popular Marvel Avengers – the winged Falcon and super-soldier Black Widow – take on 2 enemy A.I.M. Agents. LEGO® Marvel Avengers Falcon & Black Widow Team Up (40418) ramps up the action even further with an extra-large, hand-operated 6-shooter, plus lots of ammunition.',
+				specificationsUl: [
+					'This LEGO® Marvel Avengers set includes 4 minifigures – Black Widow, Falcon and 2 A.I.M. Agents – and a large 6-shooter, plus ammunition.',
+					'Falcon’s wings can be moved by hand into ‘flying’ position.',
+					'The hand-controlled 6-shooter fires out large LEGO®projectiles.',
+				],
+				DeliveriesAndReturnsUl: [
+					'Free standard 3 to 5 business day shipping on all merchandise orders over $35!',
+					'Express shipping available at checkout.',
+					'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
+					'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
+				],
+				DeliveriesAndReturnsParagraph:
+					'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+				Reviews: [
+					{
+						nickname: 'frontranger',
+						review:
+							'It seems to me that LEGO has opened up a whole new category for what they can offer with this piece. As mom to a lifelong LEGO builder, and also having grown up with LEGO myself, this little fig touches my heart. It is an exquisite piece of lovely woodwork which can be displayed as is. It presently sits next to a fine art horse sculpture in my home & holds its own proudly. Given that my son & I used to create wool felt works together when he was a child, I can see adding a little felt vest & hat to the piece for special occasions. The best part about this piece is how it represents the beginnings of LEGO, honoring the beauty of toy making with wood. I will cherish this gift. I look forward to seeing more from LEGO in the form of sustainably produced wooden toys in the future. I welcome the blend of the historical with the modern. Bravo!',
+					},
+				],
+			},
 		],
 
 		ArchitectureAccordion: [
@@ -173,11 +469,19 @@ class HomePage extends Component {
 						exact></Route>
 
 					<Route component={() => <Slider />} path='/' exact></Route>
-					<Route component={() => <Slider />} path='/architecture' exact></Route>
+					<Route
+						component={() => <Slider />}
+						path='/architecture'
+						exact></Route>
 
-					<Route component={() => <Slider />} path='/architecture/:id' exact></Route>
+					<Route
+						component={() => <Slider />}
+						path='/architecture/:id'
+						exact></Route>
 
-					<Route component={() => <ProductPage />} path='/architecture/:id' exact></Route>
+					<Route
+						component={() => <ProductPage />}
+						path='/architecture/:id'></Route>
 
 					<Route
 						component={() => (

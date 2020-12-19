@@ -1,0 +1,22 @@
+.AddToWishlistStyle{
+	cursor: pointer;
+}
+.AddToWishlistStyle span {
+font-size: 0.75rem;
+font-weight: 500;
+color: black;
+}
+
+.AddToWishlistStyle i {
+	color: rgb(0, 109, 183);
+	font-size: 0.95rem;
+}
+
+.btn.focus, .btn:focus  {
+	box-shadow: 0 0 0 0 #ffffff;
+}
+
+#filledHeart{
+    display: none;
+}
+

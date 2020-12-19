@@ -1,0 +1,48 @@
+*{
+  box-sizing: border-box
+}
+.input-number{
+  width: 70px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none
+}
+.input-number,
+.input-number-decrement,
+.input-number-increment{
+  border: 1px solid #ccc;
+  height: 44px;
+  user-select: none;
+}
+.input-number-decrement,
+.input-number-increment{
+  display: inline-block;
+  width: 44px;
+  line-height: 40px;
+  background: rgb(255, 255, 255);
+  color: #444;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.input-number-decrement,
+.input-number-increment:active{
+    background: rgb(255, 255, 255)
+}
+.input-number-decrement{
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+.input-number-increment{
+  border-left: none;
+  border-radius: 0 4px 4px 0
+}
+
+.lowOpacity{
+    opacity: 0.5;
+}
+
+/* .highOpacity{
+    opacity: 1;
+} */
