@@ -1,0 +1,63 @@
+.iStyle, .iStyle2 {
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1px solid rgb(117, 117, 117);
+    border-radius: 100%;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0.75rem;
+    color: rgb(117, 117, 117);
+    margin-left: 0.3125rem;
+}
+
+.overlayStyle {
+	background-color: white;
+	color: black;
+	border-radius: 3px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px;
+	max-width: 95vw;
+	max-width: 95vh;
+	padding: 1.25rem;
+	overflow: auto;
+	font-size: 0.75rem;
+	line-height: 1.5625rem;
+}
+
+.iStyle:hover, .iStyle2:hover {
+    color: #007bff;
+	border: 1px solid #007bff;
+}
+
+.overlayStyle h4 {
+	text-transform: capitalize;
+	margin: 0px 0px 0.9375rem;
+	font-size: 0.875rem;
+	line-height: 1.5625rem;
+	font-weight: 500;
+	text-transform: capitalize;
+	margin: 0px 0px 0.9375rem;
+	font-size: 0.875rem;
+}
+.overlayStyle span {
+	width: 16.97rem;
+	white-space: normal;
+}
+
+@media only screen and (min-width: 992px) {
+	.overlayStyle {
+		font-size: 0.875rem;
+	}
+	.overlayStyle h4 {
+		font-size: 1rem;
+    }
+
+    .iStyle{
+        display: none;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .iStyle2{
+        display: none;
+    }
+}

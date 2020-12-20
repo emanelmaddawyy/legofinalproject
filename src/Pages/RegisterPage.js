@@ -58,7 +58,7 @@ class RegisterPage extends Component{
     }
 
     try {
-        const response = await Axios.post('http://localhost:3001/auth/register', reqBody);
+        const response = await Axios.post('http://localhost:3013/auth/register', reqBody);
         if (response.status === 201) {
           // successful
           // redirect

@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 class CardContainer extends React.Component {
 	state = {
 		title: this.props.title,
-		data: this.props.data,
+		data: this.props.data || [],
 	};
 
 	render() {
-		console.log(this.props);
-		console.log('data', this.props.data);
+		// console.log(this.props);
+		// console.log('data', this.props.data);
 		return (
 			<div className='m-5'>
 				<h2 className='mb-3'>{this.state.title}</h2>

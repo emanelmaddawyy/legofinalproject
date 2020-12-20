@@ -17,7 +17,7 @@ export default class Themes extends Component{
 
   componentDidMount = async()=>{
   try {
-    const response = await Axios.get('http://localhost:3001/themes');
+    const response = await Axios.get('http://localhost:3013/themes');
     if (response.status === 200) {
        this.setState({
         themes : response.data

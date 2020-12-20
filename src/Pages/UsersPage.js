@@ -10,7 +10,7 @@ class LoginPage extends Component{
   }
   async componentDidMount() {
     try {
-      const response = await Axios.get('http://localhost:3001/users/');
+      const response = await Axios.get('http://localhost:3013/users/');
         // successful
         this.setState({ 
           users : response.data
@@ -22,7 +22,7 @@ class LoginPage extends Component{
 }
   deleteUser = async (index, user) =>{
     try {
-      const response =  await Axios.delete(`http://localhost:3001/users/${user._id}`);
+      const response =  await Axios.delete(`http://localhost:3013/users/${user._id}`);
       if (response.status === 204) {
         const newUsers = [...this.state.users];
         newUsers.splice(index, 1);
@@ -49,7 +49,7 @@ class LoginPage extends Component{
         birthDate: newBirthdate
       };
 
-      const response =  await Axios.put(`http://localhost:3001/users/${user._id}`, reqBody);
+      const response =  await Axios.put(`http://localhost:3013/users/${user._id}`, reqBody);
       if (response.status === 200) {
         const newUsers = [...this.state.users];
         newUsers.splice(index, 1, response.data);

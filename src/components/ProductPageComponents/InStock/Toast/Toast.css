@@ -1,0 +1,52 @@
+.Toast {
+	background-color: rgb(254, 246, 210);
+	border: 1px solid rgb(253, 128, 36);
+	padding: 0.75rem 1.25rem;
+	text-align: center;
+	color: inherit;
+	font-size: 1rem;
+	line-height: 1.5625rem;
+	font-weight: 400;
+	display: none;
+	opacity: 0;
+	animation: fadeInFromNone 2s ease-out;
+}
+
+@keyframes fadeInFromNone {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	50% {
+		display: block;
+		opacity: 1;
+	}
+
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
+
+.ToastImg {
+	height: 1.875rem;
+	width: 1.875rem;
+	margin-right: 0.75rem;
+	max-width: 100%;
+	height: inherit;
+	-ms-interpolation-mode: bicubic;
+	display: inline-block;
+	vertical-align: middle;
+	border-style: none;
+}
+
+.ToastSpan {
+	vertical-align: middle;
+	text-transform: uppercase;
+}

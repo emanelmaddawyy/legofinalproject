@@ -7,7 +7,7 @@ import Vip from '../Vip/Vip';
 import Findstore from '../Findstore/Findstore';
 import Legolife from '../Legolife/Legolife'
 import Kids from '../Kids/Kids';
-import Wishlist from '../Wishlist/Wishlist';
+import WishList from '../WishList/WishList';
 import Cart from '../Cart/Cart';
 
 
@@ -44,10 +44,10 @@ class TopHeader extends Component{
             <Account/>
             </li>
             <li>
-            <Wishlist/>
+            <Link to="/wishlist">Wish List</Link>
             </li>
             <li>
-            <Cart/>
+            <Link to="/cart">Cart</Link>
             </li>
           </ul>
     </div>

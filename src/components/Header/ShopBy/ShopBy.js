@@ -14,7 +14,7 @@ export default class ShopBy extends Component{
   }
   componentDidMount = async()=>{
     try {
-      const response = await Axios.get('http://localhost:3001/filters/shopby');
+      const response = await Axios.get('http://localhost:3013/filters/shopby');
       if (response.status === 200) {
          this.setState({
           shopby : response.data
