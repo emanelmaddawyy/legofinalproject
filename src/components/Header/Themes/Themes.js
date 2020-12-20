@@ -41,7 +41,7 @@ export default class Themes extends Component{
           <ul className="list-unstyled liststyle">
             {this.state.themes.map((item, index) => {
               return(<li key={item._id}>
-                <Link to={'/theme/' + item._id}>{item.name}</Link>
+                <Link to={'/themes/' + item.visibleId}>{item.name}</Link>
                 </li>);
             })}
           </ul>

@@ -42,16 +42,16 @@ export default  class Navheader extends Component{
             </Nav.Link>
          
           </Nav>
-          <Nav.Link className="ml-auto search">
-
-          <button  className="btn searchBtn"onClick={this.toggleSearchHandeler}>
-            <FontAwesomeIcon icon={faSearch}/>
-          </button>
-          {
-            this.state.isSeachBarVisalbeFalg ? <input type="text"className="inputSearch" placeholder="Search..."/> : ''
-          }
-            </Nav.Link>
+       
         </Navbar.Collapse>
+        <Nav.Link className="ml-auto search">
+            <button  className="btn searchBtn"onClick={this.toggleSearchHandeler}>
+              <FontAwesomeIcon icon={faSearch}/>
+            </button>
+            {
+              this.state.isSeachBarVisalbeFalg ? <input type="text"className="inputSearch" placeholder="Search..."/> : ''
+            }
+        </Nav.Link>
       </Navbar>)
   }
 }

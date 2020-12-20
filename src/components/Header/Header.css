@@ -225,9 +225,14 @@ a.nav-link a {
   border-radius: 0;
 }
 
-.tabsWidth a.nav-link:active {
+.tabsWidth a.nav-link:hover {
   color: #fff !important;
-  background-color: #006cb6;
+  background-color: #007bff;
+}
+
+.tabsWidth .nav-pills .nav-link.active, .tabsWidth .nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #007bff;
 }
 
 .tab-content > .active {

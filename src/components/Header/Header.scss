@@ -171,12 +171,19 @@ a.nav-link a{
   a.nav-link{
     height: 40px !important;
     color: #000 !important;
+    
     border-radius: 0;
-    &:active{
+    &:hover{
       color: #fff !important;
-    background-color: #006cb6;
+      background-color: #007bff;
+
     }
+
   }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff !important;
+    background-color: #007bff;
+}
 }
 .tab-content>.active{
   display: flex !important;
@@ -190,4 +197,30 @@ ul.shopstyle {
   padding-left: 0 !important;
   text-align: center;
 }
+
+//////Media/////
+
+
+// 480px
+// 600px
+// 768px
+// 991px
+// 1024px
+// 1200px
+@media only screen and (min-width: 1200px) {
+
+}
+@media only screen and (min-width: 1024px) {
+
+}
+@media only screen and (min-width: 991px) {
+ 
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 480px) {
+
+}
+
 /* No CSS *//*# sourceMappingURL=Header.css.map */
