@@ -18,7 +18,7 @@ import ArchitecturePage from './Pages/ArchitecturePage';
 import LegoLifePage from './Pages/LegoLifePage';
 import ProductPage from './Pages/ProductPage';
 import Cart from './components/Cart/Cart.js';
-import WishList from './components/WishList/WishList.js';
+import WishList from './components/WishList/Wishlist';
 import './App.css';
 import './Pages/HomePage.css';
 import VipPage from './Pages/VipPage';
@@ -570,59 +570,59 @@ class App extends Component {
 				<span>Wishlist: {this.state.wishlistNumber} </span> */}
 
 				<BrowserRouter>
-          <Route 
-            path="/Login" 
-            exact 
+          <Route
+            path="/Login"
+            exact
             component={() => <LoginPage/>}>
           </Route>
-          <Route 
-            path="/Register" 
-            exact 
+          <Route
+            path="/Register"
+            exact
             component={() => <RegisterPage/>}>
           </Route>
-          <Route 
-            path="/users" 
-            exact 
+          <Route
+            path="/users"
+            exact
             component={() => <UsersPage/>}>
           </Route>
-          <Route 
-            path="/aboutus" 
-            exact 
+          <Route
+            path="/aboutus"
+            exact
             component={() => <AboutusPage/>}>
           </Route>
-          <Route 
-            path="/findstore" 
-            exact 
+          <Route
+            path="/findstore"
+            exact
             component={() => <FindstorePage/>}>
           </Route>
-          <Route 
-            path="/legolife" 
-            exact 
+          <Route
+            path="/legolife"
+            exact
             component={() => <LegoLifePage/>}>
           </Route>
-          <Route 
-            path="/kids" 
-            exact 
+          <Route
+            path="/kids"
+            exact
             component={() => <KidsPage/>}>
           </Route>
-          <Route 
-            path="/offers" 
-            exact 
+          <Route
+            path="/offers"
+            exact
             component={() => <OffersPage/>}>
           </Route>
-          <Route 
-            path="/exclusives" 
-            exact 
+          <Route
+            path="/exclusives"
+            exact
             component={() => <ExclusivesPage/>}>
           </Route>
-          <Route 
-            path="/forgetusername" 
-            exact 
+          <Route
+            path="/forgetusername"
+            exact
             component={() => <ForgetUsernamePage/>}>
           </Route>
-          <Route 
-            path="/forgetpassword" 
-            exact 
+          <Route
+            path="/forgetpassword"
+            exact
             component={() => <ForgetPasswordPage/>}>
           </Route>
 

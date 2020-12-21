@@ -6,7 +6,7 @@ import './HomePage.css';
 import ProductSlider from '../components/Slider/ProductSlider';
 import Slider from '../components/Slider/Slider';
 import Header from '../components/Header/Header'
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import {
