@@ -4,7 +4,7 @@ import HomePage from './Pages/HomePage';
 import RegisterPage from './Pages/RegisterPage';
 import LoginPage from './Pages/LoginPage';
 import UsersPage from './Pages/UsersPage';
-import AboutusPage from './Pages/AboutusPage'
+import AboutusPage from './Pages/AboutusPage';
 import FindstorePage from './Pages/FindstorePage';
 import KidsPage from './Pages/KidsPage';
 import CartPage from './Pages/CartPage';
@@ -456,14 +456,14 @@ class App extends Component {
 			result += product.numberOfProduct;
 		});
 		return result;
-  };
+	};
 	componentDidMount() {
 		// axios.get(`http://localhost:5000/api/customers`)
 		//   .then(res => {
 		//     const productsToBeDis = res.data;
 		//     this.setState({ productsToBeDis });
 		//   }).catch(err=>console.log(err.message));
-    this.state.productsToBeDis = this.staticProducts; //remove it if u will uncomment axios
+		this.state.productsToBeDis = this.staticProducts; //remove it if u will uncomment axios
 		this.state.products = localStorage.getItem('products')
 			? JSON.parse(localStorage.getItem('products'))
 			: [];
@@ -570,62 +570,38 @@ class App extends Component {
 				<span>Wishlist: {this.state.wishlistNumber} </span> */}
 
 				<BrowserRouter>
-          <Route
-            path="/Login"
-            exact
-            component={() => <LoginPage/>}>
-          </Route>
-          <Route
-            path="/Register"
-            exact
-            component={() => <RegisterPage/>}>
-          </Route>
-          <Route
-            path="/users"
-            exact
-            component={() => <UsersPage/>}>
-          </Route>
-          <Route
-            path="/aboutus"
-            exact
-            component={() => <AboutusPage/>}>
-          </Route>
-          <Route
-            path="/findstore"
-            exact
-            component={() => <FindstorePage/>}>
-          </Route>
-          <Route
-            path="/legolife"
-            exact
-            component={() => <LegoLifePage/>}>
-          </Route>
-          <Route
-            path="/kids"
-            exact
-            component={() => <KidsPage/>}>
-          </Route>
-          <Route
-            path="/offers"
-            exact
-            component={() => <OffersPage/>}>
-          </Route>
-          <Route
-            path="/exclusives"
-            exact
-            component={() => <ExclusivesPage/>}>
-          </Route>
-          <Route
-            path="/forgetusername"
-            exact
-            component={() => <ForgetUsernamePage/>}>
-          </Route>
-          <Route
-            path="/forgetpassword"
-            exact
-            component={() => <ForgetPasswordPage/>}>
-          </Route>
-
+					<Route path='/Login' exact component={() => <LoginPage />}></Route>
+					<Route
+						path='/Register'
+						exact
+						component={() => <RegisterPage />}></Route>
+					<Route path='/users' exact component={() => <UsersPage />}></Route>
+					<Route
+						path='/aboutus'
+						exact
+						component={() => <AboutusPage />}></Route>
+					<Route
+						path='/findstore'
+						exact
+						component={() => <FindstorePage />}></Route>
+					<Route
+						path='/legolife'
+						exact
+						component={() => <LegoLifePage />}></Route>
+					<Route path='/kids' exact component={() => <KidsPage />}></Route>
+					<Route path='/offers' exact component={() => <OffersPage />}></Route>
+					<Route
+						path='/exclusives'
+						exact
+						component={() => <ExclusivesPage />}></Route>
+					<Route
+						path='/forgetusername'
+						exact
+						component={() => <ForgetUsernamePage />}></Route>
+					<Route
+						path='/forgetpassword'
+						exact
+						component={() => <ForgetPasswordPage />}></Route>
 
 					<Route
 						component={() => (
@@ -693,7 +669,6 @@ class App extends Component {
 						exact></Route>
 
 					<Route path='/vip' exact component={() => <VipPage />}></Route>
-
 				</BrowserRouter>
 			</>
 		);

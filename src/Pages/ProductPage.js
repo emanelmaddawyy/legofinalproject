@@ -12,8 +12,8 @@ import Header from '../components/Header/Header';
 import ProductInStock from '../components/ProductPageComponents/InStock/ProductInStock';
 import ProductNotInStock from '../components/ProductPageComponents/NotInStock/ProductNotInStock';
 import Toast from '../components/ProductPageComponents/InStock/Toast/Toast';
-import AddToBagHeader from '../components/ProductPageComponents/InStock/AddToBagHeader/AddToBagHeader';
-import CheckStoreStock from '../components/ProductPageComponents/Shared/CheckStoreStock/CheckStoreStock';
+// import AddToBagHeader from '../components/ProductPageComponents/InStock/AddToBagHeader/AddToBagHeader';
+// import CheckStoreStock from '../components/ProductPageComponents/Shared/CheckStoreStock/CheckStoreStock';
 import PromoBadge from '../components/ProductPageComponents/Shared/PromoBadge/PromoBadge';
 import ShopMoreLikeThis from '../components/ProductPageComponents/Shared/ShopMoreLikeThis/ShopMoreLikeThis';
 import ProductDetails from '../components/ProductPageComponents/Shared/ProductDetails/ProductDetails';
@@ -126,7 +126,7 @@ const ProductPage = (props) => {
 					{/* <IsInStockForBagHeader /> */}
 					<Toast />
 				</div>
- 
+
 				<Col lg={8} >
         <VerticalSlider/>
 					{/* <img
@@ -158,7 +158,7 @@ const ProductPage = (props) => {
 
 							<IsInStock />
 
-							<CheckStoreStock />
+							{/* <CheckStoreStock /> */}
 
 							<ShopMoreLikeThis />
 						</ListGroup.Item>
