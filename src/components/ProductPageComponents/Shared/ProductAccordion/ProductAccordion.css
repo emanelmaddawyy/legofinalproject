@@ -184,6 +184,7 @@
 	padding-left: 1.875rem;
 	list-style-position: outside;
 	margin-left: 1.5625rem;
+	list-style-type: disc;
 }
 
 .specificationsUl li {
@@ -218,7 +219,7 @@
 }
 
 .blue {
-	color: rgb(0, 109, 183);
+	color: rgb(0, 109, 183) !important;
 	cursor: pointer;
 }
 
@@ -232,21 +233,21 @@
 	list-style-type: none;
 }
 
-.custReview .nickname{
+.custReview .nickname {
 	font-size: 0.875rem;
-    line-height: 1.1875rem;
-    font-weight: 400;
-    text-transform: inherit;
+	line-height: 1.1875rem;
+	font-weight: 400;
+	text-transform: inherit;
 }
-.custReview .review{
-    font-weight: 400;
-    text-transform: inherit;
-    line-height: 1.75rem;
-    display: block;
-    overflow-wrap: break-word;
+.custReview .review {
+	font-weight: 400;
+	text-transform: inherit;
+	line-height: 1.75rem;
+	display: block;
+	overflow-wrap: break-word;
 	word-break: break-word;
-    max-height: 7.5rem;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+	max-height: 7.5rem;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
 }

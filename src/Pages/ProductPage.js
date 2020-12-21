@@ -1,10 +1,9 @@
 // import React, { useEffect } from 'react';
 import React from 'react';
-
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col,  ListGroup } from 'react-bootstrap';
+import { Row, Col, ListGroup } from 'react-bootstrap';
 
 // import ProductsSlider from '../components/ProductsSlider/ProductsSlider';
 import Rating from '../components/Rating/Rating';
@@ -12,6 +11,7 @@ import Header from '../components/Header/Header';
 import ProductInStock from '../components/ProductPageComponents/InStock/ProductInStock';
 import ProductNotInStock from '../components/ProductPageComponents/NotInStock/ProductNotInStock';
 import Toast from '../components/ProductPageComponents/InStock/Toast/Toast';
+import Silder from '../components/Slider/Slider';
 // import AddToBagHeader from '../components/ProductPageComponents/InStock/AddToBagHeader/AddToBagHeader';
 // import CheckStoreStock from '../components/ProductPageComponents/Shared/CheckStoreStock/CheckStoreStock';
 import PromoBadge from '../components/ProductPageComponents/Shared/PromoBadge/PromoBadge';
@@ -19,7 +19,7 @@ import ShopMoreLikeThis from '../components/ProductPageComponents/Shared/ShopMor
 import ProductDetails from '../components/ProductPageComponents/Shared/ProductDetails/ProductDetails';
 import ProductAccordion from '../components/ProductPageComponents/Shared/ProductAccordion/ProductAccordion';
 import ProductSlider from '../components/Slider/ProductSlider';
-import VerticalSlider from "../components/VerticalSlider/VerticalSlider";
+import VerticalSlider from '../components/VerticalSlider/VerticalSlider';
 
 const ProductPage = (props) => {
 	console.log('ProductPage props!', props);
@@ -118,7 +118,8 @@ const ProductPage = (props) => {
 
 	return (
 		<>
-    <Header/>
+			<Header />
+			<Silder/>
 			<Row className='m-0 mt-3'>
 				<div class='fixed-Header'>
 					{/* <div class='fixed-Header' onClick={test2}> */}
@@ -127,8 +128,8 @@ const ProductPage = (props) => {
 					<Toast />
 				</div>
 
-				<Col lg={8} >
-        <VerticalSlider/>
+				<Col lg={8}>
+					<VerticalSlider />
 					{/* <img
 						className='w-100'
 						src={props.location.state.imgSrc}
@@ -147,12 +148,14 @@ const ProductPage = (props) => {
 							/>
 							<h2>{props.location.state.name}</h2>
 
+
 							<Rating
 								value={props.location.state.rating}
 								className='text-primary'
 								color='#ffcf00'
 								text={`${props.location.state.numberOfReviews} reviews`}
 							/>
+
 
 							<PromoBadge />
 
@@ -169,11 +172,10 @@ const ProductPage = (props) => {
 
 			<ProductAccordion data={props} />
 
-
 			{/* <ProductsSlider title='Recommended For You' /> */}
 
 			<ProductSlider
-				title="Recommended For You"
+				title='Recommended For You'
 				products={props.products}
 				addProductToCart={props.addProductToCart}
 				addProductToWishlist={props.addProductToWishlist}

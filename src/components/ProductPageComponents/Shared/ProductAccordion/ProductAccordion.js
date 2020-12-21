@@ -59,11 +59,11 @@ const ProductAccordion = (props) => {
 								})}
 							</ul>
 						</div>
-						<Link to='/'>
+						{/* <Link to='/'>
 							<button className='btn btn-primary order-last ml-4 specificationsBtn'>
 								Building Instructions
 							</button>
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 
@@ -119,8 +119,9 @@ const ProductAccordion = (props) => {
 									return (
 										<li>
 											<ul className='p-0'>
-												<li className='blue nickname'>{item.nickname}</li>
+												<li className=' nickname'>{item.nickname}</li>
 												<li className='review'>{item.review}</li>
+												<hr/>
 											</ul>
 										</li>
 									);

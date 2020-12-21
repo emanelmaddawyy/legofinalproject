@@ -1,21 +1,25 @@
-body{
-    font-weight:100
+body {
+	font-weight: 100;
 }
-.card{
-    text-align: center;
-    border: 0px ;
+.card {
+	text-align: center;
+	border: 0px;
 }
 
 .card-title {
-    font-weight: bold;
+	font-weight: bold;
 }
 
-.card-footer{
-    background-color: transparent;
-    border-top: 0px;
+.card-footer {
+	background-color: transparent;
+	border-top: 0px;
 }
 
-a,a:hover{
-    color: black;
+a,
+a:hover {
+	color: black;
 }
 
+.card-body {
+	padding-bottom: 0;
+}

@@ -19,7 +19,7 @@ class Slider extends React.Component {
 											alt='BFCM-live-Sitewide-Banner-1'
 										/>
 										Order volumes are high so deliveries may take longer
-										<Link to='#'> Learn more</Link>
+										{/* <Link to='#'> Learn more</Link> */}
 									</p>
 								</Carousel.Caption>
 							</Carousel.Item>
@@ -31,8 +31,10 @@ class Slider extends React.Component {
 											src='/BFCM-live-Sitewide-Banner-2.png'
 											alt='BFCM-live-Sitewide-Banner-2'
 										/>
-										Hurry! Black Friday offers last 11/27-11/30.
-										<Link to='#'>Shop now</Link>
+										Hurry! Black Friday offers last 11/27-11/30. {'   '}
+										<Link to='/architecture' className='blue'>
+											Shop now
+										</Link>
 									</p>
 								</Carousel.Caption>
 							</Carousel.Item>
@@ -45,8 +47,10 @@ class Slider extends React.Component {
 											src='/BFCM-live-Sitewide-Banner-6.png'
 											alt='BFCM-live-Sitewide-Banner-6'
 										/>
-										FREE Charles Dickens set with $150 purchase*{' '}
-										<Link to='#'>Shop now</Link>
+										FREE Charles Dickens set with $150 purchase*{'   '}
+										<Link to='/architecture' className='blue'>
+											Shop now
+										</Link>
 									</p>
 								</Carousel.Caption>
 							</Carousel.Item>
@@ -58,8 +62,10 @@ class Slider extends React.Component {
 											src='/BFCM-live-Sitewide-Banner-5.png'
 											alt='BFCM-live-Sitewide-Banner-5'
 										/>
-										Save up to 20% on selected sets, 11/27-11/30{' '}
-										<Link to='#'>Shop now</Link>
+										Save up to 20% on selected sets, 11/27-11/30{'   '}
+										<Link to='/architecture' className='blue'>
+											Shop now
+										</Link>
 									</p>
 								</Carousel.Caption>
 							</Carousel.Item>

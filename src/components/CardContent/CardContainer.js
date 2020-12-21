@@ -27,8 +27,8 @@ class CardContainer extends React.Component {
 								</Card.Body>
 
 								<Card.Footer>
-									<Link to='#'>
-										Learn More
+									<Link to='/architecture'>
+										Shop Now
 										<img
 											src='https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png'
 											alt=''

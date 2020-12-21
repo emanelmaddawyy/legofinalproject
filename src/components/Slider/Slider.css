@@ -1,36 +1,40 @@
-.carousel-item{
-    height: 50px;
-    padding: 0px 0.75rem;
-    background: rgb(248, 248, 248);
-    /* border-bottom: 1px solid rgb(224, 224, 224); */
+.carousel-item {
+	height: 50px;
+	padding: 0px 0.75rem;
+	background: rgb(248, 248, 248);
+	/* border-bottom: 1px solid rgb(224, 224, 224); */
 }
 
-.carousel-caption{
-    /* margin-top: 10px; */
-    padding: 0px;
-    color: black;
-    bottom: 0;
+.carousel-caption {
+	/* margin-top: 10px; */
+	padding: 0px;
+	color: black;
+	bottom: 0;
 }
 
-.carousel-caption p{
-    margin: 0;
-    font-size: small;
+.carousel-caption p {
+	margin: 0;
+	font-size: small;
 }
 
-.carousel-control-prev-icon{
-
-    background-image: url('https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png')
+.carousel-control-prev-icon {
+	background-image: url('https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png');
 }
 
-.carousel-control-next-icon{
-    background-image: url('https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png')
+.carousel-control-next-icon {
+	background-image: url('https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png');
 }
 
-.carousel-indicators{
-    display: none
+.carousel-indicators {
+	display: none;
 }
 
-.sliderWrapper{
-    background: rgb(248, 248, 248);
-    border-bottom: 1px solid rgb(224, 224, 224);
+.sliderWrapper {
+	background: rgb(248, 248, 248);
+	border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.blue {
+	color: rgb(0, 109, 183) !important;
+	cursor: pointer;
 }

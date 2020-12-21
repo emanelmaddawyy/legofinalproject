@@ -442,10 +442,22 @@ class App extends Component {
 					{ PieceCount3: '1000+' },
 				],
 			},
-			{ title: 'Availability', filters: [{ Availability: 'Out Of Stock' }] },
+			{
+				title: 'Availability',
+				filters: [
+					{ Availability1: 'Out Of Stock' },
+					// { Availability2: 'Available Now' },
+				],
+			},
 			{
 				title: 'Rating',
-				filters: [{ Rating: <Rating value='4' color='#ffcf00' /> }],
+				filters: [
+					// { Rating1: <Rating value='1' color='#ffcf00' /> },
+					// { Rating2: <Rating value='2' color='#ffcf00' /> },
+					// { Rating3: <Rating value='3' color='#ffcf00' /> },
+					{ Rating4: <Rating value='4' color='#ffcf00' /> },
+					// { Rating5: <Rating value='5' color='#ffcf00' /> },
+				],
 			},
 		],
 	};

@@ -1,6 +1,7 @@
 import React from "react";
 // import cera from "../fonts/Cera Pro Black Italic.ttf";
 import './LegoLifePage.css'
+import Header from '../components/Header/Header'
 
 class LegoLifePage extends React.Component {
 
@@ -8,6 +9,7 @@ class LegoLifePage extends React.Component {
 	render() {
 		return (
 			<>
+                <Header/>
                 <header className="headerStyle">
                     <div>
                         <img src="/LEGOlifeLogo.png" alt=""/>
