@@ -25,6 +25,7 @@ import VipPage from './Pages/VipPage';
 import { StarFilled, StarTwoTone } from '@ant-design/icons';
 import Rating from './components/Rating/Rating';
 import axios from 'axios';
+import ScrollToTop from './components/ProductPageComponents/ScrollToTop';
 
 class App extends Component {
 	staticProducts = [
@@ -582,6 +583,8 @@ class App extends Component {
 				<span>Wishlist: {this.state.wishlistNumber} </span> */}
 
 				<BrowserRouter>
+				<ScrollToTop/>
+
 					<Route path='/Login' exact component={() => <LoginPage />}></Route>
 					<Route
 						path='/Register'
