@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './HomePage.css';
 import ProductSlider from '../components/Slider/ProductSlider';
 import Slider from '../components/Slider/Slider';
+import Header from '../components/Header/Header'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 import {
 	Link,
@@ -149,10 +152,12 @@ const Architecture = ({
 				</div>
 			</div>
 		) : null;
-	});
+  });
+
 
 	return (
 		<>
+      <Header/>
 			<Slider />
 			<div class='row p-5 m-0'>
 				<div class=' col-lg-3 d-none d-lg-block '>

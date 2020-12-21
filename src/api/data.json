@@ -1,0 +1,158 @@
+{
+  "themes": [
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"}
+  ],
+  "ShopBy": [
+    {
+      "id": 1,
+      "title": "new",
+      "display": [{
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "bestseller",
+      "display": [{
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Age",
+      "display": [{
+          "img": "/40186.jpeg",
+          "age": "pic1"
+        },
+        {
+          "img": "/40146.jpeg",
+          "age": "pic1"
+        },
+        {
+          "img": "/40186.jpeg",
+          "age": "pic1"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Price",
+      "display": [{
+          "img": "/21043.jpeg",
+          "price": "100$"
+        },
+        {
+          "img": "/21042.jpeg",
+          "age": "3"
+        },
+        {
+          "img": "/21043.jpeg",
+          "age": "2"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "product type",
+      "display": [{
+        "imgTitle":"Architecture"},
+        {"imgTitle":"Batman"},
+        {"imgTitle":"Boost"},
+        {"imgTitle":"City"},
+        {"imgTitle":"Classic"},
+        {"imgTitle":"DC"},
+        {"imgTitle":"Creator"},
+        {"imgTitle": "DOTS"},
+        {"imgTitle":"Disney"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "bricks",
+      "display": [{
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        }
+      ]
+    }
+  ],
+  "interest":[{
+
+   "interestTypes" :[
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"}
+   ],
+  "interestImg":"/vichel.jpeg"
+  }]
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { HeartOutlined } from '@ant-design/icons';
 
-const Cart = ({ products, addProductToWishlist, deleteProductFromCart }) => {
+const Cart = ({ products = [], addProductToWishlist, deleteProductFromCart }) => {
 
     const productsList = products.length ? (
         products.map((product) => {

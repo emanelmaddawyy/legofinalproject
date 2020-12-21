@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class CardContainer extends React.Component {
 	state = {
 		title: this.props.title,
-		data: this.props.data,
+		data: this.props.data || [],
 	};
 
 	render() {

@@ -1,4 +1,6 @@
 import './HomePage.css';
+
+import Header from '../components/Header/Header';
 import ProductSlider from '../components/Slider/ProductSlider';
 import Slider from '../components/Slider/Slider';
 import CardContainer from '../components/CardContent/CardContainer';
@@ -15,6 +17,7 @@ const HomePage = ({
 }) => {
 	return (
 		<>
+      <Header />
 			<Slider />
 			<CardContainer title={TrendingTitle} data={TrendingData} />
 			<CardContainer title={SpotlightTitle} data={SpotlightData} />

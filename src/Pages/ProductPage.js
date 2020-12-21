@@ -8,7 +8,7 @@ import { Row, Col,  ListGroup } from 'react-bootstrap';
 
 // import ProductsSlider from '../components/ProductsSlider/ProductsSlider';
 import Rating from '../components/Rating/Rating';
-
+import Header from '../components/Header/Header';
 import ProductInStock from '../components/ProductPageComponents/InStock/ProductInStock';
 import ProductNotInStock from '../components/ProductPageComponents/NotInStock/ProductNotInStock';
 import Toast from '../components/ProductPageComponents/InStock/Toast/Toast';
@@ -19,7 +19,7 @@ import ShopMoreLikeThis from '../components/ProductPageComponents/Shared/ShopMor
 import ProductDetails from '../components/ProductPageComponents/Shared/ProductDetails/ProductDetails';
 import ProductAccordion from '../components/ProductPageComponents/Shared/ProductAccordion/ProductAccordion';
 import ProductSlider from '../components/Slider/ProductSlider';
-
+import VerticalSlider from "../components/VerticalSlider/VerticalSlider";
 
 const ProductPage = (props) => {
 	console.log('ProductPage props!', props);
@@ -118,6 +118,7 @@ const ProductPage = (props) => {
 
 	return (
 		<>
+    <Header/>
 			<Row className='m-0 mt-3'>
 				<div class='fixed-Header'>
 					{/* <div class='fixed-Header' onClick={test2}> */}
@@ -125,14 +126,14 @@ const ProductPage = (props) => {
 					{/* <IsInStockForBagHeader /> */}
 					<Toast />
 				</div>
-
-				<Col lg={8}>
-					<img
+ 
+				<Col lg={8} >
+        <VerticalSlider/>
+					{/* <img
 						className='w-100'
 						src={props.location.state.imgSrc}
 						alt={props.location.state.name}
-						fluid
-					/>
+						fluid/> */}
 				</Col>
 
 				<Col lg={4} className='bg-light'>
@@ -182,26 +183,3 @@ const ProductPage = (props) => {
 };
 
 export default withRouter(ProductPage);
-
-// import React from 'react'
-// import { withRouter } from 'react-router-dom';
-
-//  class ProductPage extends React.Component{
-
-//      state={
-
-//      }
-
-//      render(){
-//         console.log("Edit props",this.props.location.state);
-//         console.log('match.params',this.props.match.params.id);
-
-//         return(
-//            <div>
-// 			   <h1>products123</h1>
-//            </div>
-//         )
-//     }
-// }
-
-// export default withRouter(ProductPage)
