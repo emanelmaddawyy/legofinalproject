@@ -7,7 +7,7 @@ import Vip from '../Vip/Vip';
 import Findstore from '../Findstore/Findstore';
 import Legolife from '../Legolife/Legolife'
 import Kids from '../Kids/Kids';
-import WishList from '../WishList/WishList';
+import WishList from '../WishList/Wishlist';
 import Cart from '../Cart/Cart';
 
 
@@ -51,8 +51,8 @@ class TopHeader extends Component{
             </li>
           </ul>
     </div>
-   
-    )  
+
+    )
   }
 }
 export default TopHeader;
