@@ -25,7 +25,10 @@ import VipPage from './Pages/VipPage';
 import { StarFilled, StarTwoTone } from '@ant-design/icons';
 import Rating from './components/Rating/Rating';
 import axios from 'axios';
-import ScrollToTop from './components/ProductPageComponents/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
+import LegoLifeAppPage from './Pages/LegoLifeSubPages/LegoLifeAppPage';
+import LegoLifeFAQPage from './Pages/LegoLifeSubPages/LegoLifeFAQPage';
+import LegoLifeMagazinePage from './Pages/LegoLifeSubPages/LegoLifeMagazinePage';
 
 class App extends Component {
 	staticProducts = [
@@ -583,7 +586,7 @@ class App extends Component {
 				<span>Wishlist: {this.state.wishlistNumber} </span> */}
 
 				<BrowserRouter>
-				<ScrollToTop/>
+					<ScrollToTop />
 
 					<Route path='/Login' exact component={() => <LoginPage />}></Route>
 					<Route
@@ -603,6 +606,22 @@ class App extends Component {
 						path='/legolife'
 						exact
 						component={() => <LegoLifePage />}></Route>
+
+					<Route
+						path='/legolifeapp'
+						exact
+						component={() => <LegoLifeAppPage />}></Route>
+
+					<Route
+						path='/legolifemagazine'
+						exact
+						component={() => <LegoLifeMagazinePage />}></Route>
+
+					<Route
+						path='/legolifefaq'
+						exact
+						component={() => <LegoLifeFAQPage />}></Route>
+
 					<Route path='/kids' exact component={() => <KidsPage />}></Route>
 					<Route path='/offers' exact component={() => <OffersPage />}></Route>
 					<Route
@@ -631,11 +650,6 @@ class App extends Component {
 							/>
 						)}
 						path='/'
-						exact></Route>
-
-					<Route
-						component={() => <LegoLifePage />}
-						path='/legolife'
 						exact></Route>
 
 					<Route

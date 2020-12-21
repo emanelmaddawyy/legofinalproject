@@ -21,7 +21,7 @@
 	display: flex;
 	color: white;
 	font-weight: 300;
-	padding: 8px 16px;
+	margin: 8px 16px;
 	cursor: pointer;
 }
 
@@ -139,7 +139,7 @@
 	}
 
 	.sect1 .content-item__secondary-inner {
-		width: 40%;
+		width: 38%;
 		color: white;
 	}
 
@@ -373,4 +373,18 @@
 
 .m-22 {
 	margin-top: 22px;
+}
+
+/* ====================================   subpages    ==================================== */
+
+.nav_list li:hover {
+	opacity: 0.7;
+}
+
+.activeLegoLife {
+	border-bottom: 1px solid white;
+}
+
+.nav_list .activeLegoLife:hover {
+	opacity: 1;
 }

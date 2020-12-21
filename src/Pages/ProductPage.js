@@ -11,7 +11,7 @@ import Header from '../components/Header/Header';
 import ProductInStock from '../components/ProductPageComponents/InStock/ProductInStock';
 import ProductNotInStock from '../components/ProductPageComponents/NotInStock/ProductNotInStock';
 import Toast from '../components/ProductPageComponents/InStock/Toast/Toast';
-import Silder from '../components/Slider/Slider';
+import Slider from '../components/Slider/Slider';
 // import AddToBagHeader from '../components/ProductPageComponents/InStock/AddToBagHeader/AddToBagHeader';
 // import CheckStoreStock from '../components/ProductPageComponents/Shared/CheckStoreStock/CheckStoreStock';
 import PromoBadge from '../components/ProductPageComponents/Shared/PromoBadge/PromoBadge';
@@ -119,7 +119,7 @@ const ProductPage = (props) => {
 	return (
 		<>
 			<Header />
-			<Silder/>
+			<Slider />
 			<Row className='m-0 mt-3'>
 				<div class='fixed-Header'>
 					{/* <div class='fixed-Header' onClick={test2}> */}
@@ -148,14 +148,12 @@ const ProductPage = (props) => {
 							/>
 							<h2>{props.location.state.name}</h2>
 
-
 							<Rating
 								value={props.location.state.rating}
 								className='text-primary'
 								color='#ffcf00'
 								text={`${props.location.state.numberOfReviews} reviews`}
 							/>
-
 
 							<PromoBadge />
 

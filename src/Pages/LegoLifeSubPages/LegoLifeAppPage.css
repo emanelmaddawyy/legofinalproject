@@ -1,0 +1,41 @@
+#legoApp .text-quote2 {
+	background: #e5e5e5;
+	padding: 0;
+}
+
+#legoApp .text-quote .cta__title {
+	color: #2d2d2d;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 48px 14px;
+}
+
+#legoApp .hero {
+	margin: 0;
+}
+#legoApp .FAQ {
+	padding: 48px 16px;
+}
+.FAQWrapper {
+	max-width: 830px;
+	margin: auto;
+}
+@media screen and (min-width: 992px) {
+	#legoApp .FAQ .cta__txt {
+		padding: 10px 20px;
+		font-size: 1rem;
+	}
+}
+
+#legoApp .keepChildSafe {
+	padding: 48px 16px;
+}
+
+#legoApp .keepChildSafe .cta__title {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+/*
+
+    */

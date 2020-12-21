@@ -2,7 +2,7 @@ import React from 'react';
 import './Rating.css';
 import PropTypes from 'prop-types';
 
-const Rating = ({ value, text, color}) => {
+const Rating = ({ value, text, color }) => {
 	return (
 		<div className='rating'>
 			<span>
@@ -61,7 +61,7 @@ const Rating = ({ value, text, color}) => {
 					}></i>
 			</span>
 			&nbsp; &nbsp;
-			<span class="textColor">{text && text}</span>
+			<span class='textColor'>{text && text}</span>
 		</div>
 	);
 };
