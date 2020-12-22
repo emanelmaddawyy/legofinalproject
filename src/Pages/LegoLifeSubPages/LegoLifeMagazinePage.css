@@ -1,0 +1,22 @@
+#magazine #magCarousel {
+	background: #2ebbcf;
+}
+
+#magazine .cta__title {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+#magazine .cta__txt {
+	font-size: 1rem;
+}
+
+#magazine .text-quote {
+	padding: 32px 64px;
+}
+
+@media screen and (min-width: 992px) {
+	#magazine .text-quote {
+		padding: 48px 16px;
+	}
+}
