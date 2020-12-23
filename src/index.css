@@ -13,12 +13,35 @@ code {
 }
 
 @font-face {
-	font-family: cera;
-	src: url(../src/fonts/CeraProMedium.ttf);
+	font-family: 'CeraLight';
+	src: url('../src/fonts/CeraProLight.ttf');
+	font-weight: 100 300; /*font is not applied by font-weight ... use font-family instead in your code it will work */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CeraBold';
+	src: url('../src/fonts/CeraProBold.ttf');
+	font-weight: 700 900; /*font is not applied by font-weight ... use font-family instead in your code it will work */
+	font-style: oblique;
+}
+
+@font-face {
+	font-family: 'CeraItalic';
+	src: url('../src/fonts/CeraProRegularItalic.ttf');
+	font-weight: 400 600; /*font is not applied by font-weight ... use font-family instead in your code it will work */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Cera';
+	src: url('../src/fonts/CeraProMedium.ttf');
+	font-weight: 400 600; /*font is not applied by font-weight ... use font-family instead in your code it will work */
+	font-style: normal;
 }
 
 body {
-	font-family: cera, sans-serif !important;
+	font-family: Cera, sans-serif !important;
 	line-height: 1.5 !important;
 	font-size: 16px !important;
 }

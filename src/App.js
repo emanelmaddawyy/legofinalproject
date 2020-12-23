@@ -30,6 +30,10 @@ import LegoLifeAppPage from './Pages/LegoLifeSubPages/LegoLifeAppPage';
 import LegoLifeFAQPage from './Pages/LegoLifeSubPages/LegoLifeFAQPage';
 import LegoLifeMagazinePage from './Pages/LegoLifeSubPages/LegoLifeMagazinePage';
 import ContactUs from './Pages/ContactUs';
+import ContactUsHelpTopics from './Pages/ContactUsSubPages/ContactUsHelpTopics';
+import ContactUsDeviceGuide from './Pages/ContactUsSubPages/ContactUsDeviceGuide';
+import BrickSeparator from './Pages/ContactUsSubPages/BrickSeparator';
+import KeepDataSafe from './Pages/ContactUsSubPages/KeepDataSafe';
 
 class App extends Component {
 	staticProducts = [
@@ -705,6 +709,11 @@ class App extends Component {
 					<Route path='/vip' exact component={() => <VipPage />}></Route>
 
 					<Route path="/service" exact component={() => <ContactUs />}></Route>
+					<Route path="/help" exact component={() => <ContactUsHelpTopics />}></Route>
+					<Route path="/deviceguide" exact component={() => <ContactUsDeviceGuide />}></Route>
+					<Route path="/brickseparator" exact component={() => <BrickSeparator />}></Route>
+					<Route path="/keepdatasafe" exact component={() => <KeepDataSafe />}></Route>
+
 				</BrowserRouter>
 			</>
 		);

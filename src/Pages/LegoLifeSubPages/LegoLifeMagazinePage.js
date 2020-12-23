@@ -124,6 +124,7 @@ const LegoLifeMagazinePage = () => {
 					</div>
 				</div>
 			</div>
+
 			<div className='px-5' id='magCarousel'>
 				<LegoMagazineCarousel></LegoMagazineCarousel>
 			</div>
@@ -202,6 +203,7 @@ const LegoLifeMagazinePage = () => {
 					</div>
 				</div>
 			</div>
+	
 		</div>
 	);
 };

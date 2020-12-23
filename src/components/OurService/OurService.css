@@ -1,0 +1,97 @@
+#contactUs #OurService .ourServiceStat img {
+	width: 150px;
+	height: 150px;
+	margin: 20px 0;
+}
+
+#OurService .layout__main-inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 155px 8px;
+}
+
+#OurService .grid--center {
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+	margin-left: -8px;
+}
+
+#OurService .grid__item {
+	box-sizing: border-box;
+	flex: 1 1 auto;
+	padding-left: 8px;
+	flex-basis: 83.33333333%;
+	max-width: 83.33333333%;
+}
+
+#OurService .grid__item ul {
+	margin: -2px;
+	display: flex;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+	padding: 0;
+	list-style: none;
+}
+
+#OurService .grid__item ul li {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	outline: none;
+	position: relative;
+	box-shadow: 0 10px 18px -5px rgba(0, 0, 0, 0.5);
+	width: 100%;
+	padding: 16px;
+	text-align: left;
+	white-space: normal;
+	background-color: #fff;
+	color: #333;
+	border: 0;
+	margin-bottom: 5px;
+}
+
+#OurService .grid__item ul li div {
+	background-color: white;
+	width: auto;
+}
+#OurService .grid__item ul li div i {
+	color: #058a0b;
+}
+
+@media screen and (min-width: 992px) {
+	#OurService .right-arrow {
+		height: 15px;
+	}
+	#OurService .grid__item ul li div i {
+		font-size: 1.3rem;
+	}
+}
+
+.m1 .modal-header {
+	border-bottom: 0;
+}
+
+.m1 .modal-body p {
+	margin: 5px;
+	font-family: CeraLight;
+}
+.m1 .modal-body .custom {
+	font-size: 1.4375rem !important;
+	font-weight: 300 !important;
+	text-transform: uppercase;
+}
+
+#m2 .modal-content {
+	right: 250px;
+	width: 1000px;
+}
+
+#m2 .modal-footer {
+	padding: 30px;
+	background-color: #f8f8f8;
+}

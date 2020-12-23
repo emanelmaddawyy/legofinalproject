@@ -48,8 +48,8 @@
 	height: 22px;
 	border: 1px solid rgb(214, 214, 214);
 	border-radius: 22px;
-    width: 1.5625rem;
-    height: 1.5625rem;
+	width: 1.5625rem;
+	height: 1.5625rem;
 }
 
 .accordion button .icon::before {
@@ -92,29 +92,30 @@
 	will-change: opacity, max-height;
 }
 .accordion .accordion-content p {
-    font-size: 0.875rem;
-    line-height: 1.1875rem;
+	font-size: 0.875rem;
+	line-height: 1.1875rem;
 	padding: 0 5px;
 	font-weight: 300;
+	font-family: 'CeraLight';
 }
 
-#EnterCityState{
+#EnterCityState {
 	padding: 25px;
 	padding-left: 15px;
 	border-right: 1px solid rgb(0, 109, 183);
 }
 
-.input-group-text{
-background-color: transparent;
-padding: 0.9375rem;
-border-color: rgb(0, 109, 183);
-border-width: 1px;
-border-style: solid;
-border-radius: 0px 0.3125rem 0.3125rem 0px;
+.input-group-text {
+	background-color: transparent;
+	padding: 0.9375rem;
+	border-color: rgb(0, 109, 183);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0px 0.3125rem 0.3125rem 0px;
 }
-.input-group-text:hover{
-background: rgb(230, 243, 255);
+.input-group-text:hover {
+	background: rgb(230, 243, 255);
 }
-.input-group-text i{
+.input-group-text i {
 	border-color: rgb(0, 109, 183);
 }
