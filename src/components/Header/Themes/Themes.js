@@ -24,7 +24,7 @@ export default class Themes extends Component{
        })
     } else {
       alert("Something went wrong");
-    } 
+    }
   } catch (error) {
     alert(error);
   }
@@ -32,7 +32,7 @@ export default class Themes extends Component{
 
 
   render(){
-    console.log(this.state.themes)
+    // console.log(this.state.themes)
     return (
       <Dropdown className="categoryDropdown" addonType="append" isOpen={this.state.isOpen} toggle={() => this.toggle()}>
         <Dropdown.Toggle caret>Themes</Dropdown.Toggle>

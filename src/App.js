@@ -29,6 +29,7 @@ import ScrollToTop from './components/ScrollToTop';
 import LegoLifeAppPage from './Pages/LegoLifeSubPages/LegoLifeAppPage';
 import LegoLifeFAQPage from './Pages/LegoLifeSubPages/LegoLifeFAQPage';
 import LegoLifeMagazinePage from './Pages/LegoLifeSubPages/LegoLifeMagazinePage';
+import ContactUs from './Pages/ContactUs';
 
 class App extends Component {
 	staticProducts = [
@@ -466,6 +467,9 @@ class App extends Component {
 		],
 	};
 
+
+
+
 	numberOfProductsCalc = (products) => {
 		let result = 0;
 		products.forEach((product) => {
@@ -579,6 +583,7 @@ class App extends Component {
 			productsNumber: this.state.productsNumber,
 		});
 	};
+
 	render() {
 		return (
 			<>
@@ -698,6 +703,8 @@ class App extends Component {
 						exact></Route>
 
 					<Route path='/vip' exact component={() => <VipPage />}></Route>
+
+					<Route path="/service" exact component={() => <ContactUs />}></Route>
 				</BrowserRouter>
 			</>
 		);

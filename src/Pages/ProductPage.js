@@ -169,15 +169,13 @@ const ProductPage = (props) => {
 			<ProductDetails />
 
 			<ProductAccordion data={props} />
-
-			{/* <ProductsSlider title='Recommended For You' /> */}
-
+{/*
 			<ProductSlider
 				title='Recommended For You'
 				products={props.products}
 				addProductToCart={props.addProductToCart}
 				addProductToWishlist={props.addProductToWishlist}
-			/>
+			/> */}
 		</>
 	);
 };

@@ -12,7 +12,7 @@ export default class Interest extends Component{
   }
 
   render(){
-    console.log(this.state.interest)
+    // console.log(this.state.interest)
     return (
       <Dropdown className="categoryDropdown" addonType="append" isOpen={this.state.isOpen} toggle={() => this.toggle()}>
         <Dropdown.Toggle caret>Interest</Dropdown.Toggle>

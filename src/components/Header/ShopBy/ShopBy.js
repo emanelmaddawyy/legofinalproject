@@ -21,13 +21,13 @@ export default class ShopBy extends Component{
          })
       } else {
         alert("Something went wrong");
-      } 
+      }
     } catch (error) {
       alert(error);
     }
   }
   render(){
-    console.log('shopby: ', this.state.shopby);
+    // console.log('shopby: ', this.state.shopby);
 
 
     return (
@@ -36,7 +36,7 @@ export default class ShopBy extends Component{
         <Dropdown.Menu>
         <Tab.Container id="left-tabs-example" defaultActiveKey={0}>
           <Container className="p-0">
-          <Row className="tabsWidth"> 
+          <Row className="tabsWidth">
             <Col sm={3}>
               <Nav variant="pills" className="flex-column">
                 {this.state.shopby.map((item, index) => (
@@ -53,11 +53,11 @@ export default class ShopBy extends Component{
                     <ul className="shopstyle">
                     {item.items.map(displayItem => (
                     <>
-                      <li>   
+                      <li>
                         <img src={displayItem.image} className="img-fluid"/>
                           <br/>
                         <p>{displayItem.title}</p>
-                        </li>                   
+                        </li>
                     </>
                     ))}
                  </ul>
@@ -67,7 +67,7 @@ export default class ShopBy extends Component{
             </Col>
           </Row>
           </Container>
-         
+
         </Tab.Container>
         </Dropdown.Menu>
       </Dropdown>
