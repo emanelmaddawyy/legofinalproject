@@ -15,6 +15,10 @@ dl, ol, ul {
   width: 100%;
   max-width: 100rem;
   margin: 0px auto;
+  overflow: hidden;
+  /* الدنيا ضاربه خالص في ال
+  screensize الصغير
+  و عامله scroll بالعرض*/
 }
 
 .topHeader ul {

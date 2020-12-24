@@ -66,8 +66,8 @@ const LegoLifeAppPage = () => {
 				</div>
 			</div>
 
-			<div className='row p-0 w-100 hero'>
-				<div className='col-lg-8 pr-0 order-lg-2'>
+			<div className='row p-0 m-0 w-100 hero'>
+				<div className='col-lg-8 px-0 order-lg-2'>
 					<img src='/1llappcreateandshare2560x1440.jfif' alt='' />
 				</div>
 
@@ -106,8 +106,8 @@ const LegoLifeAppPage = () => {
 				</div>
 			</div>
 
-			<div className='row p-0 w-100 hero'>
-				<div className='col-lg-8 pl-0 order-lg-1'>
+			<div className='row p-0 ,-0 w-100 hero'>
+				<div className='col-lg-8 px-0 order-lg-1'>
 					<img
 						src='/legolife_applandingpage_hero23_digitalsafety.jfif'
 						alt=''

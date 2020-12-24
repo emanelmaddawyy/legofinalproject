@@ -77,8 +77,8 @@ class LegoLifePage extends React.Component {
 					</div>
 				</div>
 
-				<div className='row p-0 w-100 hero'>
-					<div className='col-lg-8 '>
+				<div className='row p-0 m-0 w-100 hero'>
+					<div className='col-lg-8 px-0'>
 						<img src='/app-hero-block.jfif' alt='' />
 					</div>
 					<div className='col-lg-4 my-auto'>

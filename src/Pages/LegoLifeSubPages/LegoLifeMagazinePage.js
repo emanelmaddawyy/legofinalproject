@@ -31,8 +31,8 @@ const LegoLifeMagazinePage = () => {
 				</nav>
 			</header>
 
-			<div className='row p-0 w-100 hero'>
-				<div className='col-lg-8 pl-0 order-lg-1'>
+			<div className='row p-0 w-100 hero m-0'>
+				<div className='col-lg-8 px-0 order-lg-1'>
 					<img
 						src='/magazine-sign-up-page-heroblock-2_3_2560x1440.jfif'
 						alt=''
@@ -62,7 +62,7 @@ const LegoLifeMagazinePage = () => {
 			</div>
 
 			<div className='row m-0 w-100 hero'>
-				<div className='col-lg-8 pr-0 order-lg-2'>
+				<div className='col-lg-8 px-0 order-lg-2'>
 					<img
 						src='/legolife_familyaccount_hero23_needtoupdateyourdetails670dc324905c60fdb938dd57366b3a4e704e9a329e4fe58d7e905d3c54d6961a.jfif'
 						alt=''
@@ -87,8 +87,8 @@ const LegoLifeMagazinePage = () => {
 				</div>
 			</div>
 
-			<div className='row p-0 w-100 hero'>
-				<div className='col-lg-8 pl-0 order-lg-1'>
+			<div className='row p-0 w-100 hero m-0'>
+				<div className='col-lg-8 px-0 order-lg-1'>
 					<img src='/magazine-hero-block.jfif' alt='' />
 				</div>
 
@@ -129,8 +129,8 @@ const LegoLifeMagazinePage = () => {
 				<LegoMagazineCarousel></LegoMagazineCarousel>
 			</div>
 
-			<div className='row p-0 w-100 hero'>
-				<div className='col-lg-8 pl-0 order-lg-1'>
+			<div className='row p-0 m-0 w-100 hero'>
+				<div className='col-lg-8 px-0 order-lg-1'>
 					<img src='/gl-ll-art-iss4-2020-digimags-images.jfif' alt='' />
 				</div>
 
@@ -203,7 +203,7 @@ const LegoLifeMagazinePage = () => {
 					</div>
 				</div>
 			</div>
-	
+
 		</div>
 	);
 };

@@ -1,4 +1,4 @@
-#contactUs #OurService .ourServiceStat img {
+#OurService .ourServiceStat img {
 	width: 150px;
 	height: 150px;
 	margin: 20px 0;
@@ -61,7 +61,12 @@
 }
 #OurService .grid__item ul li div i {
 	color: #058a0b;
+	/* min-width: 20px; */
 }
+/*
+#OurService .right-arrow {
+	height: 15px;
+} */
 
 @media screen and (min-width: 992px) {
 	#OurService .right-arrow {
@@ -94,4 +99,10 @@
 #m2 .modal-footer {
 	padding: 30px;
 	background-color: #f8f8f8;
+}
+
+#mailus,
+#phoneus {
+	cursor: pointer;
+	min-width: 435px;
 }

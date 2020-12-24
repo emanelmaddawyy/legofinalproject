@@ -34,6 +34,20 @@ import ContactUsHelpTopics from './Pages/ContactUsSubPages/ContactUsHelpTopics';
 import ContactUsDeviceGuide from './Pages/ContactUsSubPages/ContactUsDeviceGuide';
 import BrickSeparator from './Pages/ContactUsSubPages/BrickSeparator';
 import KeepDataSafe from './Pages/ContactUsSubPages/KeepDataSafe';
+import Deliveries from './Pages/ContactUsSubPages/HelpTopicsSubPages/Deliveries';
+import OnlineShop from './Pages/ContactUsSubPages/HelpTopicsSubPages/OnlineShop';
+import BrickFacts from './Pages/ContactUsSubPages/HelpTopicsSubPages/BrickFacts';
+import BuildingInstructions from './Pages/ContactUsSubPages/HelpTopicsSubPages/BuildingInstructions';
+import BuyingParts from './Pages/ContactUsSubPages/HelpTopicsSubPages/BuyingParts';
+import HelpContactUs from './Pages/ContactUsSubPages/HelpTopicsSubPages/HelpContactUs';
+import LegoAccount from './Pages/ContactUsSubPages/HelpTopicsSubPages/LegoAccount'
+import ElectronicsRobotics from './Pages/ContactUsSubPages/HelpTopicsSubPages/ElectronicsRobotics';
+import ThemesSets from './Pages/ContactUsSubPages/HelpTopicsSubPages/ThemesSets';
+import LegoEventsTours from './Pages/ContactUsSubPages/HelpTopicsSubPages/LegoEventsTours';
+import LegoLand from './Pages/ContactUsSubPages/HelpTopicsSubPages/LegoLand';
+
+
+
 
 class App extends Component {
 	staticProducts = [
@@ -713,6 +727,18 @@ class App extends Component {
 					<Route path="/deviceguide" exact component={() => <ContactUsDeviceGuide />}></Route>
 					<Route path="/brickseparator" exact component={() => <BrickSeparator />}></Route>
 					<Route path="/keepdatasafe" exact component={() => <KeepDataSafe />}></Route>
+					<Route path="/deliveries" exact component={() => <Deliveries />}></Route>
+					<Route path="/onlineshop" exact component={() => <OnlineShop />}></Route>
+					<Route path="/brickfacts" exact component={() => <BrickFacts />}></Route>
+					<Route path="/buildinginstructions" exact component={() => <BuildingInstructions />}></Route>
+					<Route path="/buildinginstructions" exact component={() => <BuildingInstructions />}></Route>
+					<Route path="/buyingParts" exact component={() => <BuyingParts />}></Route>
+					<Route path="/helpcontactus" exact component={() => <HelpContactUs />}></Route>
+					<Route path="/legoaccount" exact component={() => <LegoAccount />}></Route>
+					<Route path="/electronicsrobotics" exact component={() => <ElectronicsRobotics />}></Route>
+					<Route path="/themessets" exact component={() => <ThemesSets />}></Route>
+					<Route path="/legoeventstours" exact component={() => <LegoEventsTours />}></Route>
+					<Route path="/legoland" exact component={() => <LegoLand />}></Route>
 
 				</BrowserRouter>
 			</>

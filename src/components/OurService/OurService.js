@@ -11,7 +11,7 @@ const OurService = () => {
 
 		return (
 			<>
-				<li className=' justify-content-center' onClick={handleShow}>
+				<li className=' justify-content-center' id="mailus" onClick={handleShow}>
 					<div className='row  align-items-center'>
 						<div className='col-1'>
 							<i class='far fa-envelope-open'></i>
@@ -51,7 +51,7 @@ const OurService = () => {
 
 		return (
 			<>
-				<li className=' justify-content-center' onClick={handleShow}>
+				<li className=' justify-content-center' id="phoneus" onClick={handleShow}>
 					<div className='row  align-items-center'>
 						<div className='col-1'>
 							<i class='fas fa-phone'></i>
