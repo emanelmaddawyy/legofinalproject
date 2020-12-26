@@ -12,7 +12,7 @@ const BuyingParts = (props) => {
 		<div>
 			<Header />
 
-            <HelpTopicsHeader/>
+			<HelpTopicsHeader />
 
 			<div className='row p-0 m-0 w-100'>
 				<div className='col-lg-8 order-lg-1 chooseTopic'>
@@ -30,44 +30,44 @@ const BuyingParts = (props) => {
 										</button>
 									</div>
 									<div className='col-12' id='title'>
-                                        Buying Parts - Buying Parts
+										Buying Parts - Buying Parts
 									</div>
 									<div className='col-12'>
 										<p id='subtitle'>
-                                        Want to buy extra LEGO® parts for a building project? Find all the information you need about buying LEGO® pieces here.
+											Want to buy extra LEGO® parts for a building project? Find
+											all the information you need about buying LEGO® pieces
+											here.
 										</p>
 									</div>
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
-											<MediaArticle2
-												text={'Buying individual LEGO® parts'}
-											/>
+										<Link to='/buyingindividualparts'>
+											<MediaArticle2 text={'Buying individual LEGO® parts'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/replacingbuyingminifigures'>
 											<MediaArticle2 text={'Replacing or buying minifigures'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/whenpartsdelivered'>
 											<MediaArticle2
-												text={
-													'What is the difference between Pick A Brick and Bricks & Pieces?'
-												}
+												text={'When will my parts be delivered?'}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'When will my parts be delivered?'} />
-										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Identifying LEGO® set and part numbers'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/identifyinglegoset'>
 											<MediaArticle2
-												text={'Creating your own minifigure'}
+												text={'Identifying LEGO® set and part numbers'}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Replacement parts for older sets'} />
+										<Link to='/creatingminifigure'>
+											<MediaArticle2 text={'Creating your own minifigure'} />
+										</Link>
+										<Link to='/replacementpartsforoldersets'>
+											<MediaArticle2
+												text={'Replacement parts for older sets'}
+											/>
+										</Link>
+										<Link to='/buylicensedparts'>
+											<MediaArticle2 text={"Why can't I buy licensed parts?"} />
 										</Link>
 									</div>
 								</div>

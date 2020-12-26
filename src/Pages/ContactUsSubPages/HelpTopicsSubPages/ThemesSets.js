@@ -42,34 +42,34 @@ const ThemesSets = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
+										<Link to='/identifyinglegoset'>
 											<MediaArticle2
 												text={'Identifying LEGO® set and part numbers'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/retiredsets'>
 											<MediaArticle2 text={'Retired LEGO® sets'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/newsetsavailable'>
 											<MediaArticle2
 												text={'Finding out when new sets are available'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/buylego'>
 											<MediaArticle2 text={'Where to buy LEGO® sets'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/pricelego'>
 											<MediaArticle2
 												text={'How we decide the prices of LEGO® sets'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/designlego'>
 											<MediaArticle2 text={'How we design LEGO® sets'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/legodigitaldesigner'>
 											<MediaArticle2
 												text={
-													'What to do if you’re having problems building your set'
+													'About LEGO® Digital Designer'
 												}
 											/>
 										</Link>

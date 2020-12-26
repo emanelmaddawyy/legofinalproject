@@ -42,33 +42,33 @@ const LegoAccount = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
+										<Link to='/makingchangestoaccount'>
 											<MediaArticle2
 												text={'Making changes to your LEGO® Account'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/deleteaccount'>
 											<MediaArticle2 text={'How do I delete my LEGO® Account?'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/didntgetemail'>
 											<MediaArticle2
 												text={
 													"I didn't get an email when I tried to reset my password. What do I do?"
 												}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/cantrememberusername'>
 											<MediaArticle2 text={"What to do if you can't remember the username registered to your LEGO® VIP card"} />
 										</Link>
-										<Link to='/'>
+										<Link to='/subscribetonewsletter'>
 											<MediaArticle2 text={'Subscribing to LEGO® newsletters'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/accountandhowtouseit'>
 											<MediaArticle2
 												text={"What's a LEGO® Account and how can I use it?"}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/registeredaccounttochild'>
 											<MediaArticle2 text={'What to do if you registered your LEGO® Account to your child'} />
 										</Link>
 									</div>

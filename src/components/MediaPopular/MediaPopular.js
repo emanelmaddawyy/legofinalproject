@@ -9,29 +9,33 @@ const MediaPopular = () => {
 			<header>
 				<h4>Popular articles</h4>
 			</header>
-			
-			<Link to="/" >
+
+			<Link to='/covidresponse'>
 				<MediaArticle text={'Our updates on COVID-19'} />
 			</Link>
 
-			<Link to="/" >
+			<Link to='/legoavailabilitystatuses'>
 				<MediaArticle text={'LEGO.com availability statuses'} />
 			</Link>
 
-			<Link to="/" >
-				<MediaArticle text={'Identifying LEGO® sets'} />
+			<Link to='/identifyinglegoset'>
+				<MediaArticle text={'Identifying LEGO® set and part numbers'} />
 			</Link>
 
-			<Link to="/" >
+			<Link to='/buyingindividualparts'>
 				<MediaArticle text={'Buying individual LEGO® parts'} />
 			</Link>
 
-			<Link to="/" >
+			<Link to='/creatingminifigure'>
 				<MediaArticle text={'Creating your own minifigure'} />
 			</Link>
 
-			<Link to="/" >
+			<Link to='/legodigitaldesigner'>
 				<MediaArticle text={'About LEGO® Digital Designer'} />
+			</Link>
+
+			<Link to='/replacementpartsforoldersets'>
+				<MediaArticle text={'Replacement parts for older sets'} />
 			</Link>
 		</div>
 	);

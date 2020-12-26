@@ -42,34 +42,33 @@ const LegoEventsTours = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
-											<MediaArticle2
-												text={'About the LEGO® Ambassador Network and LEGO® User Groups'}
-											/>
-										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'LEGO® Stores Monthly Mini Builds'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/legoambassador'>
 											<MediaArticle2
 												text={
-													'Find out about LEGO® Events near you'
+													'About the LEGO® Ambassador Network and LEGO® User Groups'
 												}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'LEGOLAND® and Discovery Center app'} />
-										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'About LEGO® Inside Tour'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/eventsnearyou'>
 											<MediaArticle2
-												text={'Find out about LEGO® House'}
+												text={'Find out about LEGO® Events near you'}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'LEGO® Life events at LEGO® Stores'} />
+										<Link to='/discoverycenterapp'>
+											<MediaArticle2
+												text={'LEGOLAND® and Discovery Center app'}
+											/>
+										</Link>
+										<Link to='/legoinside'>
+											<MediaArticle2 text={'About LEGO® Inside Tour'} />
+										</Link>
+										<Link to='/eventsatstores'>
+											<MediaArticle2 text={'Find out about LEGO® House'} />
+										</Link>
+										<Link to='/legoHouse'>
+											<MediaArticle2
+												text={'LEGO® Life events at LEGO® Stores'}
+											/>
 										</Link>
 									</div>
 								</div>

@@ -19,7 +19,7 @@
 
 .headerStyle2 .nav_list li {
 	display: flex;
-	color: black;
+	color: #333;
 	font-weight: 300;
 	font-family: 'CeraLight';
 	margin: 8px 16px;
@@ -32,5 +32,6 @@
     font-family: 'CeraBold';
     padding: 20px;
     padding-left: 40px;
-    padding-right: 0;
+	padding-right: 0;
+	color: #333;
 }

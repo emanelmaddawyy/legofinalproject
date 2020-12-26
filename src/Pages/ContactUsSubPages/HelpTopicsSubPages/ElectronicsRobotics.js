@@ -41,34 +41,37 @@ const ElectronicsRobotics = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
-											<MediaArticle2
-												text={'Guide to LEGO® BOOST programming blocks'}
-											/>
-										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Connecting the LEGO® BOOST app to the Move Hub with Bluetooth'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/connectlegoboost'>
 											<MediaArticle2
 												text={
-													'BOOST-compatible LEGO® sets'
+													'Connecting the LEGO® BOOST app to the Move Hub with Bluetooth'
 												}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'How is LEGO® BOOST different from LEGO® MINDSTORMS®?'} />
+										<Link to='/boostcompatible'>
+											<MediaArticle2 text={'BOOST-compatible LEGO® sets'} />
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'The light on my LEGO® BOOST Move Hub keeps flashing different colors'} />
+										<Link to='/mindstorm'>
+											<MediaArticle2
+												text={
+													'How is LEGO® BOOST different from LEGO® MINDSTORMS®?'
+												}
+											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/lightlegoboost'>
+											<MediaArticle2
+												text={
+													'The light on my LEGO® BOOST Move Hub keeps flashing different colors'
+												}
+											/>
+										</Link>
+										<Link to='/hearingsound'>
 											<MediaArticle2
 												text={'Hearing sound and speaking to LEGO® BOOST'}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Changing the language setting in the LEGO® BOOST app'} />
+										<Link to='/starwars'>
+											<MediaArticle2 text={'LEGO® BOOST Star Wars™ app'} />
 										</Link>
 									</div>
 								</div>

@@ -107,27 +107,6 @@ const ContactUs = () => {
 				</div>
 			</div>
 
-			{/* <div className='text-quote EveryPageIsABlast'>
-				<div className='grid-column'>
-					<div className='grid-content'>
-						<div className='content-item'>
-							<section className='content-item__secondary'>
-								<h3 className='cta__title'>Find answers to frequently asked questions</h3>
-								<p className='cta__txt2'>
-                                <Link to='/help'>
-                                    <div className='cta__btn-wrapper'>
-                                        <div className='cta__btn border-0 bg-light'>
-                                            Help Topics
-                                        </div>
-                                    </div>
-                                </Link>
-								</p>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div> */}
-
 			<section id='c-hero'>
 				<div className='c-hero__img-wrapper '>
 					<img src='/help-topics-section.jpg' alt='' className='c-hero__img' />

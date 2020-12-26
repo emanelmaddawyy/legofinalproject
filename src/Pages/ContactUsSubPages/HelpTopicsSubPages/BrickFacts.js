@@ -42,33 +42,33 @@ const BrickFacts = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
+										<Link to='/recyclinglego'>
 											<MediaArticle2
 												text={'Recycling LEGO® pieces & warehouse recycling'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/cleaninglego'>
 											<MediaArticle2 text={'Cleaning your LEGO® bricks'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/comparingbricksplates'>
 											<MediaArticle2
 												text={
 													'Comparing LEGO® bricks, plates, and DUPLO® bricks'
 												}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/howbricksmade'>
 											<MediaArticle2 text={'How LEGO® bricks are made'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/whatbricksmadeof'>
 											<MediaArticle2 text={'What LEGO® bricks are made of'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/buildingtips'>
 											<MediaArticle2
 												text={'Building tips for Master Builders'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/waterproof'>
 											<MediaArticle2 text={'Are LEGO® bricks waterproof?'} />
 										</Link>
 									</div>

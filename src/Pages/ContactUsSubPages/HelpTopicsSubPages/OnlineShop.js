@@ -42,26 +42,26 @@ const OnlineShop = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
-											<MediaArticle2 text={'LEGO® Shop online troubleshooting walkthrough'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/orderingonline'>
 											<MediaArticle2 text={'Ordering from LEGO® Shop online'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/legoavailabilitystatuses'>
 											<MediaArticle2 text={'LEGO.com availability statuses'} />
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'LEGO® Shop order statuses'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/cancelorder'>
 											<MediaArticle2 text={'When can I cancel or change a LEGO® Shop order?'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/addpromotional'>
 											<MediaArticle2 text={'Where to add VIP codes, promotional codes and discount codes at checkout'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/legogiftcard'>
 											<MediaArticle2 text={'About LEGO® Gift Cards'} />
+										</Link>
+										<Link to='/shopweberrors'>
+											<MediaArticle2 text={'LEGO® Shop web errors'} />
+										</Link>
+										<Link to='/backordereditems'>
+											<MediaArticle2 text={'Ordering backordered items'} />
 										</Link>
 									</div>
 								</div>

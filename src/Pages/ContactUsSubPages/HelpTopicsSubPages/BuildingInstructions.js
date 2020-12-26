@@ -12,7 +12,7 @@ const BuildingInstructions = (props) => {
 		<div>
 			<Header />
 
-			<HelpTopicsHeader/>
+			<HelpTopicsHeader />
 
 			<div className='row p-0 m-0 w-100'>
 				<div className='col-lg-8 order-lg-1 chooseTopic'>
@@ -30,44 +30,48 @@ const BuildingInstructions = (props) => {
 										</button>
 									</div>
 									<div className='col-12' id='title'>
-                                    Building Instructions - Building Instructions
+										Building Instructions - Building Instructions
 									</div>
 									<div className='col-12'>
 										<p id='subtitle'>
-                                        Looking for building tips and ideas? Browse our database and download LEGO® building instructions online.
+											Looking for building tips and ideas? Browse our database
+											and download LEGO® building instructions online.
 										</p>
 									</div>
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
+										<Link to='/identifyinglegoset'>
 											<MediaArticle2
-												text={'How to download building instructions online'}
+												text={'Identifying LEGO® set and part numbers'}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Identifying LEGO® set and part numbers'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/replaceinstructions'>
 											<MediaArticle2
 												text={
 													'Replace missing or damaged building instructions'
 												}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Digital building instructions for older sets'} />
-										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Extra Technic building instructions'} />
-										</Link>
-										<Link to='/'>
+										<Link to='/buildingtips'>
 											<MediaArticle2
-												text={'Instructions PLUS - digital building instructions'}
+												text={'Building tips for Master Builders'}
 											/>
 										</Link>
-										<Link to='/'>
-											<MediaArticle2 text={'Digital building instructions for new sets'} />
+										<Link to='/designinstructions'>
+											<MediaArticle2
+												text={'How we design our building instructions'}
+											/>
+										</Link>
+										<Link to='/printedmaterials'>
+											<MediaArticle2 text={'FSC® logo on printed materials'} />
+										</Link>
+										<Link to='/minion'>
+											<MediaArticle2
+												text={
+													'LEGO® Minions 75551 Brick-built Minions and their Lair'
+												}
+											/>
 										</Link>
 									</div>
 								</div>

@@ -40,33 +40,33 @@ const HelpContactUs = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
+										<Link to='/covidresponse'>
 											<MediaArticle2
 												text={'Our updates on COVID-19'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/contactingcustomerservice'>
 											<MediaArticle2 text={'Contacting LEGO® Customer Service'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/sellinglego'>
 											<MediaArticle2
 												text={
 													'Selling LEGO® products in your shop'
 												}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/coolcreation'>
 											<MediaArticle2 text={'Cool Creations'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/customerserviceteam'>
 											<MediaArticle2 text={'Meet our Customer Service team!'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/jobswithlego'>
 											<MediaArticle2
 												text={'Jobs with The LEGO Group'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/writelegolife'>
 											<MediaArticle2 text={'Write to LEGO® Life'} />
 										</Link>
 									</div>

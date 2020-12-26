@@ -30,6 +30,6 @@ header h4 {
 }
 @media screen and (min-width: 992px) {
 	#popularArticles .right-arrow {
-		margin-left: 20px;
+		margin-left: 35px;
 	}
 }

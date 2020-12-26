@@ -42,20 +42,20 @@ const LegoLand = (props) => {
 								</div>
 								<div className='row m-0' id='main-content'>
 									<div className='col-12'>
-										<Link to='/'>
+										<Link to='/legolandlocations'>
 											<MediaArticle2
 												text={'LEGOLAND® locations around the world'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/legolandsupport'>
 											<MediaArticle2 text={'Contacting LEGOLAND® Support'} />
 										</Link>
-										<Link to='/'>
+										<Link to='/discoverycenterapp'>
 											<MediaArticle2
 												text={'LEGOLAND® and Discovery Center app'}
 											/>
 										</Link>
-										<Link to='/'>
+										<Link to='/disccoveryaroundtheworld'>
 											<MediaArticle2
 												text={'LEGOLAND® Discovery Centers around the world'}
 											/>
