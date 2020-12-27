@@ -40,7 +40,7 @@ import BrickFacts from './Pages/ContactUsSubPages/HelpTopicsSubPages/BrickFacts'
 import BuildingInstructions from './Pages/ContactUsSubPages/HelpTopicsSubPages/BuildingInstructions';
 import BuyingParts from './Pages/ContactUsSubPages/HelpTopicsSubPages/BuyingParts';
 import HelpContactUs from './Pages/ContactUsSubPages/HelpTopicsSubPages/HelpContactUs';
-import LegoAccount from './Pages/ContactUsSubPages/HelpTopicsSubPages/LegoAccount'
+import LegoAccount from './Pages/ContactUsSubPages/HelpTopicsSubPages/LegoAccount';
 import ElectronicsRobotics from './Pages/ContactUsSubPages/HelpTopicsSubPages/ElectronicsRobotics';
 import ThemesSets from './Pages/ContactUsSubPages/HelpTopicsSubPages/ThemesSets';
 import LegoEventsTours from './Pages/ContactUsSubPages/HelpTopicsSubPages/LegoEventsTours';
@@ -110,9 +110,9 @@ import EventsAtStores from './Pages/ContactUsSubPages/HelpTopicsSubPages/Answers
 import LEGOLANDlocations from './Pages/ContactUsSubPages/HelpTopicsSubPages/Answers/LEGOLANDlocations';
 import LEGOLANDSupport from './Pages/ContactUsSubPages/HelpTopicsSubPages/Answers/LEGOLANDSupport';
 import DiscoveryAroundTheWorld from './Pages/ContactUsSubPages/HelpTopicsSubPages/Answers/DiscoveryAroundTheWorld';
-
-
-
+import PrivacyPolicy from './Pages/PrivacyPolicy';
+import PrivacyPolicyCookies from './Pages/PrivacyPolicyCookies';
+import Shipping from './Pages/Shipping';
 
 class App extends Component {
 	staticProducts = [
@@ -148,8 +148,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'LEGOfans123',
@@ -194,8 +193,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'frontranger',
@@ -235,8 +233,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'LEGOfans123',
@@ -281,8 +278,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'frontranger',
@@ -322,8 +318,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'LEGOfans123',
@@ -368,8 +363,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'frontranger',
@@ -409,8 +403,7 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
+
 			Reviews: [
 				{
 					nickname: 'LEGOfans123',
@@ -455,8 +448,6 @@ class App extends Component {
 				'Custom parts orders are sent separately from merchandise and take additional time to process and deliver.',
 				'Unopened merchandise may be returned for a full refund within 90 days of receipt of your order.',
 			],
-			DeliveriesAndReturnsParagraph:
-				'Some exclusions apply. Visit our Deliveries and Returns page for more information.',
 			Reviews: [
 				{
 					nickname: 'frontranger',
@@ -549,9 +540,6 @@ class App extends Component {
 			},
 		],
 	};
-
-
-
 
 	numberOfProductsCalc = (products) => {
 		let result = 0;
@@ -787,92 +775,321 @@ class App extends Component {
 
 					<Route path='/vip' exact component={() => <VipPage />}></Route>
 
-					<Route path="/service" exact component={() => <ContactUs />}></Route>
-					<Route path="/help" exact component={() => <ContactUsHelpTopics />}></Route>
-					<Route path="/deviceguide" exact component={() => <ContactUsDeviceGuide />}></Route>
-					<Route path="/brickseparator" exact component={() => <BrickSeparator />}></Route>
-					<Route path="/keepdatasafe" exact component={() => <KeepDataSafe />}></Route>
-					<Route path="/deliveries" exact component={() => <Deliveries />}></Route>
-					<Route path="/onlineshop" exact component={() => <OnlineShop />}></Route>
-					<Route path="/brickfacts" exact component={() => <BrickFacts />}></Route>
-					<Route path="/buildinginstructions" exact component={() => <BuildingInstructions />}></Route>
-					<Route path="/buyingParts" exact component={() => <BuyingParts />}></Route>
-					<Route path="/helpcontactus" exact component={() => <HelpContactUs />}></Route>
-					<Route path="/legoaccount" exact component={() => <LegoAccount />}></Route>
-					<Route path="/electronicsrobotics" exact component={() => <ElectronicsRobotics />}></Route>
-					<Route path="/themessets" exact component={() => <ThemesSets />}></Route>
-					<Route path="/legoeventstours" exact component={() => <LegoEventsTours />}></Route>
-					<Route path="/legoland" exact component={() => <LegoLand />}></Route>
-					<Route path="/covidresponse" exact component={() => <CovidResponse />}></Route>
-					<Route path="/legoavailabilitystatuses" exact component={() => <LegoAvailabilityStatuses />}></Route>
-					<Route path="/buyingindividualparts" exact component={() => <BuyingIndividualParts />}></Route>
-					<Route path="/replacementpartsforoldersets" exact component={() => <ReplacementPartsForOlderSets />}></Route>
-					<Route path="/creatingminifigure" exact component={() => <CreatingMinifigure />}></Route>
-					<Route path="/legodigitaldesigner" exact component={() => <LegoDigitalDesigner />}></Route>
-					<Route path="/identifyinglegoset" exact component={() => <IdentifyingLegoSet />}></Route>
-					<Route path="/trackingorders" exact component={() => <TrackingOrders />}></Route>
-					<Route path="/whenpartsdelivered" exact component={() => <WhenPartsDelivered />}></Route>
-					<Route path="/backordereditems" exact component={() => <BackorderedItems />}></Route>
-					<Route path="/missingparts" exact component={() => <MissingParts />}></Route>
-					<Route path="/wrongdamagedorders" exact component={() => <WrongDamagedOrders  />}></Route>
-					<Route path="/brickstakinglong" exact component={() => <BricksTakingLong  />}></Route>
-					<Route path="/changeregion" exact component={() => <ChangeRegion  />}></Route>
-					<Route path="/orderingonline" exact component={() => <OrderingOnline  />}></Route>
-					<Route path="/shopweberrors" exact component={() => <ShopWebErrors  />}></Route>
-					<Route path="/cancelorder" exact component={() => <CancelOrder  />}></Route>
-					<Route path="/addpromotional" exact component={() => <AddPromotional  />}></Route>
-					<Route path="/legogiftcard" exact component={() => <LegoGiftCard  />}></Route>
-					<Route path="/recyclinglego" exact component={() => <RecyclingLego  />}></Route>
-					<Route path="/cleaninglego" exact component={() => <CleaningLego  />}></Route>
-					<Route path="/whatbricksmadeof" exact component={() => <WhatBricksMadeOf  />}></Route>
-					<Route path="/comparingbricksplates" exact component={() => <ComparingBricksPlates  />}></Route>
-					<Route path="/howbricksmade" exact component={() => <HowBricksMade  />}></Route>
-					<Route path="/buildingtips" exact component={() => <BuildingTips  />}></Route>
-					<Route path="/waterproof" exact component={() => <WaterProof  />}></Route>
-					<Route path="/replaceinstructions" exact component={() => <ReplaceInstructions  />}></Route>
-					<Route path="/designinstructions" exact component={() => <DesignInstructions  />}></Route>
-					<Route path="/printedmaterials" exact component={() => <PrintedMaterials  />}></Route>
-					<Route path="/minion" exact component={() => <Minion  />}></Route>
-					<Route path="/replacingbuyingminifigures" exact component={() => <ReplacingBuyingMinifigures  />}></Route>
-					<Route path="/buylicensedparts" exact component={() => <BuyLicensedParts  />}></Route>
-					<Route path="/writelegolife" exact component={() => <WriteLegoLife  />}></Route>
-					<Route path="/jobswithlego" exact component={() => <Jobs  />}></Route>
-					<Route path="/customerserviceteam" exact component={() => <CustomerServiceTeam  />}></Route>
-					<Route path="/coolcreation" exact component={() => <CoolCreation  />}></Route>
-					<Route path="/sellinglego" exact component={() => <SellingLego  />}></Route>
-					<Route path="/contactingcustomerservice" exact component={() => <ContactingCustomerService  />}></Route>
-					<Route path="/registeredaccounttochild" exact component={() => <RegisteredAccountToChild  />}></Route>
-					<Route path="/accountandhowtouseit" exact component={() => <AccountandHowToUseIt  />}></Route>
-					<Route path="/subscribetonewsletter" exact component={() => <SubscribeToNewsLetter  />}></Route>
-					<Route path="/cantrememberusername" exact component={() => <CantRememberUsername  />}></Route>
-					<Route path="/didntgetemail" exact component={() => <DidntGetEmail  />}></Route>
-					<Route path="/deleteaccount" exact component={() => <DeleteAccount  />}></Route>
-					<Route path="/makingchangestoaccount" exact component={() => <MakingChangesToAccount  />}></Route>
-					<Route path="/connectlegoboost" exact component={() => <ConnectLegoBoost  />}></Route>
-					<Route path="/boostcompatible" exact component={() => <BOOSTCompatible  />}></Route>
-					<Route path="/mindstorm" exact component={() => <MindStorm  />}></Route>
-					<Route path="/hearingsound" exact component={() => <HearingSound  />}></Route>
-					<Route path="/starwars" exact component={() => <StarWars  />}></Route>
-					<Route path="/lightlegoboost" exact component={() => <LightLegoBoost  />}></Route>
-					<Route path="/retiredsets" exact component={() => <RetiredSets  />}></Route>
-					<Route path="/designlego" exact component={() => <DesignLego  />}></Route>
-					<Route path="/pricelego" exact component={() => <PriceLego  />}></Route>
-					<Route path="/buylego" exact component={() => <BuyLego  />}></Route>
-					<Route path="/newsetsavailable" exact component={() => <NewSetsAvailable  />}></Route>
-					<Route path="/legoambassador" exact component={() => <LEGOAmbassador  />}></Route>
-					<Route path="/eventsnearyou" exact component={() => <EventsNearYou  />}></Route>
-					<Route path="/legoinside" exact component={() => <LegoInside  />}></Route>
-					<Route path="/discoverycenterapp" exact component={() => <DiscoveryCenterApp  />}></Route>
-					<Route path="/eventsatstores" exact component={() => <EventsAtStores  />}></Route>
-					<Route path="/legoHouse" exact component={() => <LEGOHouse  />}></Route>
-					<Route path="/legolandlocations" exact component={() => <LEGOLANDlocations  />}></Route>
-					<Route path="/legolandsupport" exact component={() => <LEGOLANDSupport  />}></Route>
-					<Route path="/disccoveryaroundtheworld" exact component={() => <DiscoveryAroundTheWorld  />}></Route>
-
-
-
-{/*
- */}
+					<Route path='/service' exact component={() => <ContactUs />}></Route>
+					<Route
+						path='/help'
+						exact
+						component={() => <ContactUsHelpTopics />}></Route>
+					<Route
+						path='/deviceguide'
+						exact
+						component={() => <ContactUsDeviceGuide />}></Route>
+					<Route
+						path='/brickseparator'
+						exact
+						component={() => <BrickSeparator />}></Route>
+					<Route
+						path='/keepdatasafe'
+						exact
+						component={() => <KeepDataSafe />}></Route>
+					<Route
+						path='/deliveries'
+						exact
+						component={() => <Deliveries />}></Route>
+					<Route
+						path='/onlineshop'
+						exact
+						component={() => <OnlineShop />}></Route>
+					<Route
+						path='/brickfacts'
+						exact
+						component={() => <BrickFacts />}></Route>
+					<Route
+						path='/buildinginstructions'
+						exact
+						component={() => <BuildingInstructions />}></Route>
+					<Route
+						path='/buyingParts'
+						exact
+						component={() => <BuyingParts />}></Route>
+					<Route
+						path='/helpcontactus'
+						exact
+						component={() => <HelpContactUs />}></Route>
+					<Route
+						path='/legoaccount'
+						exact
+						component={() => <LegoAccount />}></Route>
+					<Route
+						path='/electronicsrobotics'
+						exact
+						component={() => <ElectronicsRobotics />}></Route>
+					<Route
+						path='/themessets'
+						exact
+						component={() => <ThemesSets />}></Route>
+					<Route
+						path='/legoeventstours'
+						exact
+						component={() => <LegoEventsTours />}></Route>
+					<Route path='/legoland' exact component={() => <LegoLand />}></Route>
+					<Route
+						path='/covidresponse'
+						exact
+						component={() => <CovidResponse />}></Route>
+					<Route
+						path='/legoavailabilitystatuses'
+						exact
+						component={() => <LegoAvailabilityStatuses />}></Route>
+					<Route
+						path='/buyingindividualparts'
+						exact
+						component={() => <BuyingIndividualParts />}></Route>
+					<Route
+						path='/replacementpartsforoldersets'
+						exact
+						component={() => <ReplacementPartsForOlderSets />}></Route>
+					<Route
+						path='/creatingminifigure'
+						exact
+						component={() => <CreatingMinifigure />}></Route>
+					<Route
+						path='/legodigitaldesigner'
+						exact
+						component={() => <LegoDigitalDesigner />}></Route>
+					<Route
+						path='/identifyinglegoset'
+						exact
+						component={() => <IdentifyingLegoSet />}></Route>
+					<Route
+						path='/trackingorders'
+						exact
+						component={() => <TrackingOrders />}></Route>
+					<Route
+						path='/whenpartsdelivered'
+						exact
+						component={() => <WhenPartsDelivered />}></Route>
+					<Route
+						path='/backordereditems'
+						exact
+						component={() => <BackorderedItems />}></Route>
+					<Route
+						path='/missingparts'
+						exact
+						component={() => <MissingParts />}></Route>
+					<Route
+						path='/wrongdamagedorders'
+						exact
+						component={() => <WrongDamagedOrders />}></Route>
+					<Route
+						path='/brickstakinglong'
+						exact
+						component={() => <BricksTakingLong />}></Route>
+					<Route
+						path='/changeregion'
+						exact
+						component={() => <ChangeRegion />}></Route>
+					<Route
+						path='/orderingonline'
+						exact
+						component={() => <OrderingOnline />}></Route>
+					<Route
+						path='/shopweberrors'
+						exact
+						component={() => <ShopWebErrors />}></Route>
+					<Route
+						path='/cancelorder'
+						exact
+						component={() => <CancelOrder />}></Route>
+					<Route
+						path='/addpromotional'
+						exact
+						component={() => <AddPromotional />}></Route>
+					<Route
+						path='/legogiftcard'
+						exact
+						component={() => <LegoGiftCard />}></Route>
+					<Route
+						path='/recyclinglego'
+						exact
+						component={() => <RecyclingLego />}></Route>
+					<Route
+						path='/cleaninglego'
+						exact
+						component={() => <CleaningLego />}></Route>
+					<Route
+						path='/whatbricksmadeof'
+						exact
+						component={() => <WhatBricksMadeOf />}></Route>
+					<Route
+						path='/comparingbricksplates'
+						exact
+						component={() => <ComparingBricksPlates />}></Route>
+					<Route
+						path='/howbricksmade'
+						exact
+						component={() => <HowBricksMade />}></Route>
+					<Route
+						path='/buildingtips'
+						exact
+						component={() => <BuildingTips />}></Route>
+					<Route
+						path='/waterproof'
+						exact
+						component={() => <WaterProof />}></Route>
+					<Route
+						path='/replaceinstructions'
+						exact
+						component={() => <ReplaceInstructions />}></Route>
+					<Route
+						path='/designinstructions'
+						exact
+						component={() => <DesignInstructions />}></Route>
+					<Route
+						path='/printedmaterials'
+						exact
+						component={() => <PrintedMaterials />}></Route>
+					<Route path='/minion' exact component={() => <Minion />}></Route>
+					<Route
+						path='/replacingbuyingminifigures'
+						exact
+						component={() => <ReplacingBuyingMinifigures />}></Route>
+					<Route
+						path='/buylicensedparts'
+						exact
+						component={() => <BuyLicensedParts />}></Route>
+					<Route
+						path='/writelegolife'
+						exact
+						component={() => <WriteLegoLife />}></Route>
+					<Route path='/jobswithlego' exact component={() => <Jobs />}></Route>
+					<Route
+						path='/customerserviceteam'
+						exact
+						component={() => <CustomerServiceTeam />}></Route>
+					<Route
+						path='/coolcreation'
+						exact
+						component={() => <CoolCreation />}></Route>
+					<Route
+						path='/sellinglego'
+						exact
+						component={() => <SellingLego />}></Route>
+					<Route
+						path='/contactingcustomerservice'
+						exact
+						component={() => <ContactingCustomerService />}></Route>
+					<Route
+						path='/registeredaccounttochild'
+						exact
+						component={() => <RegisteredAccountToChild />}></Route>
+					<Route
+						path='/accountandhowtouseit'
+						exact
+						component={() => <AccountandHowToUseIt />}></Route>
+					<Route
+						path='/subscribetonewsletter'
+						exact
+						component={() => <SubscribeToNewsLetter />}></Route>
+					<Route
+						path='/cantrememberusername'
+						exact
+						component={() => <CantRememberUsername />}></Route>
+					<Route
+						path='/didntgetemail'
+						exact
+						component={() => <DidntGetEmail />}></Route>
+					<Route
+						path='/deleteaccount'
+						exact
+						component={() => <DeleteAccount />}></Route>
+					<Route
+						path='/makingchangestoaccount'
+						exact
+						component={() => <MakingChangesToAccount />}></Route>
+					<Route
+						path='/connectlegoboost'
+						exact
+						component={() => <ConnectLegoBoost />}></Route>
+					<Route
+						path='/boostcompatible'
+						exact
+						component={() => <BOOSTCompatible />}></Route>
+					<Route
+						path='/mindstorm'
+						exact
+						component={() => <MindStorm />}></Route>
+					<Route
+						path='/hearingsound'
+						exact
+						component={() => <HearingSound />}></Route>
+					<Route path='/starwars' exact component={() => <StarWars />}></Route>
+					<Route
+						path='/lightlegoboost'
+						exact
+						component={() => <LightLegoBoost />}></Route>
+					<Route
+						path='/retiredsets'
+						exact
+						component={() => <RetiredSets />}></Route>
+					<Route
+						path='/designlego'
+						exact
+						component={() => <DesignLego />}></Route>
+					<Route
+						path='/pricelego'
+						exact
+						component={() => <PriceLego />}></Route>
+					<Route path='/buylego' exact component={() => <BuyLego />}></Route>
+					<Route
+						path='/newsetsavailable'
+						exact
+						component={() => <NewSetsAvailable />}></Route>
+					<Route
+						path='/legoambassador'
+						exact
+						component={() => <LEGOAmbassador />}></Route>
+					<Route
+						path='/eventsnearyou'
+						exact
+						component={() => <EventsNearYou />}></Route>
+					<Route
+						path='/legoinside'
+						exact
+						component={() => <LegoInside />}></Route>
+					<Route
+						path='/discoverycenterapp'
+						exact
+						component={() => <DiscoveryCenterApp />}></Route>
+					<Route
+						path='/eventsatstores'
+						exact
+						component={() => <EventsAtStores />}></Route>
+					<Route
+						path='/legoHouse'
+						exact
+						component={() => <LEGOHouse />}></Route>
+					<Route
+						path='/legolandlocations'
+						exact
+						component={() => <LEGOLANDlocations />}></Route>
+					<Route
+						path='/legolandsupport'
+						exact
+						component={() => <LEGOLANDSupport />}></Route>
+					<Route
+						path='/disccoveryaroundtheworld'
+						exact
+						component={() => <DiscoveryAroundTheWorld />}></Route>
+					<Route
+						path='/privacypolicy'
+						exact
+						component={() => <PrivacyPolicy />}></Route>
+					<Route
+						path='/privacypolicycookies'
+						exact
+						component={() => <PrivacyPolicyCookies />}></Route>
+					<Route path='/shipping' exact component={() => <Shipping />}></Route>
 				</BrowserRouter>
 			</>
 		);

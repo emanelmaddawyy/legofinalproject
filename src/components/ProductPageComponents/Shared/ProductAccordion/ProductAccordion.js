@@ -83,7 +83,12 @@ const ProductAccordion = (props) => {
 								)}
 							</ul>
 							<p class='specificationsParagraph'>
-								{props.data.location.state.DeliveriesAndReturnsParagraph}
+								{/* {props.data.location.state.DeliveriesAndReturnsParagraph} */}
+								Some exclusions apply. Visit our{'  '}
+								<Link to='/shipping' className='blue'>
+									Deliveries and Returns
+								</Link>
+								{'  '}page for more information.
 							</p>
 						</div>
 					</div>
@@ -109,7 +114,9 @@ const ProductAccordion = (props) => {
 								party service provider for the sole purpose of preventing
 								multiple entries from the same IP address. To see how to control
 								your personal data, please see our{' '}
-								<span className='blue'>Privacy policy.</span>
+								<Link to='/privacypolicy'>
+									<span className='blue'>Privacy policy.</span>
+								</Link>
 							</i>
 							<h5 className='mt-5'>Reviews</h5>
 							<hr />
@@ -121,7 +128,7 @@ const ProductAccordion = (props) => {
 											<ul className='p-0'>
 												<li className=' nickname'>{item.nickname}</li>
 												<li className='review'>{item.review}</li>
-												<hr/>
+												<hr />
 											</ul>
 										</li>
 									);

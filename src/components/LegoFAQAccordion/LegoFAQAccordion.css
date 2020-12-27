@@ -107,6 +107,7 @@
 	max-height: max-content;
 	transition: all 200ms linear;
 	will-change: opacity, max-height;
+	margin: 0;
 }
 
 #accordion3 .accordion-content {

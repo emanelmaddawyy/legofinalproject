@@ -1,18 +1,18 @@
-#KeepDataSafe {
+#PrivacyPolicy {
 	background: white;
 	color: #333;
 }
 
-#KeepDataSafe #backBtn {
+#PrivacyPolicy #backBtn {
 	width: fit-content;
 	margin: auto;
 	margin-top: 32px;
 }
 
-#KeepDataSafe #title {
+#PrivacyPolicy #title {
 	width: fit-content;
-    /* margin: 16px auto 32px auto; */
-    margin: 64px auto;
+	/* margin: 16px auto 32px auto; */
+	margin: 64px auto;
 	font-weight: 700 !important;
 	line-height: 1.25 !important;
 	max-width: 960px;
@@ -25,41 +25,42 @@
 }
 
 @media screen and (min-width: 992px) {
-	#KeepDataSafe #title {
+	#PrivacyPolicy #title {
 		font-size: 2.8rem !important;
 	}
 }
 
-#KeepDataSafe .question {
+#PrivacyPolicy .question {
 	margin-top: 32px;
 	font-size: 1.625rem;
 }
 
-#KeepDataSafe .answer {
+#PrivacyPolicy .answer {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 16px;
 	font-family: 'CeraLight';
 }
 
-#KeepDataSafe .link {
+#PrivacyPolicy .link {
 	color: #005eb8 !important;
 	text-decoration: underline;
 }
 
-#KeepDataSafe .ul {
+#PrivacyPolicy .ul {
 	list-style-type: disc;
 }
 
-#KeepDataSafe .ul li{
-    margin: 10px 0;
-}
 
+
+#PrivacyPolicy .ul li {
+	margin: 10px 0;
+}
 
 strong {
 	font-family: 'CeraBold';
 }
 
-#KeepDataSafe #main-content {
+#PrivacyPolicy #main-content {
 	margin-bottom: 64px !important;
 }

@@ -1,32 +1,3 @@
-#contactUs .headerStyle {
-	background-color: white;
-	text-align: center;
-	padding: 5px 0 10px;
-}
-
-#contactUs .headerStyle img {
-	padding: 10px;
-}
-
-#contactUs .nav_list {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	justify-content: center;
-	margin-bottom: 16px;
-	margin-right: 30px;
-}
-
-#contactUs .nav_list li {
-	display: flex;
-	color: black;
-	font-weight: 300;
-	font-family: 'CeraLight';
-	margin: 8px 16px;
-	cursor: pointer;
-	font-size: 1.125rem;
-}
-
 /*===================================================================================*/
 
 .content-item__inner {
@@ -415,13 +386,6 @@
 }
 /*====================================================================================================*/
 
-#contactUs .headerStyle h1 {
-	font-size: 2rem;
-	font-family: 'CeraBold';
-	padding: 20px;
-	padding-left: 40px;
-	padding-right: 0;
-}
 
 #contactUs .alerts {
 	background-color: #eeeeee;
@@ -491,19 +455,19 @@ strong {
 }
 
 #contactUs .dark {
-	color: 333;
+	color: #333;
 	background-color: #c0c0c0;
 	text-align: left;
 }
 
 #contactUs .dark .cta__title,
 #contactUs .dark .cta__txt {
-	text-align: left;
+	/* text-align: left; */
 	color: #333;
 }
-#contactUs .dark .cta__btn-wrapper {
+/* #contactUs .dark .cta__btn-wrapper {
 	display: block;
-}
+} */
 
 @media screen and (min-width: 992px) {
 	#contactUs .dark .cta__title {

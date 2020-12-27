@@ -1,0 +1,76 @@
+#BrickSeparator {
+	background: white;
+	color: #333;
+	/* text-align: center; */
+}
+
+#BrickSeparator #backBtn {
+	width: fit-content;
+	margin: auto;
+	margin-top: 32px;
+}
+
+#BrickSeparator #title {
+	width: fit-content;
+	/* margin: 16px auto 32px auto; */
+	margin: 64px auto;
+	font-weight: 700 !important;
+	line-height: 1.25 !important;
+	max-width: 960px;
+	padding-left: 8px;
+	font-family: 'CeraBold';
+	padding-right: 8px;
+	font-size: 2.25rem !important;
+	color: #333;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	#BrickSeparator #title {
+		font-size: 2.8rem !important;
+	}
+}
+
+#BrickSeparator .question {
+	margin-top: 32px;
+	font-size: 1.625rem;
+	text-align: center;
+}
+
+#BrickSeparator .answer {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 16px;
+	font-family: 'CeraLight';
+}
+
+#BrickSeparator .link {
+	color: #005eb8 !important;
+	text-decoration: underline;
+}
+
+#BrickSeparator .ul {
+	list-style-type: disc;
+}
+
+#BrickSeparator .ol {
+	list-style-type: decimal;
+	text-align: left;
+	margin: 15px 0 !important;
+}
+
+#BrickSeparator .ol li {
+	margin: 10px 0;
+}
+
+#BrickSeparator .ul li {
+	margin: 10px 0;
+}
+
+strong {
+	font-family: 'CeraBold';
+}
+
+#BrickSeparator #main-content {
+	margin-bottom: 64px !important;
+}

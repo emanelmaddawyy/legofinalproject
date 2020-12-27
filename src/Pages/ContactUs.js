@@ -4,30 +4,14 @@ import { Link } from 'react-router-dom';
 import './ContactUs.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import OurService from '../components/OurService/OurService';
+import ContactUsHeader from '../components/ContactUsHeader/ContactUsHeader';
 
 const ContactUs = () => {
 	return (
 		<div id='contactUs'>
 			<Header />
 
-			<header className='headerStyle'>
-				<div>
-					<Link to='/service'>
-						<h1 className='m-0'>Customer Service</h1>
-					</Link>
-				</div>
-				<nav>
-					<ul className='nav_list'>
-						<Link to='/help'>
-							<li>Help Topics</li>
-						</Link>
-
-						<Link to='/deviceguide'>
-							<li className='activeContactUs'>Device Guide</li>
-						</Link>
-					</ul>
-				</nav>
-			</header>
+			<ContactUsHeader />
 
 			<div className='row m-0 w-100 alerts'>
 				<section className='section row justify-content-center col-12'>
@@ -91,7 +75,7 @@ const ContactUs = () => {
 
 				<div className='col-lg-4 my-auto order-lg-2'>
 					<section className='content-item__secondary'>
-						<div className='content-item__secondary-inner p-5'>
+						<div className='content-item__secondary-inner p-5 dark bg-light'>
 							<h3 className='cta__title'>Device Guide</h3>
 							<p className='cta__txt'>
 								Find out what apps are available for your phone, tablet or
@@ -106,6 +90,27 @@ const ContactUs = () => {
 					</section>
 				</div>
 			</div>
+
+			{/*
+
+				<div className='col-lg-4 my-auto order-lg-2'>
+					<section className='content-item__secondary'>
+						<div className='content-item__secondary-inner p-5 d-flex align-items-end'>
+							<h3 className='cta__title'>Device Guide</h3>
+							<p className='cta__txt text-right'>
+								Find out what apps are available for your phone, tablet or
+								console using these helpful guides.
+							</p>
+							<Link to='/deviceguide'>
+								<div className='cta__btn-wrapper'>
+									<div className='cta__btn'>Find Out More</div>
+								</div>
+							</Link>
+						</div>
+					</section>
+				</div>
+			</div>
+			*/}
 
 			<section id='c-hero'>
 				<div className='c-hero__img-wrapper '>

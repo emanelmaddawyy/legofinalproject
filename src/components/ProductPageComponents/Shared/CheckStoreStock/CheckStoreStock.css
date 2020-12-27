@@ -83,6 +83,7 @@
 	max-height: 9em;
 	transition: all 200ms linear;
 	will-change: opacity, max-height;
+	margin: 0;
 }
 .accordion .accordion-content {
 	opacity: 0;
