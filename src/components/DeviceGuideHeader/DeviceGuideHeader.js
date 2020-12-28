@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ContactUsHeader.css';
+import './DeviceGuideHeader.css';
 
-const ContactUsHeader = () => {
+const DeviceGuideHeader = () => {
 	return (
-		<div>
-			<header className='ContactUsHeaderStyle'>
+		<>
+			<header className='headerStyle2'>
 				<div>
 					<Link to='/service'>
 						<h1 className='m-0'>Customer Service</h1>
@@ -18,13 +18,13 @@ const ContactUsHeader = () => {
 						</Link>
 
 						<Link to='/deviceguide'>
-							<li>Device Guide</li>
+							<li className='activeHelpTopics'>Device Guide</li>
 						</Link>
 					</ul>
 				</nav>
 			</header>
-		</div>
+		</>
 	);
 };
 
-export default ContactUsHeader;
+export default DeviceGuideHeader;

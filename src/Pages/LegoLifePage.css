@@ -5,6 +5,10 @@
 	border-radius: 0;
 }
 
+.headerStyle nav{
+	padding-right: 40px;
+}
+
 .headerStyle img {
 	padding: 10px;
 }

@@ -113,6 +113,16 @@ import DiscoveryAroundTheWorld from './Pages/ContactUsSubPages/HelpTopicsSubPage
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 import PrivacyPolicyCookies from './Pages/PrivacyPolicyCookies';
 import Shipping from './Pages/Shipping';
+import MarioApp from './Pages/DeviceGuideSubPages/MarioApp';
+import MindstormRobot from './Pages/DeviceGuideSubPages/MindstormRobot';
+import BoostStarwars from './Pages/DeviceGuideSubPages/BoostStarwars';
+import ControlPlus from './Pages/DeviceGuideSubPages/ControlPlus';
+import PoweredUp from './Pages/DeviceGuideSubPages/PoweredUp';
+import HiddenSide from './Pages/DeviceGuideSubPages/HiddenSide';
+import ARPhotoShoot from './Pages/DeviceGuideSubPages/ARPhotoShoot';
+import BoostApp from './Pages/DeviceGuideSubPages/BoostApp';
+import MovieMakerApp from './Pages/DeviceGuideSubPages/MovieMakerApp';
+import DuploApp from './Pages/DeviceGuideSubPages/DuploApp';
 
 class App extends Component {
 	staticProducts = [
@@ -1090,6 +1100,38 @@ class App extends Component {
 						exact
 						component={() => <PrivacyPolicyCookies />}></Route>
 					<Route path='/shipping' exact component={() => <Shipping />}></Route>
+
+					<Route path='/marioapp' exact component={() => <MarioApp />}></Route>
+					<Route
+						path='/mindstormrobot'
+						exact
+						component={() => <MindstormRobot />}></Route>
+					<Route
+						path='/booststarwars'
+						exact
+						component={() => <BoostStarwars />}></Route>
+					<Route
+						path='/controlplus'
+						exact
+						component={() => <ControlPlus />}></Route>
+					<Route
+						path='/poweredup'
+						exact
+						component={() => <PoweredUp />}></Route>
+					<Route
+						path='/hiddenside'
+						exact
+						component={() => <HiddenSide />}></Route>
+					<Route
+						path='/arphotoshoot'
+						exact
+						component={() => <ARPhotoShoot />}></Route>
+					<Route path='/boostapp' exact component={() => <BoostApp />}></Route>
+					<Route
+						path='/moviemakerapp'
+						exact
+						component={() => <MovieMakerApp />}></Route>
+					<Route path='/duploapp' exact component={() => <DuploApp />}></Route>
 				</BrowserRouter>
 			</>
 		);
