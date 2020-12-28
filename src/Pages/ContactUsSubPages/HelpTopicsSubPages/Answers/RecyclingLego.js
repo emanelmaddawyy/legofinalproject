@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import BackButton from '../../../../components/BackButton/BackButton';
 import Header from '../../../../components/Header/Header';
 import HelpTopicsHeader from '../../../../components/HelpTopicsHeader/HelpTopicsHeader';
 import OurService from '../../../../components/OurService/OurService';
@@ -16,13 +17,7 @@ const RecyclingLego = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-							<button
-								className='btn d-flex align-items-center'
-								id='backBtn'
-								onClick={props.history.goBack}>
-								<img src='/left-arrow.svg' alt='' height='10px' />
-								<div id='back-text'>Back to all Help Topics</div>
-							</button>
+							<BackButton data='Back to all Help Topics' />
 							<h1 id='title'>Recycling LEGO® pieces & warehouse recycling</h1>
 						</div>
 					</div>
@@ -33,7 +28,10 @@ const RecyclingLego = (props) => {
 								LEGO Replay is our way of helping fans donate bricks to kids in
 								need. We’re currently trying it out in the United States. Just
 								go to{' '}
-								<a href='http://givebackbox.com/LEGO' target='_blank' className="link">
+								<a
+									href='http://givebackbox.com/LEGO'
+									target='_blank'
+									className='link'>
 									givebackbox.com/LEGO
 								</a>{' '}
 								, print out a shipping label, box up your bricks and get them to
@@ -57,7 +55,6 @@ const RecyclingLego = (props) => {
 								many bricks of one kind, we donate them through our LEGO
 								Foundation to charities all over the world!
 							</p>
-
 						</div>
 					</div>
 				</div>

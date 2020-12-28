@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import './DeviceGuideSubPages.css';
+import BackButton from '../../components/BackButton/BackButton';
 
 const PoweredUp = (props) => {
 	useEffect(() => {
@@ -40,13 +41,7 @@ const PoweredUp = (props) => {
 				<div className='col-12 p-0'>
 					<div className='row m-0'>
 						<div className='col-12'>
-							<button
-								className='btn d-flex align-items-center'
-								id='backBtn'
-								onClick={props.history.goBack}>
-								<img src='/left-arrow.svg' alt='' height='10px' />
-								<div id='back-text'>Back to all Help Topics</div>
-							</button>
+						<BackButton data="Back to all apps" />
 
 							<h1 className='title'>LEGO® Powered Up</h1>
 						</div>

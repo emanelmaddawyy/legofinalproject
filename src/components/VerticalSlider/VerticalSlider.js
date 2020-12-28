@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default class VerticalSlider extends Component {
@@ -35,7 +35,7 @@ export default class VerticalSlider extends Component {
           vertical={true}
           verticalSwiping={true}
           dots={false}
-          arrows= {true} 
+          arrows= {true}
 
         >
           <div>
@@ -58,14 +58,14 @@ export default class VerticalSlider extends Component {
           </div>
         </Slider>
 
-        
+
         <Slider
           asNavFor={this.state.nav2}
           ref={slider => (this.slider1 = slider)}
           verticalSwiping={true}
           vertical={true}
           dots={false}
-          arrows= {false} 
+          arrows= {false}
 
 
         >
@@ -98,7 +98,7 @@ export default class VerticalSlider extends Component {
             <h3>6</h3>
           </div>
         </Slider>
-        
+
       </div>
     );
   }

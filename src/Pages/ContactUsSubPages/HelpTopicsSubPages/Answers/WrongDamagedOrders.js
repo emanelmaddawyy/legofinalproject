@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import BackButton from '../../../../components/BackButton/BackButton';
 import Header from '../../../../components/Header/Header';
 import HelpTopicsHeader from '../../../../components/HelpTopicsHeader/HelpTopicsHeader';
 import OurService from '../../../../components/OurService/OurService';
@@ -16,14 +17,7 @@ const WrongDamagedOrders = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-							<button
-								className='btn d-flex align-items-center'
-								id='backBtn'
-								onClick={props.history.goBack}>
-								<img src='/left-arrow.svg' alt='' height='10px' />
-								<div id='back-text'>Back to all Help Topics</div>
-							</button>
-							<h1 id='title'>Wrong or damaged orders</h1>
+						<BackButton data='Back to all Help Topics' />							<h1 id='title'>Wrong or damaged orders</h1>
 						</div>
 					</div>
 

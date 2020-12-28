@@ -6,6 +6,7 @@ import MediaPopular from '../../../components/MediaPopular/MediaPopular';
 import MediaArticle2 from '../../../components/MediaArticle/MediaArticle2';
 import HelpTopicsHeader from '../../../components/HelpTopicsHeader/HelpTopicsHeader';
 import './HelpTopicsSubPages.css';
+import BackButton from '../../../components/BackButton/BackButton';
 
 const OnlineShop = (props) => {
 	return (
@@ -21,13 +22,7 @@ const OnlineShop = (props) => {
 							<div className='grid__item'>
 								<div className='row m-0'>
 									<div className='col-12'>
-										<button
-											className='btn d-flex align-items-center pl-0'
-											id='backBtn'
-											onClick={props.history.goBack}>
-											<img src='/left-arrow.svg' alt='' height='10px' />
-											<div id='back-text'>Back to all Help Topics</div>
-										</button>
+									<BackButton data="Back to all Help Topics" />
 									</div>
 									<div className='col-12' id='title'>
 										Online Shop - Online Shop

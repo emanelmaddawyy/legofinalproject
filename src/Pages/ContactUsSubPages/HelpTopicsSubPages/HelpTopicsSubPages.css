@@ -23,6 +23,7 @@
 #backBtn {
 	font-family: 'CeraLight';
 	margin-bottom: 16px;
+	padding-left: 0 !important;
 }
 
 #backBtn:hover {

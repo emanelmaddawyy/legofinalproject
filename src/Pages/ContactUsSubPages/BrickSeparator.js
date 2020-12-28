@@ -12,12 +12,6 @@ const BrickSeparator = () => {
 
 			<div className='row p-0 m-0 w-100'>
 				<div className='col-12'>
-					<div className='row m-0'>
-						<div className='col-12'>
-							<h1 id='title'></h1>
-						</div>
-					</div>
-
 					<div className='row m-0' id='main-content'>
 						<div className='col-12 col-sm-10 offset-sm-1 col-lg-6 offset-lg-3 p-0'>
 							<p className='question'>
@@ -37,7 +31,7 @@ const BrickSeparator = () => {
 								Similar to our LEGO Classic Brick Separator, you can use our
 								LEGO Art Brick Separator to get your plates to unstick from
 								studs.
-								<ol className="ol">
+								<ol className='ol'>
 									<li>
 										Press the stud side of the brick separator down on top of
 										the piece you want to remove. You should feel it click into
@@ -59,7 +53,7 @@ const BrickSeparator = () => {
 							<p className='answer'>
 								LEGO plates are excellent at sticking to the bottom of other
 								LEGO elements. The brick separator can unstick them!
-								<ol className="ol">
+								<ol className='ol'>
 									<li>
 										Attach the studs on the brick separator to the bottom of the
 										LEGO plate. You should feel it click into place.
@@ -79,7 +73,7 @@ const BrickSeparator = () => {
 							<h3 className='question'>Removing multiple tiles</h3>
 							<p className='answer'>
 								Here’s where the LEGO Art Brick Separator really shines.
-								<ol className="ol">
+								<ol className='ol'>
 									<li>
 										Put the flat end of the brick separator next to the tiles
 										you want to remove.
@@ -98,7 +92,7 @@ const BrickSeparator = () => {
 							<p className='answer'>
 								This technique works for unsticking tiles on the edge of your
 								piece of art.
-								<ol className="ol">
+								<ol className='ol'>
 									<li>
 										Put the corner of the brick separator’s flat side next to
 										the tile you want to remove.

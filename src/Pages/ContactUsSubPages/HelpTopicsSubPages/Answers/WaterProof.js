@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import BackButton from '../../../../components/BackButton/BackButton';
 import Header from '../../../../components/Header/Header';
 import HelpTopicsHeader from '../../../../components/HelpTopicsHeader/HelpTopicsHeader';
 import OurService from '../../../../components/OurService/OurService';
@@ -16,14 +17,8 @@ const WaterProof = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-							<button
-								className='btn d-flex align-items-center'
-								id='backBtn'
-								onClick={props.history.goBack}>
-								<img src='/left-arrow.svg' alt='' height='10px' />
-								<div id='back-text'>Back to all Help Topics</div>
-							</button>
-							<h1 id='title'></h1>
+							<BackButton data='Back to all Help Topics' />
+							<h1 id='title'>Are LEGO® bricks waterproof?</h1>
 						</div>
 					</div>
 
@@ -57,11 +52,11 @@ const WaterProof = (props) => {
 										with water. Putting electronic parts in water can damage the
 										parts and pose a safety risk.
 									</p>
-									<h3 className='question'>
+									<h3 className='d-none d-lg-block question'>
 										Assemblies and Mechanical components
 									</h3>
 
-									<p className='answer'>
+									<p className='d-none d-lg-block  answer'>
 										Any parts that are made of multiple smaller pieces which
 										can’t come apart, like a Technic gearbox or DUPLO® vehicle
 										should not be put into water. There’s no safety risk from
@@ -70,6 +65,18 @@ const WaterProof = (props) => {
 									</p>
 								</div>
 							</div>
+
+							<h3 className='d-lg-none question'>
+								Assemblies and Mechanical components
+							</h3>
+
+							<p className='d-lg-none  answer'>
+								Any parts that are made of multiple smaller pieces which can’t
+								come apart, like a Technic gearbox or DUPLO® vehicle should not
+								be put into water. There’s no safety risk from immersing these,
+								but water could get inside the part and never fully dry,
+								resulting in mold or mildew growth.
+							</p>
 
 							<p className='answer'>
 								For information on how to clean your LEGO® bricks,
