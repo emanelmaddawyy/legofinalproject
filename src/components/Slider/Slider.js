@@ -9,6 +9,7 @@ class Slider extends React.Component {
 		return (
 			<>
 				<div className='sliderWrapper'>
+					{/* <Container fluid> */}
 					<Container>
 						<Carousel>
 							<Carousel.Item interval={50000}>

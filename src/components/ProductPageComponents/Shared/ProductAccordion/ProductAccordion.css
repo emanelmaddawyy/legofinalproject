@@ -170,6 +170,12 @@
 	/* padding: 12px !important; */
 }
 
+@media screen and (min-width: 992px) {
+	.accordion2 .specifications {
+		padding: 0;
+	}
+}
+
 .specificationsImg {
 	text-align: center;
 	padding: 10px;

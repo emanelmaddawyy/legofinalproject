@@ -45,7 +45,7 @@ export class ProductImageSlider extends Component {
 		// console.log('ProductImageSlider props', this.props);
 
 		return (
-			<div className='row bg-white'>
+			<div className='row bg-white m-0'>
 				<div className='col-12 col-xl-11 order-xl-2 '>
 					<div className='ImgWrapper'>
 						<div className='arrow' id='arrow-left'>

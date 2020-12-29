@@ -160,7 +160,7 @@ const ProductPage = (props) => {
 								text={`${props.location.state.numberOfReviews} reviews`}
 							/>
 
-							<PromoBadge />
+							{/* <PromoBadge /> */}
 
 							<IsInStock />
 

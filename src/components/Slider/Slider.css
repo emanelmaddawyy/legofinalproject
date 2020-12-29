@@ -1,6 +1,7 @@
 .carousel-item {
 	height: 50px;
-	padding: 0px 0.75rem;
+	/* padding: 0px 0.75rem; */
+	padding: 0;
 	background: rgb(248, 248, 248);
 	/* border-bottom: 1px solid rgb(224, 224, 224); */
 }
@@ -14,7 +15,7 @@
 
 .carousel-caption p {
 	margin: 0;
-	font-size: small;
+	font-size: 0.6rem;
 }
 
 .carousel-control-prev-icon {
@@ -37,4 +38,23 @@
 .blue {
 	color: rgb(0, 109, 183) !important;
 	cursor: pointer;
+}
+
+.sliderWrapper .container {
+	padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.carousel-caption p {
+		font-size: 0.68rem;
+	}
+	.sliderWrapper .container {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.carousel-caption p {
+		font-size:  0.75rem;
+	}
 }
