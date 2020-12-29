@@ -15,6 +15,7 @@ class LegoLifePage extends React.Component {
 							<img src='/LEGOlifeLogo.png' alt='' />
 						</Link>
 					</div>
+
 					<nav>
 						<ul className='nav_list'>
 							<Link to='/legolifeapp'>
