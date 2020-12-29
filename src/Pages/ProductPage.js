@@ -136,7 +136,10 @@ const ProductPage = (props) => {
 						className='w-100'
 						alt={props.location.state.name}
 						fluid/> */}
-					<ProductImageSlider img={props.location.state.imgSrc} />
+					<ProductImageSlider
+						img={props.location.state.imgSrc}
+						sliderImgs={props.location.state.sliderImgs}
+					/>
 				</Col>
 
 				<Col lg={4} className='bg-light'>

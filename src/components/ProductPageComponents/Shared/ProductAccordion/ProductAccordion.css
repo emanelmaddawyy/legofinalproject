@@ -195,7 +195,9 @@
 	padding-bottom: 1.5625rem;
 }
 
-.specificationsBtn {
+.specificationsBtn,
+.specificationsBtn:focus,
+.specificationsBtn:active {
 	display: inline-flex;
 	margin: 0.9375rem 0px;
 	display: inline-block;
@@ -209,16 +211,17 @@
 	font-weight: 500;
 	font-size: 0.875rem;
 	line-height: 1.1875rem;
-	background-color: rgb(0, 109, 183);
-	color: rgb(255, 255, 255);
+	background-color: rgb(0, 109, 183) !important;
+	color: rgb(255, 255, 255) !important;
 	border-color: rgb(0, 109, 183);
 	font-size: 1rem;
 	line-height: 1.5625rem;
 	font-weight: 400;
+	width: max-content !important;
 }
 .specificationsBtn:hover {
-	color: rgb(0, 109, 183);
-	background-color: white;
+	color: rgb(0, 109, 183) !important;
+	background-color: white !important;
 }
 
 .blue {
