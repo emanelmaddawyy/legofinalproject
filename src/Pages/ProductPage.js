@@ -20,9 +20,10 @@ import ProductDetails from '../components/ProductPageComponents/Shared/ProductDe
 import ProductAccordion from '../components/ProductPageComponents/Shared/ProductAccordion/ProductAccordion';
 import ProductSlider from '../components/Slider/ProductSlider';
 import VerticalSlider from '../components/VerticalSlider/VerticalSlider';
+import ProductImageSlider from '../components/ProductImageSlider/ProductImageSlider';
 
 const ProductPage = (props) => {
-	console.log('ProductPage props!', props);
+	// console.log('ProductPage props!', props);
 	// console.log('ProductPage props location state', props.location.state);
 	// console.log('ProductPage match.params.id', props.match.params.id);
 	// console.log('numberOfProduct',props.location.state.numberOfProduct);
@@ -129,12 +130,13 @@ const ProductPage = (props) => {
 				</div>
 
 				<Col lg={8}>
-					<VerticalSlider />
+					{/* <VerticalSlider /> */}
 					{/* <img
-						className='w-100'
 						src={props.location.state.imgSrc}
+						className='w-100'
 						alt={props.location.state.name}
 						fluid/> */}
+					<ProductImageSlider img={props.location.state.imgSrc} />
 				</Col>
 
 				<Col lg={4} className='bg-light'>
@@ -169,7 +171,7 @@ const ProductPage = (props) => {
 			<ProductDetails />
 
 			<ProductAccordion data={props} />
-{/*
+			{/*
 			<ProductSlider
 				title='Recommended For You'
 				products={props.products}

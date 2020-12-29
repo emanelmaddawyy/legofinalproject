@@ -1,0 +1,25 @@
+.ImgWrapper {
+	height: 100vh;
+}
+
+#featured {
+	object-fit: contain;
+	height: 100%;
+}
+
+.thumbnail {
+	object-fit: cover;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #e5e5e5;
+	margin: 2px 0.625rem;
+	padding: 2px;
+	background-color: white;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+	.thumbnail {
+		margin: 2px 2px 0.75rem;
+	}
+}
