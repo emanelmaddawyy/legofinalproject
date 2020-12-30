@@ -17,7 +17,7 @@ const AddPromotional = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-						<BackButton data="Back to all Help Topics" />
+							<BackButton data='Back to all Help Topics' />
 							<h1 id='title'>
 								Where to add VIP codes, promotional codes and discount codes at
 								checkout
@@ -57,7 +57,7 @@ const AddPromotional = (props) => {
 							<h3 className='question'>How to use a promotional code</h3>
 							<p className='answer'>
 								To use a promotional code and add a reward to your order:
-								<ul classname="ul">
+								<ol className='ol'>
 									<li>
 										Once you’ve got everything in your bag, click on ‘My Bag’.
 									</li>
@@ -65,7 +65,7 @@ const AddPromotional = (props) => {
 										Open the ‘Enter Promo Code’ section and enter your code.
 									</li>
 									<li>Click ‘Apply’.</li>
-								</ul>
+								</ol>
 							</p>
 
 							<p className='answer'>
@@ -81,7 +81,7 @@ const AddPromotional = (props) => {
 							<h3 className='question'>How to use a discount code</h3>
 							<p className='answer'>
 								To use a discount code to save money on your LEGO.com order:
-								<ul classname="ul">
+								<ol className='ol'>
 									<li>
 										Once you’ve got everything in your bag, click on ‘My Bag’.
 									</li>
@@ -95,7 +95,7 @@ const AddPromotional = (props) => {
 										your code.
 									</li>
 									<li>Click ‘Apply’.</li>
-								</ul>
+								</ol>
 							</p>
 
 							<p className='answer'>

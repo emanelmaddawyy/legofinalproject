@@ -17,8 +17,7 @@ const OrderingOnline = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-							
-							<BackButton data="Back to all Help Topics" />
+							<BackButton data='Back to all Help Topics' />
 							<h1 id='title'>Ordering from LEGO® Shop online</h1>
 						</div>
 					</div>
@@ -38,7 +37,7 @@ const OrderingOnline = (props) => {
 							</p>
 
 							<p className='answer'>
-								<ul classname="ul">
+								<ol className='ol'>
 									<li>
 										First, go online and visit{' '}
 										<Link to='/' className='link'>
@@ -97,7 +96,7 @@ const OrderingOnline = (props) => {
 									<p class='text-center'>
 										<img src='/ordercomplete.png' alt='' width='100%' />
 									</p>
-								</ul>
+								</ol>
 							</p>
 
 							<p className='answer'>
@@ -117,7 +116,6 @@ const OrderingOnline = (props) => {
 									give us a call!
 								</Link>
 							</p>
-
 						</div>
 					</div>
 				</div>

@@ -17,7 +17,7 @@ const ChangeRegion = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-						<BackButton data="Back to all Help Topics" />
+							<BackButton data='Back to all Help Topics' />
 							<h1 id='title'>
 								How to change the region you're shipping to on the LEGO® Shop
 							</h1>
@@ -65,7 +65,7 @@ const ChangeRegion = (props) => {
 							</p>
 
 							<p className='answer'>
-								<ul classname="ul">
+								<ol className='ol'>
 									<li>
 										If you’re in the middle of checkout, click “Back to My Bag”
 										at the top-left to continue shopping. Otherwise you can skip
@@ -92,7 +92,7 @@ const ChangeRegion = (props) => {
 										</Link>
 										. We’ll be happy to help!
 									</li>
-								</ul>
+								</ol>
 							</p>
 						</div>
 					</div>

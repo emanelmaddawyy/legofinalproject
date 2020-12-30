@@ -17,7 +17,7 @@ const WriteLegoLife = (props) => {
 				<div className='col-12'>
 					<div className='row m-0'>
 						<div className='col-12'>
-						<BackButton data='Back to all Help Topics' />
+							<BackButton data='Back to all Help Topics' />
 							<h1 id='title'>Write to LEGO® Life</h1>
 						</div>
 					</div>
@@ -34,7 +34,7 @@ const WriteLegoLife = (props) => {
 							<p className='answer'>Here are some submission guidelines:</p>
 
 							<p className='answer'>
-								<ul className="ul">
+								<ol className='ol'>
 									<li>Don’t write your letter by hand, type it instead.</li>
 									<li>
 										If you’re sending a drawing or picture, please don’t write
@@ -47,7 +47,7 @@ const WriteLegoLife = (props) => {
 									<li>
 										Fill out the form in ALL CAPS so it’s easy for us to read!
 									</li>
-								</ul>
+								</ol>
 							</p>
 
 							<p className='answer'>
