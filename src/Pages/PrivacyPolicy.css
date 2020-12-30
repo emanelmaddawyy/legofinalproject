@@ -51,7 +51,9 @@
 	list-style-type: disc;
 }
 
-
+#PrivacyPolicy .ol {
+	list-style-type: decimal;
+}
 
 #PrivacyPolicy .ul li {
 	margin: 10px 0;

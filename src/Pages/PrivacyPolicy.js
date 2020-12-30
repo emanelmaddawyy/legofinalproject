@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
 							<p className='answer'>
 								At any point while we are in possession of or processing your
 								personal data, you have the following rights:
-								<ol>
+								<ol className='ol'>
 									<li>
 										Right of access – you have the right to request a copy of
 										the information that we hold about you.
@@ -169,7 +169,7 @@ const PrivacyPolicy = () => {
 							</p>
 							<h3 className='question'>You can complain about:</h3>
 							<p className='answer'>
-								<ol>
+								<ol className='ol'>
 									<li>how your personal data has been processed;</li>
 									<li>how your request for access to data has been handled;</li>
 									<li>how your complaint has been handled;</li>
@@ -185,7 +185,7 @@ const PrivacyPolicy = () => {
 							</p>
 							<p className='answer'>
 								Whenever we collect customer data, we make sure:
-								<ul>
+								<ul className='ul'>
 									<li>We ask for permission to collect the data</li>
 									<li>
 										We only use the data for the agreed reason and for the time
@@ -236,7 +236,7 @@ const PrivacyPolicy = () => {
 							<p className='answer'>
 								When you’re visiting any of these online channels, we may
 								collect:
-								<ul>
+								<ul className='ul'>
 									<li>
 										Registration information that we use to help you set up an
 										account (e.g. your name, country, gender, date of birth,
@@ -276,7 +276,7 @@ const PrivacyPolicy = () => {
 								As we’re a global company that sells toys directly to customers
 								and offers many different experiences for our fans, we need to
 								process personal customer data, so that:
-								<ul>
+								<ul className='ul'>
 									<li>
 										Customers can buy products from our online LEGO Shop and
 										have them delivered where they want
@@ -356,7 +356,7 @@ const PrivacyPolicy = () => {
 								other LEGO Group companies will then be acting as ‘data
 								processors’ and will be subject to data processing laws. They
 								need your personal data so they can:
-								<ul>
+								<ul className='ul'>
 									<li>Deliver products and services you’ve requested</li>
 									<li>
 										Get in touch with you about your account or transactions
