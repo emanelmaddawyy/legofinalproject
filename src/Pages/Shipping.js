@@ -401,14 +401,7 @@ const Shipping = () => {
 								Forwarding Services.
 							</p>
 						</div>
-						<div className='Shipping-wrapper'>
-							<h3 className='question'></h3>
-							<p className='answer'></p>
-						</div>
-						<div className='Shipping-wrapper'>
-							<h3 className='question'></h3>
-							<p className='answer'></p>
-						</div>
+
 						<div className='Shipping-wrapper'>
 							<h3 className='question'>Shipping & Service Delays</h3>
 							<p className='answer'>
