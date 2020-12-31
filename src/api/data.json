@@ -1,0 +1,202 @@
+{
+  "themes": [
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"}
+  ],
+  "ShopBy": [
+    {
+      "id": 1,
+      "title": "new",
+      "display": [{
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "bestseller",
+      "display": [{
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/75257.jpg",
+          "imgTitle": "pic1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Age",
+      "display": [{
+          "img": "/40186.jpeg",
+          "age": "pic1"
+        },
+        {
+          "img": "/40146.jpeg",
+          "age": "pic1"
+        },
+        {
+          "img": "/40186.jpeg",
+          "age": "pic1"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Price",
+      "display": [{
+          "img": "/21043.jpeg",
+          "price": "100$"
+        },
+        {
+          "img": "/21042.jpeg",
+          "age": "3"
+        },
+        {
+          "img": "/21043.jpeg",
+          "age": "2"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "product type",
+      "display": [{
+        "imgTitle":"Architecture"},
+        {"imgTitle":"Batman"},
+        {"imgTitle":"Boost"},
+        {"imgTitle":"City"},
+        {"imgTitle":"Classic"},
+        {"imgTitle":"DC"},
+        {"imgTitle":"Creator"},
+        {"imgTitle": "DOTS"},
+        {"imgTitle":"Disney"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "bricks",
+      "display": [{
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        },
+        {
+          "img": "/bag.png",
+          "imgTitle": "pic1"
+        }
+      ]
+    }
+  ],
+  "interest":[{
+
+   "interestTypes" :[
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"},
+    {"title": "Architecture"},
+    {"title": "Batman"},
+    {"title": "Boost"},
+    {"title": "City"},
+    {"title": "Classic"},
+    {"title": "DC"},
+    {"title": "Creator"},
+    {"title": "DOTS"},
+    {"title": "Disney"}
+   ],
+  "interestImg":"/vichel.jpeg"
+  }],
+  "product" :[{
+    "id": 1,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blt4adc5a9b68979056/novelty-2020-06-Quicklink.jpg",
+    "description": "New"
+
+  },
+  {
+    "id": 2,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blt45f79e6d407c22e9/10276-Landmark--202011--Quicklink.png",
+    "description": "Exclusive"
+
+  },
+
+  {
+    "id": 3,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blt8f32480bac10d91f/40416-HomePage-202011-Quicklink.png",
+    "description": "Offers"
+
+  }, {
+    "id": 4,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blt99669ee3445e7d3a/front-QL.jpg",
+    "description": "Holiday"
+
+  }, {
+    "id": 5,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blt59f1314c52a130c1/bfcm-gift-card-Quicklink.png",
+    "description": "Gift Cards"
+
+  }, {
+    "id": 6,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/bltdb862feba861a3ae/adults-welcome_04.png",
+    "description": "Adults Welcome"
+
+  }, {
+    "id": 7,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blta3c434abc46ff995/Quicklink-pick-a-brick.jpg",
+    "description": "pick-a-Brick"
+
+  }, {
+    "id": 8,
+    "thumb": "https://www.lego.com/cdn/cs/set/assets/blt3c435fefe7e0b613/VIPSoftLaunch-Quicklink.jpg",
+    "description": "VIP"
+
+  }]
+}

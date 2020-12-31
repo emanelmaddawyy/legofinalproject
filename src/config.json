@@ -1,0 +1,4 @@
+{
+  "apiUrl":"http://localhost:3014",
+  "imagesEndpoint":"http://localhost:3014/images/"
+}

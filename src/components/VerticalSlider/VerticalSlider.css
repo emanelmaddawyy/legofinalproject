@@ -1,0 +1,6 @@
+.slick-track {
+  height: auto !important;
+}
+.slick-vertical .slick-slide{
+  width: 550px;
+}

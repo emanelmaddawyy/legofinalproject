@@ -1,0 +1,46 @@
+
+    .row{
+      padding: 20px;    
+     }
+       .container{
+          width: 1200px;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+   .imgproduct{
+      width: 100px;
+       height: 100px;
+   }
+   
+   .main_content{
+      position:relative;
+      margin:  50px 0 0;
+      box-sizing: border-box;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  
+  .product_description{
+      flex-direction: column;
+      color:white;
+      margin:25px 0;
+      
+      }
+   
+   
+       .product_description h2{font-size:15px;
+       color:black;
+       font-weight:5;
+       text-align: center;
+       
+       }
+   
+   
+       .product_description h2:hover{
+           color:blue;
+       }
+   
+   
+   
+   
+   

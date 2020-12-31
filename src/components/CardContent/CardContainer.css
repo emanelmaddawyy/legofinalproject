@@ -1,0 +1,24 @@
+body{
+    font-weight:100
+}
+.card{
+    text-align: center;
+    border: 0px ;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-footer{
+    background-color: transparent;
+    border-top: 0px;
+}
+
+a,a:hover{
+    color: black;
+}
+
+.card-img, .card-img-top{
+  height: 200px;
+}

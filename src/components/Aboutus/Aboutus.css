@@ -1,0 +1,81 @@
+
+.bg-image1 {
+  background-image: url("./../../images/about/about-1.jpg");
+  height: 850px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+margin-top: 100PX;    
+}
+.caption  {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+}
+
+.list-inline  li{
+  font-size: 25px;
+ padding-left: 50px;
+}
+
+.caption h3{
+  font-size:70px
+}
+.caption p{
+
+  font-size: 30px;
+}
+.caption a{
+
+font-size: 20px;
+
+}
+.bg-image2 {
+  background-image: url("./../../images/about/about-2.jpg");
+  background-color: #cccccc;
+  height: 850px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: auto;
+}
+
+.history {
+font-size: 1.4375rem !important;
+font-weight: 300 !important;
+}
+
+
+.img-responsive{
+
+
+height: 70PX;
+}
+.h5{
+
+font-size: 20px;
+
+color:black;
+}
+.h5:hover{
+
+color:black;
+
+}
+
+.media-body h1{
+
+font-size: 50px;
+color: black;
+font-weight: 700!important;
+
+}
+.media p{
+margin-bottom: 10px;
+font-size: 35px;
+font-weight: 400!important;
+line-height: 1.5!important;
+}

@@ -1,0 +1,24 @@
+.available {
+	margin: 0.3125rem 0px 0px;
+	color: green;
+	font-size: 0.875rem;
+	line-height: 1.1875rem;
+	font-weight: 400;
+}
+
+.limitStyle {
+	font-size: 0.875rem;
+}
+
+.priceStyle {
+	font-size: 2rem;
+	line-height: 2.6875rem;
+	font-weight: 700;
+	text-transform: inherit;
+	padding-bottom: 0;
+}
+
+.priceStyle::before {
+	content: '$';
+}
+

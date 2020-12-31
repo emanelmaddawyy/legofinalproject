@@ -1,0 +1,130 @@
+#WriteReviewModal .modal-content {
+	width: 125%;
+	left: -75px;
+}
+
+#WriteReviewModal #modalNickname,
+#WriteReviewModal #modalReview {
+	-webkit-font-smoothing: antialiased;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 #dfdfdf, inset 0 0 8px rgba(206, 206, 206, 0.5);
+	box-sizing: border-box;
+	color: #2a2a2a;
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0;
+	outline: 1px solid #e0e0e0;
+	padding: 14px !important;
+	width: 100%;
+}
+#WriteReviewModal .modal-body,
+#WriteReviewModal .modal-header {
+	border-bottom: 0 !important;
+}
+
+#WriteReviewModal .modal-body {
+	border-width: 1px 1px 0;
+	background-color: #f8f8f8;
+	border-color: #e0e0e0;
+	width: 100%;
+	border-style: solid;
+	padding: 0 40px 40px;
+	line-height: 1.5;
+	color: #2a2a2a;
+	font-size: 14px;
+}
+
+#WriteReviewModal .modal-body form {
+	margin: 20px 0;
+	box-sizing: border-box;
+	border: 1px solid #dfdfdf;
+	background-color: #ffffff;
+	box-shadow: 0 6px 0 #dfdfdf;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 120px;
+	padding: 25px 25px 10px 18px;
+	position: relative;
+	width: 457px;
+}
+
+#WriteReviewModal label {
+	padding-top: 4px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #7e7e7e;
+	line-height: 1.5;
+	width: 100%;
+	display: block;
+	float: none;
+	margin-bottom: 5px;
+}
+
+#WriteReviewModal small {
+	color: #7e7e7e;
+}
+
+#WriteReviewModal #ModalSubmit {
+	font-family: sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 10px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1;
+	white-space: nowrap;
+	-webkit-font-smoothing: antialiased;
+	color: #ffffff;
+	text-shadow: 0 1px 0 #004f84;
+	display: inline-block;
+	zoom: 1;
+	box-sizing: border-box;
+	margin: 0 10px 0 0;
+	padding: 14px 70px 12px;
+	overflow: visible;
+	vertical-align: top;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	border: 1px solid #004f84;
+	border-width: 1px 1px 2px;
+	background: linear-gradient(to bottom, #008bea 0%, #0088c9 27%, #006db7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008bea',endColorstr='#006DB7',GradientType=0);
+	box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.3),
+		inset 0px 1px 0 rgba(255, 255, 255, 0.3);
+	padding-left: 0;
+	padding-right: 0;
+	width: 168px;
+}
+
+#WriteReviewModal .modal-footer {
+	padding: 40px;
+	justify-content: flex-start;
+}
+
+#WriteReviewModal .cancel {
+	color: #004f84;
+	margin-left: 20px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.section1 {
+	margin: 25px 0 0;
+}
+
+#reviewModalimg {
+	width: 150px;
+	/* padding: 0 40px; */
+}
+#modalErrors {
+	margin: 25px 0;
+	max-width: 1130px;
+	color: red;
+}
+
+#modalErrors p {
+	font-size: 20px;
+}

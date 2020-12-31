@@ -1,0 +1,22 @@
+body {
+	background-color: #f8f8f8;
+}
+
+.list-group-flush > .list-group-item,
+.list-group-item {
+	border-width: 0;
+}
+
+.padding18 {
+	padding: 0 18px;
+}
+
+.fixed-Header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
