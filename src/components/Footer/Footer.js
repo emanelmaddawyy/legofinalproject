@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { link } from "react-router-dom";
+import AboutGroup from "../../Pages/AboutGroup";
 import "./Footer.css";
 
 const Footer = () => {
@@ -247,12 +248,13 @@ const Footer = () => {
             >
               <h5 className="places mb-1">ABOUT US</h5>
               <h5 className="mt-2 h__5">
-                <a
-                  href=""
+                <link
+                  to="/AboutGroup"
+                  component={AboutGroup}
                   style={{ textDecoration: "none", color: "rgb(0, 0, 0)" }}
                 >
                   About the LEGO Group
-                </a>
+                </link>
               </h5>
               <h5 className="mt-2 h__5">
                 <a

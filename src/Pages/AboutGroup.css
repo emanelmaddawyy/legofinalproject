@@ -1,0 +1,289 @@
+@font-face {
+  font-family: ceraPro;
+  src: url(../fonts/CeraCompactPro-Regular\ -\ Copy.woff);
+}
+.h3__slide1 {
+  font-family: "ceraPro", sans-serif;
+}
+
+.row__Slide {
+  height: 120vh;
+  width: auto;
+  background: url(https://www.lego.com/cdn/cs/aboutus/assets/blt428815fcab383532/only-the-best-is-good-enough.jpg?disable=upscale&width=3840&quality=50&crop=16:9);
+  background-size: cover;
+  border: none;
+  overflow: hidden;
+}
+.row__Slide2 {
+  height: 120vh;
+  width: auto;
+  background: url(https://www.lego.com/cdn/cs/aboutus/assets/blt37b58bd1adf1b4fc/inspire-and-develop-the-builders-of-tomorrow.jpg?disable=upscale&width=3840&quality=50&crop=16:9);
+  background-size: cover;
+  border: none;
+  overflow: hidden;
+}
+
+.col__slide {
+  max-width: 60%;
+  margin-top: 10%;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+}
+
+.h3__slide1 {
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  font-size: 5.875rem !important;
+  position: relative;
+  display: flex;
+}
+
+.h3__slide2 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  font-size: 3.875rem !important;
+  position: relative;
+  display: flex;
+}
+
+.h2__slide1 {
+  color: #333;
+  text-align: center;
+  flex: 0 1 auto;
+  word-break: break-word;
+  max-width: 100%;
+  margin-bottom: 10%;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  font-size: 1.5rem !important;
+  position: relative;
+}
+
+.a__slide1 {
+  text-align: center;
+  flex: 0 1 auto;
+  color: #333;
+  position: relative;
+  margin-left: 35%;
+  margin-top: 10px;
+}
+.a__slide2,
+.a__slide2:hover {
+  color: #333;
+  justify-content: center;
+  margin-left: 45%;
+}
+.a__slide1:hover {
+  text-align: center;
+  flex: 0 1 auto;
+  color: #333;
+  text-decoration: #333 underline;
+}
+/* middle slide */
+
+.mid__slide__right {
+  background: url(https://www.lego.com/cdn/cs/aboutus/assets/bltf937b03e3ee30ee8/home--history.jpg?disable=upscale&width=1200&quality=50&crop=16:9);
+  background-size: cover;
+  border: none;
+  height: 80vh;
+}
+.mid__slide__left__header {
+  color: #333;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  font-size: 2.875rem !important;
+}
+.mid__slide__left__p {
+  word-break: break-word;
+  max-width: 100%;
+  line-height: 1.5 !important;
+  font-size: 1.4375rem !important;
+  font-weight: 300 !important;
+}
+
+.mid__slide__left__links {
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 32px auto;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.a__center {
+  flex: 0 1 auto;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #333;
+}
+.h3__mid {
+  /* margin-left: 28%; */
+  margin-bottom: 20px;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  font-size: 2.5rem !important;
+  text-align: center;
+}
+
+.Last__slide {
+  margin: 0px -9px 5px -9px;
+  justify-content: center;
+  width: 100%;
+  height: 120vh;
+}
+
+.map__slide {
+  background: url(../assets/map.jpg);
+  background-size: cover;
+  height: 100%;
+  margin: 0 auto;
+  transform: none;
+  width: 100%;
+}
+
+.Last__h2 {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  font-size: 2.5625rem !important;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.last__link {
+  height: 70px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 3px;
+}
+.last__link__item {
+  width: 90%;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 16px;
+  height: 90%;
+  cursor: pointer;
+  outline: none;
+  flex: 0 1 auto;
+}
+.last__link__item__img {
+  height: inherit;
+  width: auto;
+  max-width: auto;
+}
+
+.link__item,
+.link__item:hover {
+  flex: 0 1 auto;
+  justify-self: center;
+  align-content: center;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #333;
+  margin-left: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .row__Slide,
+  .row__Slide2 {
+    height: 100vh;
+    width: auto;
+    border: none;
+    overflow: hidden;
+  }
+
+  .h3__slide1 {
+    margin-bottom: 15px;
+    font-weight: 600 !important;
+    line-height: 0.9 !important;
+    font-size: 3.5rem !important;
+    position: relative;
+  }
+  .h2__slide1 {
+    max-width: 100%;
+    margin-bottom: 5%;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    font-size: 1.2rem !important;
+  }
+
+  .col__slide {
+    max-width: 75%;
+    margin-top: 10%;
+  }
+  .a__slide1 {
+    margin-left: 25%;
+  }
+  .h3__mid {
+    /* margin-left: 20%; */
+    margin-bottom: 20px;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    font-size: 1.8rem !important;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  .row__Slide,
+  .row__Slide2 {
+    height: 110vh;
+    width: auto;
+    border: none;
+    overflow: hidden;
+  }
+  .row__Slide2 {
+    width: auto;
+    border: none;
+    overflow: hidden;
+  }
+
+  .h3__slide1 {
+    margin-bottom: 15px;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    font-size: 4.5rem !important;
+    position: relative;
+  }
+  .h2__slide1 {
+    max-width: 100%;
+    margin-bottom: 5%;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    font-size: 1.4rem !important;
+  }
+
+  .col__slide {
+    max-width: 75%;
+    margin-top: 10%;
+  }
+  .a__slide1 {
+    margin-left: 35%;
+  }
+  .h3__mid {
+    margin-left: 20%;
+    margin-bottom: 20px;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    font-size: 2.5rem !important;
+  }
+}
