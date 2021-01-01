@@ -6,6 +6,7 @@ import CardContainerSpotlight from '../components/CardContent/CardContainerSpotl
 import Adv from "../components/Adv/Adv";
 import MainCategory from "../components/MainCategory/MainCategory"
 import NewProductsSlider from '../components/NewProductsSlider/NewProductsSlider';
+import loggedModule from '../modules/LoggedUserModule';
 
 
 const HomePage = () => {

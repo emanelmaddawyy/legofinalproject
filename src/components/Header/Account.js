@@ -39,12 +39,12 @@ function Account(props) {
       </div></>}
         <div className="orderRegister">
           <img src="../../orderStatus.png"/>
-          <Link to="order">Check Order Satuts</Link>
+          <Link to="orders">Check Order Satuts</Link>
         </div>
         <div className="orderRegister">
           <img src="../../vipBadge.png" className="my-4"/>
           <p>Become a LEGO® VIP member <br/>
-          <Link to="order"> LEGO® VIP rewards</Link>
+          <Link to="/vip"> LEGO® VIP rewards</Link>
           </p>
         </div>
         {loggedUser ? <button onClick={logOut} className="btn loginBtn m-auto d-block">log out</button>: ""}

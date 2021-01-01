@@ -43,7 +43,11 @@ class LoginPage extends Component{
         const response = await Axios.post(`${this.api}/auth/login`, reqBody);
         if (response.status === 200) {
           loggedModule.setLoggedUser(response.data);
-          this.props.history.push('/');
+          if (loggedModule.getLoggedUser().isAdmin) {
+            this.props.history.push('/admin');
+          } else {
+            this.props.history.push('/');
+          }
         } else {
           alert("Something went wrong");
         } 
