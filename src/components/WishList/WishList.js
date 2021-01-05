@@ -42,6 +42,8 @@ class WishList extends React.Component  {
     }
 
     cartModule.addProduct(product);
+    toast.success("You products added");
+
   }
 
   removeFromWishListHandler = (index) => {

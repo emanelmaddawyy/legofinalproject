@@ -45,6 +45,7 @@ class Architecture extends React.Component {
     const product = {...this.state.products[index]};
 
     wishListModule.addProduct(product);
+    toast.error("Added in wishlist") 
 
     product.existsInWishList = true;
 
@@ -132,6 +133,8 @@ class Architecture extends React.Component {
     }
 
     cartModule.addProduct(product);
+    toast.success("You products added");
+
   }
 
   filtersChanged = (productFilters) => {

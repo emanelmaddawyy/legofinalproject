@@ -23,6 +23,9 @@ export default class NewProductsSlider extends Component {
     const product = {...this.state.products[index]};
 
     wishListModule.addProduct(product);
+    toast.error("Added to wishlist") 
+
+
 
     product.existsInWishList = true;
 

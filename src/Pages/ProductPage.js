@@ -42,6 +42,8 @@ class ProductPage extends Component{
     }
 
     cartModule.addProduct(product);
+    toast.success("You products added");
+
   }
 
   fetchProduct = async () => {
@@ -111,7 +113,7 @@ class ProductPage extends Component{
                 Price : <span>{this.state.product.price} $</span>  
                 <br/>
                 {this.state.product.available=true ? "Avaliable Now": "Not avaliable"}
-                <PromoBadge /> 
+                {/* <PromoBadge />  */}
               <button
                 class='btn add col-12'
                 onClick={() => this.addToCartClickHandler(this.state.product)}>

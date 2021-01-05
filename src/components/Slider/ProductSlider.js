@@ -55,6 +55,8 @@ const ProductSlider = ({
     }
 
     cartModule.addProduct(product);
+    toast.success("You products added");
+
   }
 
 	const productList = products.map((product, i) => {
