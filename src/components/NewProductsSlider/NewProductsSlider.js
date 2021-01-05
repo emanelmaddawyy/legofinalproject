@@ -6,6 +6,7 @@ import wishListModule from '../../modules/WishListModule';
 import loggedUserModule from '../../modules/LoggedUserModule';
 import config from '../../config.json';
 import EventEmitter from '../../modules/EventEmitter';
+import { toast } from 'react-toastify';
 
 
 export default class NewProductsSlider extends Component {
@@ -15,7 +16,7 @@ export default class NewProductsSlider extends Component {
 
   addToWishListHandler = (index) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 
@@ -33,7 +34,7 @@ export default class NewProductsSlider extends Component {
 
   removeFromWishListHandler = (index) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 
@@ -66,7 +67,7 @@ export default class NewProductsSlider extends Component {
       if (error && error.response && error.response.data && error.response.data.message) {
         msg = error.response.data.message;
       }
-      alert(msg);
+      toast.error(msg);
     }
 
     // listen

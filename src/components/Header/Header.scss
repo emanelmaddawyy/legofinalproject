@@ -161,7 +161,6 @@ width: calc(30%);
 }
 a.nav-link a{
     color: #000;
-    height: 70px;
     align-items: center;
     display: flex;
     margin-right: 20px;
@@ -178,7 +177,6 @@ a.nav-link a{
       background-color: #007bff;
 
     }
-
   }
   .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff !important;
@@ -201,8 +199,6 @@ ul.shopstyle {
   width: 170px;
 }
 
-//////Media/////
-
 
 // 480px
 // 600px
@@ -211,19 +207,47 @@ ul.shopstyle {
 // 1024px
 // 1200px
 @media only screen and (min-width: 1200px) {
-
+  .topHeader{
+    display: flex !important ;
+  }
+  .topHeader ul {
+    justify-content: start !important;
+  }
 }
 @media only screen and (min-width: 1024px) {
-
+  .topHeader ul {
+    justify-content: center ;
+  }
 }
 @media only screen and (min-width: 991px) {
- 
+  // .topHeader ul {
+  //   justify-content: center !important;
+  // }
 }
 @media only screen and (min-width: 768px) {
+  .topHeader{
+    display:block ;
+    text-align: center;
+  } 
+  .topHeader ul {
+    justify-content: center;
+  }
+  .topHeader ul li {
+    padding: 0 5px !important ;
+  }
 
 }
 @media only screen and (min-width: 480px) {
-
+  .topHeader{
+    display:block ;
+    text-align: center;
+  } 
+  .topHeader ul li {
+    padding: 10px 5px ;
+  }
+  .topHeader ul {
+    justify-content: center;
+  }
 }
 
 /* No CSS *//*# sourceMappingURL=Header.css.map */

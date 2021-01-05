@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { HeartOutlined, HeartFilled } from '@ant-design/icons';
+import { HeartOutlined, HeartFilled,DeleteOutlined } from '@ant-design/icons';
 import cartModule from '../../modules/CartModule';
 import wishListModule from '../../modules/WishListModule';
 import Axios from 'axios';
 import LoggedUserModule from '../../modules/LoggedUserModule';
 import EventEmitter from '../../modules/EventEmitter';
 import config from '../../config.json';
+import './Cart.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -17,6 +21,7 @@ class Cart extends Component{
     products:[],
     totalPrice: cartModule.getTotalPrice()
   }
+   notify = () => toast("Wow so easy !");
 
   componentDidMount() {
     const products = cartModule.getProducts().map(item => {
@@ -87,10 +92,10 @@ class Cart extends Component{
 
   orderNowHandeler = async () => {  
     if(this.state.products.length == 0){
-      alert("Order First")
+      toast.error("Order First")
+      
       return;
     }
-
 
     const orderProducts = this.state.products.map(item => {
       return {
@@ -109,14 +114,36 @@ class Cart extends Component{
         cartModule.clearCart();
         this.props.history.push('/orders');   
       } catch (error) {
-        alert(error);
+        toast.error(error.message);
     }
   }
   render(){
     const productsList = this.state.products.length ? (
       this.state.products.map((product, index) => {
           return (
-              <tr key={product._id} className="p-0">
+
+         <tr>
+           <td>
+            <div className="media cart">
+              <img className="mr-3 imgCart" src={config.imagesEndpoint + product.images[0]} alt="Generic placeholder image" />
+              <div className="media-body">
+               <h5 className="mt-0">{product.title}</h5>
+              <ul className="list-unstyled">
+                <li>  price : {product.price} $</li>
+                <li> count : {product.countInCart}</li>
+                <li> </li>
+                <li> </li>
+              </ul>
+              </div>
+            </div>
+            </td>
+            <td> { this.getWishListHeartButton(product, index) }</td>
+            <td><button onClick={() => this.removeFromCart(product)} className="btn text-primary p-0 pl-2 pt-2 pr-2 ml-3 mr-3" type="button"><DeleteOutlined style={{ fontSize: '16px', color: 'rgb(0, 109, 183)', margin: '2px',  padding: '3px',
+                  borderRadius:'50%' }}/></button></td>
+                  <td> {product.price * product.countInCart}</td>
+        </tr>    
+
+              /* <tr key={product._id} className="p-0">
                   <td className="text-left align-self-center">
                       {product._id}
                   </td>
@@ -136,7 +163,7 @@ class Cart extends Component{
                   <td className="text-center align-self-center">
                       <button onClick={() => this.removeFromCart(product)} className="btn text-primary p-0 pl-2 pr-2 ml-3 mr-3" type="button">Delete</button>
                   </td>
-              </tr>
+              </tr> */
           )
       })
   ) : (
@@ -150,19 +177,18 @@ class Cart extends Component{
         <table className="table col-8 offset-2">
             <thead className="thead-light">
                 <tr className="">
-                    <th scope="col" className="text-left align-self-center">ID</th>
-                    <th scope="col" className="text-left align-self-center">Name</th>
-                    <th scope="col" className="text-left align-self-center">Price</th>
-                    <th scope="col" className="text-left align-self-center">Number of product</th>
-                    <th scope="col" className="text-left align-self-center">Add to wishlist</th>
-                    <th scope="col" className="text-left align-self-center">del</th>
+                    <th scope="col" className="text-left align-self-center">Items</th>
+                    <th scope="col" className="text-left align-self-center"></th>
+                    <th scope="col" className="text-left align-self-center"></th>
+                    <th scope="col" className="text-left align-self-center">total</th> 
                 </tr>
             </thead>
             <tbody>
                 {productsList}
-                <p>total :{this.state.totalPrice} </p>
             </tbody>
         </table>
+        <p className="text-center m-3 text-danger" style={{ fontSize: '20px'}}>Total :{this.state.totalPrice} </p>
+
         <div className="w-100 m-auto text-center">
         <button className="btn loginBtn" onClick={this.orderNowHandeler}>Order Now</button>
         </div>

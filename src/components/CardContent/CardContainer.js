@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import SpinnerLoader from '../../components/common/SpinnerLoader/SpinnerLoader';
+import { toast } from 'react-toastify';
 const config = require('../../config.json');
 
 
@@ -24,11 +25,11 @@ class CardContainer extends React.Component {
           showLoading:false
          })
       } else {
-        alert("Something went wrong");
+        toast.error("Something went wrong");
       } 
     } catch (error) {
       this.setState({showLoading: false});
-      alert(error);
+      toast.error(error.message);
     }
   }
 	render() {

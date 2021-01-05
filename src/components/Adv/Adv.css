@@ -71,7 +71,7 @@
           font-family:sans-serif;
           cursor: pointer;
       }
-      .bannar_btn .btn:hover{background-color:white;
-          color:black;
+      .bannar_btn .btn:hover{background-color:#fff !important;
+          color:black !important;
       }
       .icon{padding-left: 10px;}

@@ -18,6 +18,7 @@ import {
 import cartModule from '../../modules/CartModule';
 import loggedUserModule from '../../modules/LoggedUserModule';
 import wishListModule from '../../modules/WishListModule';
+import { toast } from 'react-toastify';
 import config from '../../config.json';
 
 const responsive = {
@@ -49,7 +50,7 @@ const ProductSlider = ({
 
   const addToCartClickHandler = (product) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 

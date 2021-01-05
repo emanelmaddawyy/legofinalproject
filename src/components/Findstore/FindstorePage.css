@@ -1,0 +1,455 @@
+
+.info {
+  margin: auto;
+  flex: 1 1 auto;
+  padding-left: 10px;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.info__body {
+  flex: 0 1 auto;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  padding: 16px 40px;
+  padding-left: 32px;
+  border-left: 4px solid #0092bc;
+}
+
+.info__icon {
+  font-size: 1.8rem;
+  flex: 0 1 auto;
+  white-space: nowrap;
+  text-align: center;
+  padding: 4px;
+  border-radius: 64px;
+  max-height: none;
+  color: #0092bc;
+  margin-right: 24px;
+}
+.info__content {
+  line-height: 0.802rem;
+  font-size: 0.7rem;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 1200) {
+  .info {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .info {
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .info {
+    max-width: 90%;
+  }
+}
+
+.search__container {
+  background-image: url(https://www.lego.com/stores/images/stores-background.jpg);
+  flex: 0 1 auto;
+  padding: 0 8px;
+  background-size: cover;
+  margin-top: 30px;
+}
+
+/* .search {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  justify-content: center;
+} */
+
+.search__content {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  padding-left: 16px;
+  flex-basis: 66.66666667%;
+  max-width: 66.66666667%;
+}
+
+.search__content__items {
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  margin: 64px auto;
+  background-color: #f8f8f8;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 1000px;
+  padding: 32px;
+}
+
+.search__header {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  margin-bottom: 32px;
+  text-align: center !important;
+}
+
+.Btns__Group {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "ceraPro", sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  list-style: none;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  display: flex;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button__search1 {
+  font-family: "ceraPro", sans-serif;
+  font-weight: 400;
+  flex: 0 1 auto;
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  font-size: 1rem;
+  padding: 12px 40px;
+  margin: 8px;
+}
+.button__search2 {
+  font-family: "ceraPro", sans-serif;
+  font-weight: 400;
+  flex: 0 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #4a4a4a;
+  background-color: #f8f8f8;
+  line-height: 22px;
+  border-radius: 4px;
+  border: 1px solid #4a4a4a;
+  font-size: 1rem;
+  padding: 12px 40px;
+  margin: 8px;
+}
+
+.cards__content {
+  font-family: "ceraPro", sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 64px 0;
+  background-color: #f8f8f8 !important;
+}
+.cards__header {
+  flex: 0 1 auto;
+  margin: 64px 0;
+  margin-top: 0;
+  margin-bottom: 64px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 700 !important;
+  font-size: 2.25rem !important;
+  line-height: 1.25 !important;
+}
+.crad__container {
+  font-family: "ceraPro", sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  overflow: hidden;
+}
+
+.link-card,
+.link-card:hover {
+  font-family: "ceraPro", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  list-style: none;
+  flex: 0 1 auto;
+  background-color: #f8f8f8;
+  box-sizing: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: center !important;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+.card {
+  border: none;
+  flex: 0 1 auto;
+  background-color: #f8f8f8;
+  box-sizing: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: center !important;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.card__header {
+  text-align: center !important;
+  cursor: pointer;
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+  line-height: 1.5;
+  font-size: 1.4375rem;
+  font-weight: 300;
+}
+
+/* cal__wrapper */
+
+.cal__wrapper {
+  font-family: "cerPro", sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  position: relative;
+  display: flex;
+  height: 80vh !important;
+
+  flex-direction: column;
+  background-color: #005eb8;
+}
+
+/* cal__second */
+.cal__second {
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  overflow: hidden;
+  position: absolute;
+  background-color: #005eb8;
+  top: 0;
+  bottom: 0;
+  padding-top: 0 !important;
+  height: auto !important;
+  right: 0;
+  width: calc(50% + ((1440px / 12) * 2)); /*  */
+}
+
+.callll {
+  font-family: "ceraPro", sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  border-style: none;
+  /* box-sizing: border-box; */
+  position: absolute;
+  left: 50%;
+  max-width: 90%;
+  height: 90% !important;
+  width: auto !important;
+  top: auto;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* cal__first */
+.cal__first {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: cera pro, sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: inherit;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  width: 50%;
+  left: 0;
+  justify-content: flex-end;
+  transform: translateX(-240px);
+  background-color: #005eb8;
+  margin-top: 15%;
+  margin-bottom: 0px;
+  /* height: auto !important; */
+}
+
+.cal__header {
+  font-family: "ceraPro", sans-serif;
+  color: #fff;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.cal__txt {
+  font-family: "ceraPro", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #fff;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  word-break: break-word;
+  max-width: 100%;
+  background-color: #005eb8;
+}
+
+.btns__download {
+  color: #fff;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 32px -8px -8px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  background-color: #005eb8;
+  align-self: stretch;
+}
+
+.btn__link1,
+.btn__link1:hover {
+  font-weight: 400;
+  flex: 0 1 auto;
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  outline: none;
+  font-size: 0.875rem;
+  padding: 4px 32px;
+  color: #4a4a4a;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 8px;
+}
+
+.svg__1 {
+  font-family: cera pro, sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  line-height: 24px;
+  width: 15;
+  height: 15;
+  fill: none;
+  flex: 0 1 auto;
+  box-sizing: inherit;
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 1200) {
+  .search__header {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  .search__content {
+    flex-basis: 80%;
+    max-width: 80%;
+  }
+
+  .search__header {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .button__search1,
+  .button__search2 {
+    flex-grow: 1;
+    margin: 8;
+    width: 100%;
+  }
+}

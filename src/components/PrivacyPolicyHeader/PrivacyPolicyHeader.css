@@ -1,0 +1,39 @@
+.PrivacyPolicyHeaderStyle {
+	background-color: #005eb8;
+	color: white;
+	text-align: center;
+    padding: 5px 0 10px;
+    border-radius: 0;
+}
+
+.PrivacyPolicyHeaderStyle h1 {
+	font-size: 2rem;
+	font-family: 'CeraBold';
+	padding: 20px;
+	padding-left: 40px;
+	padding-right: 0;
+	color: white;
+}
+
+.PrivacyPolicyHeaderStyle .nav_list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	margin-bottom: 16px;
+	margin-right: 30px;
+}
+
+.PrivacyPolicyHeaderStyle .nav_list li {
+	display: flex;
+	color: white;
+	font-weight: 300;
+	font-family: 'CeraLight';
+	margin: 8px 16px;
+	cursor: pointer;
+	font-size: 1.125rem;
+}
+
+#activeLink {
+	font-family: CeraBold !important;
+}

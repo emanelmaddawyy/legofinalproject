@@ -6,6 +6,7 @@ import {  faAppleAlt} from '@fortawesome/free-solid-svg-icons';
 import {  faCoffee } from '@fortawesome/fontawesome-free-solid';
 import './Auth.css';
 import loggedModule from '../modules/LoggedUserModule';
+import { toast } from 'react-toastify';
 import config from '../config.json'
 
 const { Component } = require("react");
@@ -49,10 +50,10 @@ class LoginPage extends Component{
             this.props.history.push('/');
           }
         } else {
-          alert("Something went wrong");
+          toast.error("Something went wrong");
         } 
       } catch (error) {
-        alert(error);
+        toast.error(error.message);
     }
   }
   render(){
@@ -75,14 +76,14 @@ class LoginPage extends Component{
       <input type="password" placeholder="password" className="form-control" value={this.state.password} onChange={this.passwordChangeHandeler} required/>
      <span></span>
      </div>
-     <div class="form-check">
+     {/* <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
   <label class="form-check-label" for="defaultCheck1">
 <Link>Remember me</Link> <br/>
 Remember to log out afterwards if you’re using a shared computer, for example in a library or school.
 
   </label>
-  </div>
+  </div> */}
    <button type="submit" className="btn loginBtn"> Log In </button> 
     </form>
      <div className="forgetLinks">

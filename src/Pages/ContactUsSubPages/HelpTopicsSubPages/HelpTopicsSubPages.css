@@ -1,0 +1,38 @@
+.chooseTopic {
+	background-color: #eee;
+	padding: 32px 8px;
+}
+
+@media screen and (min-width: 992px) {
+	.chooseTopic {
+		padding: 32px;
+		padding-left: 8px;
+	}
+}
+
+#title {
+	font-size: 1.4375rem !important;
+	font-family: 'CeraLight';
+}
+
+#subtitle {
+	font-family: 'CeraLight';
+	margin-bottom: 32px !important;
+}
+
+#backBtn {
+	font-family: 'CeraLight';
+	margin-bottom: 16px;
+	padding-left: 0 !important;
+}
+
+#backBtn:hover {
+	opacity: 0.7;
+
+	text-decoration: underline;
+}
+
+#back-text {
+	margin-left: 5px;
+}
+/* ============================================================ */

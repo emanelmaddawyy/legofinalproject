@@ -1,5 +1,6 @@
 import React from 'react';
 import './Adv.css'
+import {Link} from 'react-router-dom'
 import { FaChevronRight } from 'react-icons/fa';
 const Adv = () =>{
     return( <>
@@ -10,9 +11,9 @@ const Adv = () =>{
     <div className="row">
     <div className="col">
     <div className="bannar_text">
-    <p className="lead">  Gift a really cool world </p>
+    <p className="lead"> Shop Now You Can Ses Our Batman Toy </p>
    <div className="bannar_btn">
-       <a href="#" className="btn">Shop now<i className="icon"><FaChevronRight/></i></a>
+       <Link to="/products/theme/5fe64b92438ee9d3e643db6a" className="btn btn-info">Shop now<i className="icon"><FaChevronRight/></i></Link>
        </div>
 </div> 
 </div>

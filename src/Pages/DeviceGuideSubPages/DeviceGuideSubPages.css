@@ -1,0 +1,307 @@
+#DeviceGuideSubStyle {
+	background: white;
+	color: #333;
+}
+
+#DeviceGuideSubStyle #backBtn {
+	width: fit-content;
+	margin: auto;
+	margin-top: 32px;
+}
+
+#DeviceGuideSubStyle .title {
+	width: fit-content;
+	margin: 16px auto 32px auto;
+	font-weight: 700 !important;
+	line-height: 1.25 !important;
+	max-width: 960px;
+	padding-left: 8px;
+	font-family: 'CeraBold';
+	padding-right: 8px;
+	font-size: 2.25rem !important;
+	color: #333;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	#DeviceGuideSubStyle .title {
+		font-size: 2.8rem !important;
+	}
+}
+
+#DeviceGuideSubStyle .question {
+	margin-top: 32px;
+	font-size: 1.625rem;
+}
+
+#DeviceGuideSubStyle .answer {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 16px;
+	font-family: 'CeraLight';
+}
+
+#DeviceGuideSubStyle .link {
+	color: #005eb8 !important;
+	text-decoration: underline;
+}
+#DeviceGuideSubStyle .ul {
+	list-style-type: disc;
+	/* padding: 0px;
+	list-style-position: inside; */
+	padding: 10px 15px 0;
+	list-style-position: outside;
+}
+
+#DeviceGuideSubStyle .ol {
+	list-style-type: decimal;
+	padding: 10px 15px 0;
+	list-style-position: outside;
+}
+#DeviceGuideSubStyle .ul li,
+#DeviceGuideSubStyle .ol li {
+	margin-bottom: 8px;
+}
+
+strong {
+	font-family: 'CeraBold';
+	margin: 5px 0;
+}
+
+#DeviceGuideSubStyle #main-content {
+	margin-bottom: 100px !important;
+}
+/* ========================================================================================= */
+
+#DeviceGuideAccordion {
+	background-color: white;
+	width: 100%;
+	/* max-width: 830px; */
+	/* padding: 0 0.75rem; */
+	margin: 32px auto;
+}
+#DeviceGuideAccordion .accordion-item {
+	border-top: solid 1px #d8d8d8;
+	/* padding: 1.5265rem 0; */
+}
+#DeviceGuideAccordion .accordion-item:last-of-type {
+	border-bottom: solid 1px #d8d8d8;
+}
+
+#DeviceGuideAccordion #accordionOpenCloseBtn {
+	position: relative;
+	display: block;
+	text-align: left;
+	width: 100%;
+	padding: 0;
+	color: rgb(244, 244, 244);
+	font-size: 1.15rem;
+	font-weight: 400;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+#DeviceGuideAccordion #accordionOpenCloseBtn:hover,
+#DeviceGuideAccordion #accordionOpenCloseBtn:focus {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#DeviceGuideAccordion #accordionOpenCloseBtn:hover::after,
+#DeviceGuideAccordion #accordionOpenCloseBtn:focus::after {
+	cursor: pointer;
+	/* color: #03b5d2; */
+	/* border: 1px solid rgb(244, 244, 244); */
+}
+
+#DeviceGuideAccordion #accordionOpenCloseBtn .accordion-title {
+	font-size: 1.25rem;
+	line-height: 2.3125;
+	padding: 1rem 1.5rem;
+	/* background-color: red; */
+	background-color: white;
+	color: rgb(44, 44, 44);
+}
+
+@media screen and (min-width: 992px) {
+	#DeviceGuideAccordion #accordionOpenCloseBtn .accordion-title {
+		font-size: 1.25rem !important;
+		padding: 32px 5.5rem;
+	}
+}
+
+#DeviceGuideAccordion #accordionOpenCloseBtn .icon {
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	right: 10px;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 30px;
+	overflow: hidden;
+	font-size: 0;
+	color: black;
+	font-size: 20px;
+	/* background-color: brown; */
+}
+
+@media screen and (min-width: 992px) {
+	#DeviceGuideAccordion #accordionOpenCloseBtn .icon {
+		text-align: center;
+		width: 20px;
+		height: 20px;
+		top: 45px;
+		right: 50px;
+	}
+}
+
+#DeviceGuideAccordion
+	#accordionOpenCloseBtn[aria-expanded='true']
+	.accordion-title {
+	background-color: #eeeeee;
+}
+
+#DeviceGuideAccordion #accordionOpenCloseBtn[aria-expanded='true'] .icon {
+	/* .icon::before { */
+	transform: rotate(180deg);
+}
+#DeviceGuideAccordion
+	#accordionOpenCloseBtn[aria-expanded='true']
+	+ .accordion-content {
+	opacity: 1;
+	max-height: max-content;
+	transition: all 200ms linear;
+	will-change: opacity, max-height;
+	margin: 0;
+}
+
+#DeviceGuideAccordion .accordion-content {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity 200ms linear, max-height 200ms linear;
+	will-change: opacity, max-height;
+	/* padding: 1.125rem 0px; */
+	/* background-color: orange; */
+	background-color: #eeeeee;
+}
+
+.input-group-text {
+	background-color: transparent;
+	padding: 0.9375rem;
+	border-color: rgb(0, 109, 183);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0px 0.3125rem 0.3125rem 0px;
+}
+.input-group-text:hover {
+	background: rgb(230, 243, 255);
+}
+.input-group-text i {
+	border-color: rgb(0, 109, 183);
+}
+
+/* ================================================================================================================== */
+
+/* ================================================================================================================== */
+
+/* ================================================================================================================== */
+/*
+================================================================================================================== */
+
+.specifications {
+	color: #2c2c2c;
+	line-height: 1.5;
+	padding: 0;
+}
+
+.specificationsImg {
+	text-align: center;
+	padding: 10px;
+}
+
+#DeviceGuideAccordion .specificationsParagraph {
+	padding: 0 5px;
+	line-height: 1.5;
+	margin-top: 32px !important;
+	font-size: 0.875rem !important;
+	font-size: 1rem;
+}
+@media screen and (min-width: 992px) {
+	#DeviceGuideAccordion .specificationsParagraph {
+		font-size: 1rem;
+	}
+	.specifications {
+		padding: 0 5.5rem;
+	}
+}
+
+.specificationsUl {
+	display: block;
+	margin: 1.125rem 0px;
+	padding-left: 1.875rem;
+	list-style-position: outside;
+	margin-left: 1.5625rem;
+	list-style-type: disc;
+}
+
+.specificationsUl li {
+	/* line-height: 3; */
+	padding-bottom: 8px;
+}
+
+.specificationsBtn {
+	display: inline-flex;
+	margin: 0.9375rem 0px;
+	display: inline-block;
+	width: auto;
+	padding: 0.9375rem;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	border-collapse: collapse;
+	text-align: center;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.1875rem;
+	background-color: rgb(0, 109, 183);
+	color: rgb(255, 255, 255);
+	border-color: rgb(0, 109, 183);
+	font-size: 1rem;
+	line-height: 1.5625rem;
+	font-weight: 400;
+}
+.specificationsBtn:hover {
+	color: rgb(0, 109, 183);
+	background-color: white;
+}
+
+.blue {
+	color: rgb(0, 109, 183) !important;
+	cursor: pointer;
+}
+
+#DeviceGuideAccordion .row {
+	margin: 0;
+}
+
+#DeviceGuideAccordion a,
+#DeviceGuideAccordion a:hover {
+	text-decoration: underline;
+}
+
+.cell {
+	border: 1px solid #d8d8d8;
+	color: black;
+	font-family: 'CeraLight';
+	max-width: 100%;
+	padding: 8px !important;
+}
+
+@media screen and (min-width: 992px) {
+	.cell {
+		padding: 16px !important;
+	}
+}

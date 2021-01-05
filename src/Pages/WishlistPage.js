@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import NewProductsSlider from '../components/NewProductsSlider/NewProductsSlider';
 import Slider from '../components/Slider/Slider';
@@ -19,6 +20,7 @@ class WishlistPage extends Component {
       <Slider />
       <WishList />
       <NewProductsSlider />
+      <Footer/>
       </>
     )
   }

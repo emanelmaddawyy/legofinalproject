@@ -1,0 +1,68 @@
+#PrivacyPolicy {
+	background: white;
+	color: #333;
+}
+
+#PrivacyPolicy #backBtn {
+	width: fit-content;
+	margin: auto;
+	margin-top: 32px;
+}
+
+#PrivacyPolicy #title {
+	width: fit-content;
+	/* margin: 16px auto 32px auto; */
+	margin: 64px auto;
+	font-weight: 700 !important;
+	line-height: 1.25 !important;
+	max-width: 960px;
+	padding-left: 8px;
+	font-family: 'CeraBold';
+	padding-right: 8px;
+	font-size: 2.25rem !important;
+	color: #333;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	#PrivacyPolicy #title {
+		font-size: 2.8rem !important;
+	}
+}
+
+#PrivacyPolicy .question {
+	margin-top: 32px;
+	font-size: 1.625rem;
+}
+
+#PrivacyPolicy .answer {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 16px;
+	font-family: 'CeraLight';
+}
+
+#PrivacyPolicy .link {
+	color: #005eb8 !important;
+	text-decoration: underline;
+}
+
+#PrivacyPolicy .ul {
+	list-style-type: disc;
+}
+
+#PrivacyPolicy .ol {
+	list-style-type: decimal;
+}
+
+#PrivacyPolicy .ul li {
+	margin: 10px 0;
+}
+
+strong {
+	font-family: 'CeraBold';
+}
+
+#PrivacyPolicy #main-content {
+	margin-bottom: 64px !important;
+}

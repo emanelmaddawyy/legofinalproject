@@ -1,55 +1,73 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import Accordion from '../Accordion/Accordion';
 import './Filter.css';
+import Axios from 'axios';
+import { toast } from 'react-toastify';
+import config from '../../config.json'
 
 const Filter = (props) => {
-	// console.log('Filter props', props.ArchitectureAccordion)
+  const [filters, setFilters ]= useState([]);
+  
+  useEffect(async () => {
+    try {
+      const response = await Axios.get(`${config.apiUrl}/filters/productFilters`);
+      setFilters(response.data);
+    } catch (error) {
+      toast.error(error.message);
+    }
+  }, []);
 
-	//will run after the page is loaded
-	// uncheck checked boxes
-	useEffect(() => {
-		let resetBtn = document.getElementById('resetBtnStyle');
-		let checkboxes = document.getElementsByClassName('getCheckBox');
+  const notifyFilterChanged = () => {
+    const productFilters = [];
+    filters.forEach(filterItem => {
+      const checkedDataItems = filterItem.data.filter(dataItem => dataItem.checked);
+      if (checkedDataItems.length > 0) {
+        productFilters.push({
+          key: filterItem.key,
+          data: checkedDataItems.map(item => item._id)
+        })
+      }
+    });
 
-		resetBtn.addEventListener('click', () => {
-			for (let i = 0; i < checkboxes.length; i++) {
-				if (checkboxes[i].checked) {
-					checkboxes[i].checked = false;
-				}
-			}
-		});
-	}, []);
+    props.filtersChanged(productFilters);
+  }
 
-	// disable - enable reset button according to if checkbox unchecked - checked
-	function checkboxClickedFun() {
-		console.log('checkboxClicked');
-		let checkboxes = document.getElementsByClassName('getCheckBox');
-		let resetBtn = document.getElementById('resetBtnStyle');
+  const filterChangeHandler = (filterKey, dataItemId) => {
+    const newFilters = [...filters];
 
-		for (let i = 0; i < checkboxes.length; i++) {
-			if (checkboxes[i].checked) {
-				resetBtn.disabled = false;
-				break;
-			} else {
-				resetBtn.disabled = true;
-			}
-		}
-	}
+    const filterItem = newFilters.find(item => item.key === filterKey);
+    const dataItemIndex = filterItem.data.find(item => item._id === dataItemId);
+    dataItemIndex.checked = !dataItemIndex.checked;
+
+    setFilters(newFilters);
+
+    notifyFilterChanged();
+  }
+
+  const resetFilters = () => {
+    const newFilters = [...filters];
+    newFilters.forEach(filterItem => {
+      filterItem.data.forEach(dataItem => {
+        dataItem.checked = false;
+      })
+    })
+
+    setFilters(newFilters);
+    
+    notifyFilterChanged();
+  }
 
 	return (
 		<>
-			{/* <button id='resetBtnStyle' disabled onClick={EnableReset}> */}
-			<button id='resetBtnStyle' disabled>
+			<button id='resetBtnStyle' onClick={resetFilters}>
 				Reset All
 			</button>
 
-			{props.ArchitectureAccordion.map((item, i) => {
-				// console.log('item!!!!', item);
+			{filters.map((item, i) => {
 				return (
 					<Accordion
-						title={item.title}
-						filters={item.filters}
-						checkboxClickedFun={checkboxClickedFun}
+            filter={item}
+						filterChangeHandler={filterChangeHandler}
 						key={i}></Accordion>
 				);
 			})}

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './WriteAReviewModal.css';
 import { withRouter } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const WriteAReview = (props) => {
 	// console.log(props.location.state);
@@ -27,10 +28,10 @@ const WriteAReview = (props) => {
 			let modalErrors = document.getElementById('modalErrors');
 
 			if (modalNicknameLength > 4 && modalReviewLength > 50) {
-				// alert('valid');
+				// toast.error('valid');
 				handleClose();
 			} else if (modalNicknameLength < 4 && modalReviewLength > 50) {
-				// alert('error modalNickname');
+				// toast.error('error modalNickname');
 				modalNickname.style.border = '1px solid red';
 				modalNicknameLabel.style.color = 'red';
 				modalErrors.innerHTML = `
@@ -45,7 +46,7 @@ const WriteAReview = (props) => {
 
 				return false;
 			} else if (modalNicknameLength > 4 && modalReviewLength < 50) {
-				// alert('error modalReview');
+				// toast.error('error modalReview');
 				modalReview.style.border = '1px solid red';
 				modalReviewLabel.style.color = 'red';
 				modalErrors.innerHTML = `
@@ -60,7 +61,7 @@ const WriteAReview = (props) => {
 
 				return false;
 			} else {
-				// alert('error modalNickname .. modalReview');
+				// toast.error('error modalNickname .. modalReview');
 				modalNicknameLabel.style.color = 'red';
 				modalReviewLabel.style.color = 'red';
 				modalNickname.style.border = '1px solid red';

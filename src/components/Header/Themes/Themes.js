@@ -3,6 +3,7 @@ import { Nav, Container ,Dropdown , Row, Col} from 'react-bootstrap';
 import {Link, withRouter} from 'react-router-dom';
 import Axios from 'axios';
 import './themes.css';
+import { toast } from 'react-toastify';
 import config from '../../../config.json';
 
 
@@ -25,10 +26,10 @@ export default class Themes extends Component{
         themes : response.data
        })
     } else {
-      alert("Something went wrong");
+      toast.error("Something went wrong");
     } 
   } catch (error) {
-    alert(error);
+    toast.error(error.message);
   }
 }
 
@@ -42,7 +43,7 @@ export default class Themes extends Component{
           {this.state.themes.map((item, index) => {
             return(
               <Dropdown.Item key={item._id}>
-                <Link to={"/architecture/" + item.visibleId}>{item.name}</Link>
+                <Link to={`/products/theme/${item._id}`}>{item.title}</Link>
               </Dropdown.Item>
             );
           })}

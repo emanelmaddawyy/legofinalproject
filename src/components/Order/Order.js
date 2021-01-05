@@ -4,6 +4,9 @@ import loggedUserModule from '../../modules/LoggedUserModule';
 import axios from 'axios';
 import Header from '../Header/Header';
 import Slider from '../Slider/Slider';
+import {Link} from 'react-router-dom';
+import './Order.css'
+
 
 export default class Order extends Component{
   state = {
@@ -26,7 +29,7 @@ export default class Order extends Component{
     return(<>
       <Header/>
       <Slider/>
-      <table className="table-bordered table-dark table-hover table-responsive-lg m-auto text-center">
+      <table className=" order table-bordered m-auto text-center">
        <thead>
           <th className="p-3" scope="col">
           Total Order Count
@@ -56,14 +59,16 @@ export default class Order extends Component{
 
         const date = new Date(item.createdAt).toDateString();
         return (
-            <tr key={index}  scope="row" className="bg-info"> 
+            <tr key={index}  scope="row" >
             <td className="p-3">{totalCount}</td>
             <td>{totalPrice}</td>
             <td>{date}</td>
             <td>{item.status}</td>
-            <td>{item.products.map((productItem,id) => {
-              return(<li key={id}>{productItem.productData.title}</li>)
-            })}</td> 
+            <td><ul>
+              {item.products.map((productItem,id) => {
+              return(
+              <li><Link to={`/product/${productItem.productData._id}`} key={id}>{productItem.productData.title}</Link></li>)
+            })}</ul></td> 
             </tr>
             )
         })}

@@ -2,6 +2,11 @@
 	background-color: black;
 	text-align: center;
 	padding: 5px 0 10px;
+	border-radius: 0;
+}
+
+.headerStyle nav{
+	padding-right: 40px;
 }
 
 .headerStyle img {
@@ -21,7 +26,8 @@
 	display: flex;
 	color: white;
 	font-weight: 300;
-	padding: 8px 16px;
+	font-family: 'CeraLight';
+	margin: 8px 16px;
 	cursor: pointer;
 }
 
@@ -139,13 +145,14 @@
 	}
 
 	.sect1 .content-item__secondary-inner {
-		width: 40%;
+		width: 38%;
 		color: white;
 	}
 
 	.sect1 .cta__title {
 		font-size: 2rem;
 		font-weight: bold;
+		font-family: 'CeraBold';
 		color: white;
 	}
 
@@ -215,6 +222,7 @@
 .text-quote .cta__txt::after {
 	font-size: 70px;
 	font-weight: bold;
+	font-family: 'CeraBold';
 	position: absolute;
 	width: 30px;
 	height: 70px;
@@ -291,6 +299,7 @@
 	.hero .cta__txt {
 		font-size: 1rem;
 		font-weight: 200;
+		font-family: 'CeraLight';
 		margin-bottom: 16px;
 		color: #2d2d2d;
 		line-height: 1.5;
@@ -373,4 +382,18 @@
 
 .m-22 {
 	margin-top: 22px;
+}
+
+/* ====================================   subpages    ==================================== */
+
+.nav_list li:hover {
+	opacity: 0.7;
+}
+
+.activeLegoLife {
+	border-bottom: 1px solid white;
+}
+
+.nav_list .activeLegoLife:hover {
+	opacity: 1;
 }

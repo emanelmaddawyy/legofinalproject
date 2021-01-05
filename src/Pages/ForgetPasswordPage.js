@@ -4,6 +4,7 @@ import Axios from 'axios';
 import './Auth.css';
 import config from '../config.json';
 import SpinnerLoader from '../components/common/SpinnerLoader/SpinnerLoader';
+import { toast } from 'react-toastify';
 
 
 
@@ -53,7 +54,7 @@ class ForgetUsernamePage extends Component{
       } catch (error) {
         this.setState({showLoading: false});
         const msg = error.response.data.message || "Something went wrong";
-        alert(msg);
+        toast.error(msg);
     }
   }
   render(){

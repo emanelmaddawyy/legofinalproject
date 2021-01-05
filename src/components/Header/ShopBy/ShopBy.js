@@ -8,13 +8,14 @@ import {
 	Link,
 	withRouter,
 } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const config = require('../../../config.json');
 
 
 export default class ShopBy extends Component{
   state = {
     isOpen: false,
-    shopby: []
+    filters: []
   }
   api = config.apiUrl
   imageUpload = config.imagesUpload
@@ -24,21 +25,14 @@ export default class ShopBy extends Component{
   componentDidMount = async()=>{
     try {
       const response = await Axios.get(`${this.api}/filters/shopby`);
-      if (response.status === 200) {
-         this.setState({
-          shopby : response.data
-         })
-      } else {
-        alert("Something went wrong");
-      } 
+      this.setState({
+        filters : response.data
+       })
     } catch (error) {
-      alert(error);
+      toast.error(error.message);
     }
   }
   render(){
-    console.log('shopby: ', this.state.shopby);
-
-
     return (
       <Dropdown className="categoryDropdown" addonType="append" isOpen={this.state.isOpen} toggle={this.toggle}>
         <Dropdown.Toggle caret>Shop By</Dropdown.Toggle>
@@ -48,28 +42,26 @@ export default class ShopBy extends Component{
           <Row className="tabsWidth"> 
             <Col sm={3}>
               <Nav variant="pills" className="flex-column">
-                {this.state.shopby.map((item, index) => (
+                {this.state.filters.map((filterItem, index) => (
                   <Nav.Item key={index}>
-                    <Nav.Link eventKey={index}>{item.title}</Nav.Link>
+                    <Nav.Link eventKey={index}>{filterItem.title}</Nav.Link>
                   </Nav.Item>
                 ))}
               </Nav>
             </Col>
             <Col sm={9}>
               <Tab.Content>
-                {this.state.shopby.map((item, index) => (
+                {this.state.filters.map((filterItem, index) => (
                   <Tab.Pane key={index} eventKey={index}>
                     <ul className="shopstyle">
-                    {item.items.map(displayItem => (
-                    <>
+                    {filterItem.data.map(dataItem => (
+                    <Link className="d-flex" to={`/products/${filterItem.key}/${dataItem._id}`}>
                       <li>   
-                      {/* <Link to={{ pathname: `/product/${displayItem._id}`}}>       */}
-                        <img src={config.imagesEndpoint + displayItem.imgSrc} className="img-fluid"/>
+                          <img src={dataItem.image ? config.imagesEndpoint + dataItem.image : "../../../images/def-product.png"} className="img-fluid"/>
                           <br/>
-                        <p>{displayItem.title}</p>
-                        {/* </Link> */}
+                        <p>{dataItem.title}</p>
                         </li>                   
-                    </>
+                    </Link>
                     ))}
                  </ul>
                   </Tab.Pane>

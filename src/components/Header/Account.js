@@ -37,10 +37,12 @@ function Account(props) {
       <sapn>Don't have an account?</sapn>
       <Link to="/Register" className="register pl-3">Register</Link>
       </div></>}
+      {loggedUser ? 
         <div className="orderRegister">
           <img src="../../orderStatus.png"/>
-          <Link to="orders">Check Order Satuts</Link>
+       <Link to="orders">Check Order Satuts</Link>
         </div>
+        :""}
         <div className="orderRegister">
           <img src="../../vipBadge.png" className="my-4"/>
           <p>Become a LEGO® VIP member <br/>

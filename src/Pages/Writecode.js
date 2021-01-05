@@ -2,6 +2,7 @@ import { Form} from 'react-bootstrap';
 import {Link, withRouter} from 'react-router-dom';
 import Axios from 'axios';
 import './Auth.css';
+import { toast } from 'react-toastify';
 import config from '../config.json'
 
 
@@ -46,7 +47,7 @@ class Writecode extends Component{
         this.props.history.push('/login');
       } catch (error) {
         const msg = error.response.data.message || "Something went wrong";
-        alert(msg);
+        toast.error(msg);
     }
   }
   render(){

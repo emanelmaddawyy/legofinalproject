@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Aboutus from '../components/Aboutus/Aboutus';
 import { FaChevronRight } from 'react-icons/fa';
+import {Link} from 'react-router-dom'
 
 class AboutusPage extends Component {
 
@@ -14,12 +15,14 @@ class AboutusPage extends Component {
           <div className="m-auto">
             <ul className="list-inline">
               <li className="list-inline-item mb-3">
-                <a href="" className="text-decoration-none text-dark"
-                  >The LEGO Group</a>
+                   <Link to="/legogroup" className="text-decoration-none text-dark"
+                  >The LEGO Group
+                  </Link>
               </li>
               <li className="list-inline-item mb-3">
-                <a href="" className="text-decoration-none text-dark"
-                  >Sustainability</a>
+                <Link path="" className="text-decoration-none text-dark"
+                  >Sustainability
+                  </Link>
               </li>
               <li className="list-inline-item mb-3">
                 <a href="" className="text-decoration-none text-dark">Discover</a>

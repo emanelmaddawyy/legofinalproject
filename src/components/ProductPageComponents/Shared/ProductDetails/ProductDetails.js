@@ -6,6 +6,7 @@ import TooltipTop from "./TooltipTop/TooltipTop";
 import './ProductDetails.css';
 
 const ProductDetails = (props) => {
+  console.log("ssss",props.products)
 	return (
 		<>
 			<Row className='ProductDetailsContainer'>
@@ -16,7 +17,7 @@ const ProductDetails = (props) => {
 						</span>
 
 						<span className='ProductDetailsStyleData age'>
-							{props.location.state.ages}
+							{props.products.ageCategory.title}
 						</span>
 
 						<p className='ProductDetailsStyleTitle'>Ages</p>
@@ -28,8 +29,8 @@ const ProductDetails = (props) => {
 						</span>
 
 						<span className='ProductDetailsStyleData'>
-							{props.location.state.pieces}
-						</span>
+            {props.products.price}
+  					</span>
 
 						<p className='ProductDetailsStyleTitle'>Pieces</p>
 					</div>
@@ -40,10 +41,7 @@ const ProductDetails = (props) => {
 						</span>
 
 						<span className='ProductDetailsStyleData'>
-							<div className="row">
-							{props.location.state.vipPoints}
-							<TooltipTop/>
-							</div>
+              {props.products.vipPoints}
 						</span>
 
 						<p className='ProductDetailsStyleTitle'>VIP Points</p>
@@ -55,7 +53,7 @@ const ProductDetails = (props) => {
 						</span>
 
 						<span className='ProductDetailsStyleData'>
-							{props.location.state.itemNo}
+						{props.products.numberOfProduct}
 						</span>
 
 						<p className='ProductDetailsStyleTitle'>Item</p>

@@ -1,0 +1,17 @@
+#magazine .react-multiple-carousel__arrow {
+	background: #4a4a4a;
+}
+
+#magazine .react-multiple-carousel__arrow:hover {
+	opacity: 0.9;
+}
+
+#magazine .react-multiple-carousel__arrow::before {
+	color: #fff;
+}
+
+#magazine .pImg:hover {
+	transition: all 0.5s;
+	transform: scale(1);
+	cursor: auto;
+}

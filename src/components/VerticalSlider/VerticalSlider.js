@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -8,58 +9,74 @@ const config = require('../../config.json');
 
 export default class VerticalSlider extends Component {
 
-  state = {
-    nav1: null,
-    nav2: null
+	state = {
+		current: 0
   };
 
-  componentDidMount = async()=>{
-    this.setState({
-      nav1: this.slider1,
-      nav2: this.slider2
-    });
+  componentDidUpdate(nextProps) {
+    if (this.props.images != nextProps.images) {
+      this.setState({current: 0});
+    }
   }
 
-  render() {
-    return (
+	renderImg = (index) => {
+		this.setState({ current: index });
+  };
 
-      <div className="d-flex">
-      <Slider
-          asNavFor={this.state.nav1}
-          ref={slider => (this.slider2 = slider)}
-          slidesToShow={this.props.images.length}
-          swipeToSlide={true}
-          focusOnSelect={true}
-          slidesToScroll={1}
-          vertical={true}
-          dots={false}
-          arrows= {true}>
-            {
-              this.props.images.map(item => (
-                <div>
-                  <img src={config.imagesEndpoint + item}></img>
-                </div>
-              ))
-            }
-        </Slider>
+	prevSlide = () => {
+		if (this.state.current === 0) {
+			this.setState({ current: this.props.images.length - 1 });
+		} else {
+			this.setState({ current: this.state.current - 1 });
+		}
+	};
 
-        
-        <Slider
-          asNavFor={this.state.nav2}
-          ref={slider => (this.slider1 = slider)}
-          verticalSwiping={true}
-          vertical={true}
-          dots={false}
-          arrows= {false}>
-           {
-              this.props.images.map(item => (
-                <div>
-                  <img src={config.imagesEndpoint + item}></img>
-                </div>
-              ))
-            }
-        </Slider>
-      </div>
-    );
-  }
+	nextSlide = () => {
+		if (this.state.current === this.props.images.length - 1) {
+			this.setState({ current: 0 });
+		} else {
+			this.setState({ current: this.state.current + 1 });
+		}
+	};
+
+	render() {
+		return (
+			<div className='row bg-white m-0'>
+				<div className='col-12 col-xl-11 order-xl-2 '>
+					<div className='ImgWrapper'>
+						<div className='arrow' id='arrow-left'>
+							<i
+								class='fas fa-chevron-circle-left'
+								onClick={this.prevSlide}></i>
+						</div>
+						<div className='arrow' id='arrow-right'>
+							<i
+								class='fas fa-chevron-circle-right'
+								onClick={this.nextSlide}></i>
+						</div>
+						<img
+							id='featured'
+							src={config.imagesEndpoint + this.props.images[this.state.current]}
+							className='w-100 img-fluid'
+						/>
+					</div>
+				</div>
+
+				<div
+					id='slide-wrapper'
+					className='col-12 col-xl-1 order-xl-1 text-center'>
+					{this.props.images.map((item, i) => {
+						return (
+							<img
+								key={i}
+								onClick={() => this.renderImg(i)}
+								className='thumbnail'
+								src={config.imagesEndpoint + item}
+							/>
+						);
+					})}
+				</div>
+			</div>
+		);
+	}
 }

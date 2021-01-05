@@ -3,6 +3,7 @@ import { Nav, Container ,Dropdown , Row, Col} from 'react-bootstrap';
 import {Link, withRouter} from 'react-router-dom';
 import Axios from 'axios';
 import '../Themes/themes.css';
+import { toast } from 'react-toastify';
 import config from '../../../config.json';
 
 
@@ -24,10 +25,10 @@ export default class Interest extends Component{
         interest : response.data
        })
     } else {
-      alert("Something went wrong");
+      toast.error("Something went wrong");
     } 
   } catch (error) {
-    alert(error);
+    toast.error(error.message);
   }
 }
 
@@ -41,7 +42,7 @@ export default class Interest extends Component{
           {this.state.interest.map((item, index) => {
             return(
               <Dropdown.Item key={item._id}>
-                <Link to={"/interests/" + item.visibleId}>{item.title}</Link>
+                <Link to={`/products/interest/${item._id}`}>{item.title}</Link>
               </Dropdown.Item>
             );
           })}

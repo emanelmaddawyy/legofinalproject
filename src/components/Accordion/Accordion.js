@@ -2,10 +2,8 @@ import './Accordion.css';
 import React, { useState, useRef, useEffect } from 'react';
 
 const Accordion = (props) => {
-	// console.log('accordion props!', props);
-
 	const [active, setActive] = useState(false);
-	const contentRef = useRef(null);
+  const contentRef = useRef(null);
 
 	useEffect(() => {
 		contentRef.current.style.maxHeight = active
@@ -15,14 +13,13 @@ const Accordion = (props) => {
 
 	const toogleActive = () => {
 		setActive(!active);
-		// console.log('active',active);
-	};
+  };
 
 	return (
 		<>
 			<div className='accordion-section'>
 				<button className='accordion-title' onClick={toogleActive}>
-					<p className='titleStyle'>{props.title}</p>
+					<p className='titleStyle'>{props.filter.title}</p>
 					<span className={active ? 'accordion-icon rotate' : 'accordion-icon'}>
 						<img
 							src='https://img.icons8.com/metro/24/000000/chevron-down.png'
@@ -33,18 +30,17 @@ const Accordion = (props) => {
 
 				<div ref={contentRef} className='accordion-content'>
 					<ul className='accordionUlStyle'>
-						{props.filters.map((item, i) => {
-							// console.log('item',Object.values(item))
+						{props.filter.data.map((item, i) => {
 							return (
 								<li className='accordionListStyle'>
 									<label className='checkbox-label'>
 										<input
 											type='checkbox'
-											className='getCheckBox'
-											onClick={props.checkboxClickedFun}
+                      className='getCheckBox'
+                      checked={item.checked || false}
+											onChange={() => props.filterChangeHandler(props.filter.key, item._id)}
 										/>
-										<span>{Object.values(item)}</span>
-										{/* <span>{props.children}</span> */}
+										<span>{item.title}</span>
 									</label>
 								</li>
 							);

@@ -13,6 +13,8 @@ import config from '../config.json';
 import loggedUserModule from '../modules/LoggedUserModule';
 import wishListModule from '../modules/WishListModule';
 import cartModule from '../modules/CartModule';
+import Footer from '../components/Footer/Footer';
+import { toast } from 'react-toastify';
 
 import {
 	Link,
@@ -36,7 +38,7 @@ class Architecture extends React.Component {
 
   addToWishListHandler = (index) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 
@@ -54,7 +56,7 @@ class Architecture extends React.Component {
 
   removeFromWishListHandler = (index) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 
@@ -70,10 +72,10 @@ class Architecture extends React.Component {
     this.setState({products: newProducts});
   }
 
-  fetchProducts = async () => {
+  fetchProducts = async (filters = []) => {
     try {
-      const url = this.props.displayInterests ? `${config.apiUrl}/interest/${this.props.match.params.visibleId}/products`: `${config.apiUrl}/themes/${this.props.match.params.visibleId}/products`
-      const response = await axios.get(url);
+      const url = config.apiUrl + '/products/getProductsFiltered';
+      const response = await axios.post(url, filters);
 
       const products = response.data.map(item => {
         return {
@@ -85,29 +87,57 @@ class Architecture extends React.Component {
       this.setState({ products: products });
     } catch (error) {
       const msg = error.response.data.message || "Something went wrong";
-      alert(msg);
+      toast.error(msg);
     }
   }
 
   componentDidMount() {
-    this.fetchProducts();
+    const id = this.props.match.params.id;
+    const key = this.props.match.params.key;
+
+    const filters = [];
+    if (id && key) {
+      filters.push({
+        key: key,
+        data: [id]
+      });
+    }
+
+    this.fetchProducts(filters);
   }
 
-  componentDidUpdate(nextProps) {
-    if (this.props.match.params.visibleId !== nextProps.match.params.visibleId) {
-      this.fetchProducts();
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.id !== prevProps.match.params.id
+        || this.props.match.params.key !== prevProps.match.params.key) {
+      const id = this.props.match.params.id;
+      const key = this.props.match.params.key;
+
+      const filters = [];
+
+      if (id && key) {
+        filters.push({
+          key: key,
+          data: [id]
+        });
+      }
+
+      this.fetchProducts(filters);
     }
   }
 
   addToCartClickHandler = (product) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 
     cartModule.addProduct(product);
   }
 
+  filtersChanged = (productFilters) => {
+    this.fetchProducts(productFilters);
+  }
+  
   productList = () => this.state.products.map((product, index) => {
 		let ratingClal = (nOfStars) => {
 			const filledStar = (
@@ -224,11 +254,12 @@ class Architecture extends React.Component {
         <Slider />
         <div class='row p-5 m-0'>
           <div class=' col-lg-3 d-none d-lg-block '>
-            <Filter ArchitectureAccordion={this.props.ArchitectureAccordion}></Filter>
+            <Filter filtersChanged={this.filtersChanged} />
           </div>
           <div class='row col-lg-9 col-12  m-xs-0'>{this.productList()}</div>
         </div>
       <NewProductsSlider/>
+      <Footer/>
       </>
     );
   }

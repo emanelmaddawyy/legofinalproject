@@ -1,6 +1,7 @@
 import { Button, Form} from 'react-bootstrap';
 import Axios from 'axios'
 import UsersList from '../components/Users/UsersList';
+import { toast } from 'react-toastify';
 import config from '../config.json'
 
 
@@ -20,7 +21,7 @@ class LoginPage extends Component{
         })
       console.log(response.data)
     } catch (error) {
-      alert(error);
+      toast.error(error.message);
     }
 }
   deleteUser = async (index, user) =>{
@@ -31,10 +32,10 @@ class LoginPage extends Component{
         newUsers.splice(index, 1);
         this.setState({users: newUsers});
       } else {
-        alert("Something went wrong"); 
+        toast.error("Something went wrong"); 
       }
     } catch (error) {
-      alert(error)
+      toast.error(error.message)
     }
   }
 
@@ -58,10 +59,10 @@ class LoginPage extends Component{
         newUsers.splice(index, 1, response.data);
         this.setState({users: newUsers});
       } else {
-        alert("Something went wrong"); 
+        toast.error("Something went wrong"); 
       }
     } catch (error) {
-      alert(error)
+      toast.error(error.message)
     }
   }
 

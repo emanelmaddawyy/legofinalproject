@@ -10,6 +10,7 @@ import Axios from 'axios';
 // import ProductsSlider from '../components/ProductsSlider/ProductsSlider';
 import Rating from '../components/Rating/Rating';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 import ProductInStock from '../components/ProductPageComponents/InStock/ProductInStock';
 import ProductNotInStock from '../components/ProductPageComponents/NotInStock/ProductNotInStock';
 import Toast from '../components/ProductPageComponents/InStock/Toast/Toast';
@@ -24,6 +25,7 @@ import VerticalSlider from "../components/VerticalSlider/VerticalSlider";
 import NewProductsSlider from "../components/NewProductsSlider/NewProductsSlider";
 import cartModule from '../modules/CartModule';
 import loggedUserModule from '../modules/LoggedUserModule';
+import { toast } from 'react-toastify';
 const config = require('../config.json');
 
 
@@ -35,14 +37,14 @@ class ProductPage extends Component{
   }
   addToCartClickHandler = (product) => {
     if (!loggedUserModule.getLoggedUser()) {
-      alert("You must login first");
+      toast.error("You must login first");
       return;
     }
 
     cartModule.addProduct(product);
   }
 
-  componentDidMount = async()=>{
+  fetchProduct = async () => {
     try {
       const response = await Axios.get(`${config.apiUrl}/products/${this.props.match.params.id}`);
       if (response.status === 200) {
@@ -50,27 +52,22 @@ class ProductPage extends Component{
           product: response.data
          })
       } else {
-        alert("Something went wrong");
+        toast.error("Something went wrong");
       } 
     } catch (error) {
-      alert(error);
+      toast.error(error.message);
     }
   }
-	// IsInStock = () => {
-	// 	const stockCount = this.props.location.state.numberOfProduct;
-	// 	if (stockCount > 0) {
-	// 		return (
-	// 			<>
-	// 				<ProductInStock showToastFunction={this.showToastFunction} />
-	// 			</>
-	// 		);
-	// 	}
-	// 	return (
-	// 		<>
-	// 			<ProductNotInStock />
-	// 		</>
-	// 	);
-	// }
+
+  componentDidMount = ()=>{
+    this.fetchProduct();
+  }
+
+  componentDidUpdate(nextProps) {
+    if (this.props.match.params.id !== nextProps.match.params.id) {
+      this.fetchProduct();
+    }
+  }
 
 	showToastFunction = () => {
 		let toast = document.getElementsByClassName('Toast')[0];
@@ -109,7 +106,7 @@ class ProductPage extends Component{
                   value={this.state.product.rating}
                   className='text-primary'
                   color='#ffcf00'
-                  text={`${this.state.product.numberOfReviews} reviews`}
+                  // text={`${this.state.product.numberOfReviews} reviews`}
                 />
                 Price : <span>{this.state.product.price} $</span>  
                 <br/>
@@ -121,16 +118,17 @@ class ProductPage extends Component{
                 Add to Bag
               </button>
                { /* <IsInStock /> */ }
-                <CheckStoreStock />
+                {/* <CheckStoreStock /> */}
                 {/* <ShopMoreLikeThis /> */}
               </ListGroup.Item>
             </ListGroup>
           </Col>
         </Row>
-        {/* <ProductDetails /> */}
-        {/* <ProductAccordion data={this.props} /> */}
-        {/* <ProductsSlider title='Recommended For You' /> */}
+        <ProductDetails 
+        products={this.state.product}/>
+        {/* <ProductAccordion /> */}
         <NewProductsSlider />
+        <Footer/>
         </>
         : <p>loading...</p>
       }

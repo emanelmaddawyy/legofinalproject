@@ -205,7 +205,6 @@ ul.imgDropDown {
 
 a.nav-link a {
   color: #000;
-  height: 70px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -254,6 +253,61 @@ ul.shopstyle {
           column-fill: balance;
   padding-left: 0 !important;
   text-align: center;
+}
+
+.tabsWidth a.nav-link {
+  width: 170px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .topHeader {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .topHeader ul {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .topHeader ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .topHeader {
+    display: block;
+    text-align: center;
+  }
+  .topHeader ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .topHeader ul li {
+    padding: 0 5px !important;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .topHeader {
+    display: block;
+    text-align: center;
+  }
+  .topHeader ul li {
+    padding: 10px 5px;
+  }
+  .topHeader ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /* No CSS */

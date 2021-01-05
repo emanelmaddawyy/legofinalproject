@@ -6,11 +6,14 @@ import Region from './Region';
 import Vip from '../Vip/Vip';
 import Findstore from '../Findstore/Findstore';
 import Legolife from '../Legolife/Legolife'
-import Kids from '../Kids/Kids';
+import Admin from '../Admin/Admin';
 import wishListModule from '../../modules/WishListModule';
 import cartModule from '../../modules/CartModule';
 import EventEmitter from "../../modules/EventEmitter";
 import LoggedUserModule from '../../modules/LoggedUserModule';
+import {HeartOutlined ,ShoppingOutlined} from '@ant-design/icons';
+import { toast } from 'react-toastify';
+
 
 const { Component } = require("react");
 
@@ -41,7 +44,7 @@ class TopHeader extends Component{
     if (LoggedUserModule.getLoggedUser()) {
       this.props.history.push('/wishlist');
     } else {
-      alert("Please login first");
+      toast.error("Please login first");
     }
   }
 
@@ -51,7 +54,7 @@ class TopHeader extends Component{
     if (LoggedUserModule.getLoggedUser()) {
       this.props.history.push('/cart');
     } else {
-      alert("Please login first");
+      toast.error("Please login first");
     }
   }
 
@@ -75,9 +78,9 @@ class TopHeader extends Component{
             <li className="noborder">
               <Legolife />
             </li>
-            <li className="noborder">
-              <Kids />
-            </li>
+            {LoggedUserModule.getLoggedUser()?.isAdmin? <li className="noborder">
+              <Admin />
+            </li> : ""}
           </ul>
           </Col>
           <ul className="list-unstyled UlleftColor">
@@ -85,10 +88,16 @@ class TopHeader extends Component{
             <Account/>
             </li>
             <li>
-            <Link onClick={this.wishListClickHandler}>Wish List {this.state.wishListCount ? `(${this.state.wishListCount})` : ''}</Link>
+            <Link onClick={this.wishListClickHandler}>
+            <HeartOutlined  style = {{fontSize: '16px', color: 'rgb(0, 109, 183)', margin: '2px', padding: '',
+                  borderRadius:'50%'}}></HeartOutlined>
+              Wish List {this.state.wishListCount ? `(${this.state.wishListCount})` : ''}</Link>
             </li>
             <li>
-            <Link onClick={this.cartClickHandler}>Cart {this.state.cartCount ? `(${this.state.cartCount})` : ''}</Link>
+            <Link onClick={this.cartClickHandler}>
+            <ShoppingOutlined  style = {{fontSize: '16px', color: 'rgb(0, 109, 183)', margin: '2px', padding: '',
+                  borderRadius:'50%'}}></ShoppingOutlined>
+              Cart {this.state.cartCount ? `(${this.state.cartCount})` : ''}</Link>
             </li>
           </ul>
     </div>

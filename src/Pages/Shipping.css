@@ -1,0 +1,133 @@
+#Shipping {
+	background: white;
+	color: #333;
+}
+
+#Shipping #backBtn {
+	width: fit-content;
+	margin: auto;
+	margin-top: 32px;
+}
+
+#Shipping #title {
+	width: fit-content;
+	/* margin: 16px auto 32px auto; */
+	margin: 64px 0 0 0;
+	font-weight: 700 !important;
+	line-height: 1.25 !important;
+	max-width: 960px;
+	font-family: 'Cera';
+	/* padding-left: 8px;
+	padding-right: 8px; */
+	font-size: 2.25rem !important;
+	color: #333;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	#Shipping #title {
+		font-size: 2.8rem !important;
+	}
+}
+
+#Shipping .question {
+	margin-top: 32px;
+	font-size: 2rem;
+}
+
+#Shipping .answer {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 16px;
+	font-family: 'CeraLight';
+}
+
+#Shipping .link {
+	color: #005eb8 !important;
+	text-decoration: underline;
+}
+
+#Shipping .ul {
+	list-style-type: disc;
+}
+
+#Shipping .ul li {
+	margin: 20px 0;
+}
+
+strong {
+	font-family: 'CeraBold';
+}
+
+#Shipping #main-content {
+	margin-bottom: 64px !important;
+}
+
+#Shipping main {
+	background-color: rgb(255, 200, 10);
+	text-align: center;
+	color: rgb(0, 0, 0);
+	padding: 1.25rem;
+	padding-top: 1.875rem;
+	padding-bottom: 1.875rem;
+	margin: 0;
+	margin-bottom: 64px;
+}
+
+#Shipping main h2 {
+	margin-top: 0px;
+	margin-bottom: 1.25rem;
+	font-size: 1.25rem;
+	line-height: 1.9375rem;
+}
+
+.Shipping-wrapper {
+	padding: 0.9rem 1.25rem;
+	width: 100%;
+}
+
+.table-striped > tbody > tr:nth-child(2n + 1) > td,
+.table-striped > tbody > tr:nth-child(2n + 1) > th {
+	background-color: #e6f3ff;
+}
+
+.table-striped {
+	margin: 1.875rem 00;
+
+	border-width: 1px 1px 7px;
+	border-style: solid;
+	border-color: rgb(224, 224, 224);
+}
+
+.cell {
+	font-size: 0.8756rem;
+	padding: 0.625rem;
+}
+
+@media screen and (min-width: 992px) {
+	#Shipping main {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	#Shipping main h2 {
+		font-size: 2rem;
+		line-height: 2.6875rem;
+		font-weight: 400;
+	}
+
+	#Shipping-wrapper {
+		margin: 0 auto;
+		padding: 1.6rem 1.25rem;
+		max-width: 82.5rem;
+	}
+
+	.table-striped {
+		margin: 2.5rem 0;
+	}
+	.cell {
+		font-size: 1rem;
+		padding: 1.25rem !important;
+		max-width: 4.24rem;
+	}
+}

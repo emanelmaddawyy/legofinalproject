@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faAppleAlt} from '@fortawesome/free-solid-svg-icons';
 import {  faCoffee } from '@fortawesome/fontawesome-free-solid';
 import './Auth.css';
+import { toast } from 'react-toastify';
 import config from '../config.json';
 
 const { Component } = require("react");
@@ -68,10 +69,10 @@ class RegisterPage extends Component{
           // redirect
           this.props.history.push('/login');
         } else {
-          alert("Something went wrong");
+          toast.error("Something went wrong");
         } 
       } catch (error) {
-        alert(error);
+        toast.error(error.message);
     }
   }
   async componentDidMount() {
@@ -84,7 +85,7 @@ class RegisterPage extends Component{
         })
 
     } catch (error) {
-      alert(error);
+      toast.error(error.message);
     } 
 }
   render(){
@@ -102,7 +103,7 @@ class RegisterPage extends Component{
             <br/>
             <Link to="/login" className="btn loginBtn my-3">Log in </Link>
             <div className="socialLogin my-3">
-            <button className=" btn appleLogin mx-2">
+            {/* <button className=" btn appleLogin mx-2">
             <FontAwesomeIcon icon={faAppleAlt} />
            <span> Continue with Apple ID </span>
             </button>
@@ -111,7 +112,7 @@ class RegisterPage extends Component{
             </button>
             <button className="btn btn-primary">
             <FontAwesomeIcon icon={faCoffee} />
-            </button>
+            </button> */}
               </div>    
           <div className="break my-4">
            <h1>
@@ -124,12 +125,13 @@ class RegisterPage extends Component{
    <form method="POST" className="form-group" onSubmit={this.submitHandeler}>
      <div className="form-group my-4">
      <label for="email">Email Address</label>
-      <input type="email" className="form-control" placeholder="email" value={this.state.email} onChange={this.emailChangeHandler} required/>
+      <input type="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" className="form-control" placeholder="email" value={this.state.email} onChange={this.emailChangeHandler} required/>
     <span></span>
      </div>
      <div className="form-group my-4">
      <label for="password"> Password</label>
-      <input type="password" placeholder="password" className="form-control" value={this.state.password} onChange={this.passwordChangeHandeler} required/>
+      <input type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="password" className="form-control" value={this.state.password}placeholder="password" className="form-control" value={this.state.password} onChange={this.passwordChangeHandeler} required/>
      <span></span>
      </div>
      <div className="form-group my-4">

@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import './modalBranch.css';
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import { toast } from 'react-toastify';
 const config = require('../../config.json');
 
 
@@ -23,10 +24,10 @@ function Region() {
       if (response.status === 200) {
         setContinents(response.data)
       } else {
-        alert("Something went wrong");
+        toast.error("Something went wrong");
       } 
     } catch (error) {
-      alert(error);
+      toast.error(error.message);
     }
   }, []);
   
