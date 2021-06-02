@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import Slider from '../Slider/Slider';
 import {Link} from 'react-router-dom';
 import './Order.css'
+import { toast } from "react-toastify";
 
 
 export default class Order extends Component{
@@ -25,6 +26,23 @@ export default class Order extends Component{
 
     }
   }
+
+  cancelOrder = async (index) => {
+    const newOrders = [...this.state.orders];
+
+    try {
+      const reqBody = {
+        _id: newOrders[index]._id,
+        status: "Cancelled"
+      }
+       await axios.put(`${config.apiUrl}/orders`, reqBody);
+      newOrders[index].status = "Cancelled";
+      this.setState({orders: newOrders});
+    } catch(error) {
+      toast.error(error);
+    }
+  }
+
   render(){
     return(<>
       <Header/>
@@ -42,6 +60,9 @@ export default class Order extends Component{
           </th>
           <th scope="col">
           Total Order Status
+          </th>
+          <th scope="col">
+          #
           </th>
           <th scope="col">
             Order
@@ -64,6 +85,7 @@ export default class Order extends Component{
             <td>{totalPrice}</td>
             <td>{date}</td>
             <td>{item.status}</td>
+            <td>{item.status === "Pending" ? <button className="btn btn-danger" onClick={() => this.cancelOrder(index)}>Cancel</button> : ""}</td>
             <td><ul>
               {item.products.map((productItem,id) => {
               return(

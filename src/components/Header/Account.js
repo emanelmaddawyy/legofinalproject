@@ -40,7 +40,7 @@ function Account(props) {
       {loggedUser ? 
         <div className="orderRegister">
           <img src="../../orderStatus.png"/>
-       <Link to="orders">Check Order Satuts</Link>
+       <Link to="/orders">Check Order Satuts</Link>
         </div>
         :""}
         <div className="orderRegister">
